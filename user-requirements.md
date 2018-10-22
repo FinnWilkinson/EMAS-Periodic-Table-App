@@ -44,8 +44,8 @@
 1. Show information of elements when clicked
 1. Search for elements by symbol and name
 1. Display basic image of energy charts - potentially an interactive version
-1. System should not break (hopefully if all goes well)
-1. 
+1. System should not break
+1.
 
 ## Non-Functional Requirements
 1. Be able to find an element in 10 seconds
