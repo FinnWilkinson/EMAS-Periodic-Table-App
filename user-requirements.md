@@ -38,7 +38,7 @@
 1. Mike & colleagues - 1st point of contact
 2. EMAS members - micro-analysis organization which will be the majority of our user base
 3. Research students - students doing research in microbeam related field
-4. Lab staff - technicians in charge of equipment etc
+4. Lab staff - technicians in charge of equipment etc(commercial use as well as academic)
 
 ## Functional Requirements
 1. Display the skeleton periodic table
