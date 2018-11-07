@@ -3,7 +3,7 @@
 ## Stakeholders
 
 #### Mike Matthews
-The periodic table application was requested by Mr Matthews and laid out the basis of the specification. Mr Matthews is a user with hope the app will benefit and ease his work.
+The periodic table application was requested by Mr Matthews and laid out the basis of the specification. Mr Matthews is a user with the hope that the app will benefit and ease his work.
 
 #### Dr Stuart Kearns
 Lecturer and researcher at the University of Bristol working closely with Mr Matthews.
@@ -12,14 +12,14 @@ Lecturer and researcher at the University of Bristol working closely with Mr Mat
 Researcher at the University of Bristol working alongside both Mr Matthews and Dr Kearns.
 
 #### EMAS
-The European microbeam analysis society is an organization that will provide the majority of our user base. The application will facilitate members of the society. Our client is part of this organization.
+The European Microbeam Analysis Society is an organization that will consist of the majority of our user base. The application will facilitate members of the society. Our client is part of this organization.
 
 
 #### Research students
- Students doing research in microbeam-analysis related fields. Students part of Bristol University as well as other institutions.
+Students doing research in microbeam-analysis related fields. Students part of Bristol University as well as other institutions.
 
 #### Lab staff
-Technicians in charge of equipment in microbeam analysis laboratories in different institutions academic or commercial.
+Technicians in charge of equipment in microbeam analysis laboratories in different institutions, academic or commercial.
 
 #### General Public
 The app will be available on the app-store hence anyone could make use of it.
@@ -101,7 +101,7 @@ The app will be available on the app-store hence anyone could make use of it.
     * Must show a list of the elements and should reduce the items shown as element is being typed
 * View the energy graph
     * Must display the basic image of the energy chart
-* User must not be able to make changes to code
+* User must not be able to see or make changes to code
 
 ## Non-Functional requirements:
 * The element that they are searching for is highlighted on the table (this involves animation/graphics that is not our primary aim)
