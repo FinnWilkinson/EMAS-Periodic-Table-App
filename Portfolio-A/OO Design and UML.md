@@ -1,6 +1,6 @@
 # OO Design and UML
 #### Static UML diagram:
-![alt text](https://bitbucket.org/MasterFinnius/periodic-table-app/raw/UML/UMLpictures/StaticUML.png "Static UML Diagram")
+![StaticUML](images/StaticUML.png "StaticUML")
 
 This diagram shows the relationships between the classes needed for the user to search for a specific element within the app.
 
@@ -13,7 +13,7 @@ Making our static UML diagram has shown us how many classes are required to make
 
 
 #### Dynamic UML diagram:
-![alt text](https://bitbucket.org/MasterFinnius/periodic-table-app/raw/UML/UMLpictures/DynamicUML.png "Dynamic UML Diagram")
+![DynamicUML](images/DynamicUML.png "DynamicUML")
 
 This diagrams dictates how the program flows when a user is searching for a specific element to view in more detail.  
 
@@ -21,4 +21,4 @@ We chose to model this aspect of our program because it is the most complex syst
 Additionally, the client wished for the search to have predictive functionality. We came up with two possible ways to implement this; SQL requests or string matching algorithm. Collectively, we decided to go with a string matching algorithm due to there already needing to be a data file with all element names. The data that we will need to string match on will therefore already be loaded into the application. The use of the dynamic UML diagram aided in this decision, as it requires less data passing throughout the program, which should hopefully improve both the predictive search speed and the efficiency of the program as a whole.
 
 Modelling the searching aspect of our system using a dynamic UML diagram helped us to visualise the data transfer and interaction between the classes within our application, and also how the user inputs are handled and passed to the correct classed.  
-Creating this dynamic UML diagram has taught us how much interaction and data transfer is required within our application. Initially we thought that there would be two transfers of data, however it has become apparent that much more will need to happen to make an efficient system. 
+Creating this dynamic UML diagram has taught us how much interaction and data transfer is required within our application. Initially we thought that there would be two transfers of data, however it has become apparent that much more will need to happen to make an efficient system.
