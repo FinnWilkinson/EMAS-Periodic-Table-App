@@ -1,13 +1,13 @@
-# REQUIREMENTS:
+# Requirements
 
 ## The core set of the use-case goals:
 1. View information on each element
 1. Search for an element
-1. Use the navigation drawer 
-1. Switch between instruments 
+1. Use the navigation drawer
+1. Switch between instruments
 1. View the energy graph
 
-## Flow of things in our v cool app:
+##  User Flow
 ### _Basic flow_:
 1. View information on each element
     - Periodic table will be displayed, fitted to the screen
@@ -29,7 +29,7 @@
         - Option 1:
             * Open menu drawer
             * Use the toggle to switch between instruments
-        - Option 2: 
+        - Option 2:
             * Click the element from the table or using the search bar
             * Element page appears
             * Use the toggle on the element page to switch between instruments
@@ -52,7 +52,7 @@
 * User may switch between instruments first then look for an element (this can be done using the toggle in the menu rather than on the individual element pages)
 * User may change the default settings from one instrument to another before looking at an individual element data
 
-### _Exceptional flow_ : 
+### _Exceptional flow_ :
 * User is not aware on how to proceed with any feature on the app
     * User can open navigation drawer and use the Help tab to understand the layout/workings of the app
 * Incorrect symbol inputted into the search bar
@@ -81,4 +81,3 @@
 * Make sure text is readable half a meter away from face when user has 20/20 vision
 * User should be able to find and use the changing unit/instrument feature in under 5 seconds
 * After reading the help page of the app, user should be able to use all features of the app confidently and quickly
- 
