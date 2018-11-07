@@ -1,5 +1,34 @@
 # Requirements
 
+## Stakeholders
+
+#### Mike Matthews
+The periodic table application was requested by Mr Matthews and laid out the basis of the specification. Mr Matthews is a user with hope the app will benefit and ease his work.
+
+#### Dr Stuart Kearns
+Lecturer and researcher at the University of Bristol working closely with Mr Matthews.
+
+#### Dr Benjamin Buse
+Researcher at the University of Bristol working alongside both Mr Matthews and Dr Kearns.
+
+#### EMAS
+The European microbeam analysis society is an organization that will provide the majority of our user base. The application will facilitate members of the society. Our client is part of this organization.
+
+
+#### Research students
+ Students doing research in microbeam-analysis related fields. Students part of Bristol University as well as other institutions.
+
+#### Lab staff
+Technicians in charge of equipment in microbeam analysis laboratories in different institutions academic or commercial.
+
+#### General Public
+The app will be available on the app-store hence anyone could make use of it.
+
+## High User Case Diagram
+
+![usercase](images/usercase.png "usercase")
+
+
 ## The core set of the use-case goals:
 1. View information on each element
 1. Search for an element
@@ -8,7 +37,7 @@
 1. View the energy graph
 
 ##  User Flow
-### _Basic flow_:
+#### _Basic flow_:
 1. View information on each element
     - Periodic table will be displayed, fitted to the screen
     - User clicks on desired element
@@ -47,12 +76,12 @@
         * Settings page is displayed
         * Use the toggle to change default instruments
 
-### _Alternative flow_ :
+#### _Alternative flow_ :
 * User may utilize the search bar to look for an element rather than clicking on the periodic table display
 * User may switch between instruments first then look for an element (this can be done using the toggle in the menu rather than on the individual element pages)
 * User may change the default settings from one instrument to another before looking at an individual element data
 
-### _Exceptional flow_ :
+#### _Exceptional flow_ :
 * User is not aware on how to proceed with any feature on the app
     * User can open navigation drawer and use the Help tab to understand the layout/workings of the app
 * Incorrect symbol inputted into the search bar
@@ -60,7 +89,7 @@
 * User is stuck on the search bar and cannot return to homepage
     * Back button is provided on all screens so that user can return to the homepage at any point
 
-***
+
 ## Functional requirements:
 * View information on each element
     * Must display the periodic table
