@@ -11,11 +11,11 @@ Lecturer and researcher at the University of Bristol working closely with Mr Mat
 Researcher at the University of Bristol working alongside both Mr Matthews and Dr Kearns.
 
 #### EMAS
-The European microbeam analysis society is an organization that will provide the majority of our user base. The application will facilitate members of the society. Our client is part of this organization.
+The European Microbeam Analysis Society is an organisation that will provide the majority of our user base. The application will facilitate members of the society. Our client is part of this organisation.
 
 
 #### Research students
- Students doing research in microbeam-analysis related fields. Students part of Bristol University as well as other institutions.
+ Students doing research in microbeam analysis related fields. Students part of Bristol University as well as other institutions.
 
 #### Lab staff
 Technicians in charge of equipment in microbeam analysis laboratories in different institutions academic or commercial.
