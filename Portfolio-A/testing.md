@@ -1,20 +1,25 @@
-# Header
-<div style="text-align: justify"> A crucial function of the Periodic Table App is the search function. It is essential for ease of use for the user, as it allows
-the user to quickly search for an element without having to look through the whole Periodic Table. The search function
-should correctly return an element when given either the element name or symbol, and should offer a reasonable
-guess in case of an incorrect spelling. It will ideally contain a functioning predictive search algorithm which will offer
-the user with predictions of which element the user wants to search for based on the current input. The advantage of
-the predictive search is that it will offer multiple possible outputs based on the input, whereas the search function will
-only output a result if it finds a match in the database. </div>
+# Testing
+<div style="text-align: justify">There are 6 main components in our architecture diagram, each of which will have it's own set of unit tests, as well as an overall integration test to check whether the individual components work together as a whole. The initial phase of testing will be checking the correctness of the code written for each component. </div>
 
 
+## Unit Tests
+#### Periodic Table View
+<div style="text-align: justify">The unit tests for this particular component will only check whether the display of the Periodic Table is correct, and will check a the values in a few cells to see if they match the expected value. This will be done by getting the values from a set of cells in the Periodic Table and comparing the expected values to the values obtained from the table. </div>
 
-| Input | Search Function Output | Predictive Search Output | Explanation |
-|:------:|:------:|:------:|:------:|
-| Hydrogen | Hydrogen | 'Hydrogen' | When the element 'Hydrogen' is searched for, <br> the search function returns the element 'Hydrogen'. |
-| hydRogEn   | Hydrogen  | 'Hydrogen' | This shows that the letter casing doesn't matter <br> when searching for an element, as it returns the <br> correct element regardless. |
-| H   | Hydrogen  | 'Hydrogen' <br> 'Helium' <br> 'Holmium' <br> 'Hafnium' <br> 'Hassium' | The atomic symbol for Hydrogen is 'H', so the <br> search function will only return the element <br> 'Hydrogen'. On the other hand, the predictive <br> search function will return a list of elements that <br> start with the letter 'H', prioritising the element <br> 'Hydrogen' and putting it on the top of the list <br> since it has an additional association with the <br> letter 'H'.  |
-| h   | -  | 'Hydrogen' <br> 'Helium' <br> 'Holmium' <br> 'Hafnium' <br> 'Hassium'  | The atomic symbol for Hydrogen is only associated <br> with the upper case letter 'H', thus, the search <br> function does not output anything. Meanwhile <br> the predictive search outputs the same list. |
-| Th   | Thorium  | 'Thorium' <br> 'Thulium' <br> 'Thallium'  | The atomic symbol for Thorium is 'Th', so the search<br> function returns the element 'Thorium'. The <br> predictive search however, outputs a list of all <br> elements that begin with the string 'Th', prioritising <br> 'Thorium' since it has an additional association.  |
-| th   | -  | 'Thulium' <br> 'Thallium' <br> 'Thorium'  | Similar to last time, the search function does not <br> output anything since the string 'th' has no <br> matches in the database. The predictive search <br> outputs the same list of elements, however in a <br> different order. This order is determined by the <br> atomic number, and is arranged in ascending <br> order. The previous list had the element 'Thorium' <br> at the top due to the addition association, <br> which is not present in this scenario.|
-| P&#226;ll&#227;d&#239;&#249;m  | -  | -  | Both the search function and the predictive search <br> will not return anything since the input uses special<br> characters which are not supported. |
+#### Search Activity
+<div style="text-align: justify">This component will be tested by checking the return value of the search function and the predicted search function by various inputs, and will be compared to the expected return value to check whether the code written is correct. There will be validation and verification tests as well, which will check if the search function works as expected on unusual inputs and with special characters.</div>
+
+#### Current Element
+<div style="text-align: justify">This component will be tested by checking whether it fetches the correct values from the database based on the element that is provided to the function, by comparing the return values to the expected values. It will also have some verification checks to see if it returns a error or a null value if an element that does not exist in the database is requested.</div>
+
+#### Element View
+<div style="text-align: justify">This component will be tested for it's correctness in displaying the correct image. All the other information required will be provided by Current Element, so there won't be any tests required to check the rest of the information. The images will be labelled sensibly, so the function can be tested by requesting an image using a key from the database, and the file name of the image provided will be compared to the expected file name for the image.</div>
+
+#### Element Button
+<div style="text-align: justify">The tests for this component will check if it produces the correct output when an element from the Periodic Table is pressed. This will be done by checking the function that handles what happens when an element is clicked. The tests will provide the function with a element key, and will check if the value returned matches the element provided.</div>
+
+## Integration Tests
+<div style="text-align: justify">The integration test will check if all the software modules interact correctly when combined. Since most of the modules are dependant on each other, this is a crucial aspect of the testing phase to make sure the app functions properly. The Periodic Table View and the Search Activity will be integrated together, and we will need to test if they work properly together. Similarly, the Periodic Table View and Element Button will be integrated together, as the Periodic Table View will be populated by Element Buttons, and the integration test will check if the buttons are ordered correctly and don't cause clashes. Element Button and Element View will be integrated as well, and it will check if clicking on an Element Button will lead to the correct Element View. Element View and Current Element will be integrated together as well, and the tests will check if Element View can fetch the correct infromation from Current Element for display.</div>
+
+## Testing Frameworks
+We will be using JUnit to create our unit tests and the integration tests, while we will be testing our UI using the Espresso Testing Framework. 
