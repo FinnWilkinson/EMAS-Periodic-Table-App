@@ -71,7 +71,7 @@ The app will be available on the app-store hence anyone could make use of it.
         * Click on the Help tab
         * Help page is displayed
     * View the Settings page
-        * Open navigation drawer but swiping or clicking the icon
+        * Open navigation drawer by swiping or clicking the icon
         * Click on the Settings tab
         * Settings page is displayed
         * Use the toggle to change default instruments
