@@ -1,4 +1,14 @@
 # OO Design and UML
+#### High-Level Architecture Diagram:
+![HighLevelArchitectureDiagram](https://bitbucket.org/MasterFinnius/periodic-table-app/raw/c83d7864c86d5eddccfbcf98449c651df04af29b/Portfolio-A/images/HighLevelArchitectureDiagram.png "HighLevelArchitectureDiagram")
+
+The _'Periodic table app'_ represents the main high level systems within the app. The user will interact with the interactive GUI. Anything the user can do will have an associated _'Event Handler'_ to deal with user inputs. Depending on if the user decides to search, or click on an element button, this is passed to the relevant section. Each of these will then access the database via the _'Database open helper class'_ and the _'Database Access Class'_. These two classes open the database file (we are not using a web based server as the client wants the app to be offline) and deal with the SQL requests required to pull the necessary information.  
+
+The _'Element Database'_ represents the local database file that holds the element information that we will load in to show to the user. Only needed information is fetched at any time using SQL fetch requests. The database is not active or web based due to the app needing to be offline via the client's request.
+
+
+
+
 #### Static UML diagram:
 ![StaticUML](images/StaticUML.png "StaticUML")
 
