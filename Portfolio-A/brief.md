@@ -12,9 +12,9 @@ The client we are working with is the European Microbeam Analysis Society, *EMAS
 The application domain of the product in which we are going to develop is that of the EMAS group. This comes under that of Earth Sciences and Chemistry.
 
 ### The Problem
-Currently the EMAS group is using A3 sized periodic tables, and large data books to look up the necessary data. This is a laborious task especially when each individual element can have different X-Ray position units dependant on the machine that is being used, and which crystals are used within this machine.
+Currently the EMAS group is using A3 sized periodic tables, and large data books to look up the necessary data. This is a laborious task especially when each individual element can have different X-ray position units dependant on the machine that is being used, and which crystals are used within this machine.
 
-The second problem is that of converting units between different machines. There are two large manufacturers of Electron Microscopes, *JEOL* and *CAMECA*. Both companies use different frames of reference for x-ray positions across a spectrometer. This can make it confusing to analyse data, and brings added difficultly when having to compare data between the machines.
+The second problem is that of converting units between different machines. There are two large manufacturers of Electron Microscopes, *JEOL* and *CAMECA*. Both companies use different frames of reference for X-ray positions across a spectrometer. This can make it confusing to analyse data, and brings added difficultly when having to compare data between the machines.
 
 ### Our Vision / Solution
 
