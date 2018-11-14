@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="73dp">
+    tools:layout_editor_absoluteY="73dp"
+    android:background="@color/niceblue">
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/Table_View"
-        android:layout_width="577dp"
+        android:layout_width="576dp"
         android:layout_height="288dp"
-        app:columnCount="18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478"
         app:orientation="horizontal"
+        app:columnCount="18"
         app:rowCount="8"
         app:rowOrderPreserved="true">
 
@@ -27,13 +26,13 @@
             android:id="@+id/H"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/grey"
             android:text="@string/el001"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="0"
-             />
+            app:layout_row="0" />
 
         <Space
             android:layout_width="32dp"
@@ -135,1142 +134,1225 @@
             android:id="@+id/He"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/blue"
             android:text="@string/el002"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="17"
-            app:layout_row="0"
-            />
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/Li"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/orangey"
             android:text="@string/el003"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
+
         <Button
             android:id="@+id/Be"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/redish"
             android:text="@string/el004"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="1"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
+
         <Button
             android:id="@+id/B"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/green"
             android:text="@string/el005"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="12"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/C"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/grey"
             android:text="@string/el006"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="13"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/N"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/grey"
             android:text="@string/el007"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="14"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
+
         <Button
             android:id="@+id/O"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/grey"
             android:text="@string/el008"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="15"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
+
         <Button
             android:id="@+id/F"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/lightblue"
             android:text="@string/el009"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="16"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
+
         <Button
             android:id="@+id/Ne"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/blue"
             android:text="@string/el010"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="17"
-            app:layout_row="1"
-            />
+            app:layout_row="1" />
+
         <Button
             android:id="@+id/Na"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/orangey"
             android:text="@string/el011"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/Mg"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/redish"
             android:text="@string/el012"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="1"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/Al"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkgreen"
             android:text="@string/el013"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="12"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/Si"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/green"
             android:text="@string/el014"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="13"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/P"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/grey"
             android:text="@string/el015"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="14"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/S"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/grey"
             android:text="@string/el016"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="15"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/Cl"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/lightblue"
             android:text="@string/el017"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="16"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/Ar"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/blue"
             android:text="@string/el018"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="17"
-            app:layout_row="2"
-            />
+            app:layout_row="2" />
+
         <Button
             android:id="@+id/K"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/orangey"
             android:text="@string/el019"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Ca"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/redish"
             android:text="@string/el020"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="1"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Sc"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el021"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="2"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Ti"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el022"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="3"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/V"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el023"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="4"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Cr"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el024"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="5"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Mn"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el025"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="6"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Fe"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el026"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="7"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Co"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el027"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="8"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Ni"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el028"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="9"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Cu"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el029"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="10"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Zn"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el030"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="11"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Ga"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkgreen"
             android:text="@string/el031"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="12"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Ge"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/green"
             android:text="@string/el032"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="13"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/As"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/green"
             android:text="@string/el033"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="14"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Se"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/grey"
             android:text="@string/el034"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="15"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Br"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/lightblue"
             android:text="@string/el035"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="16"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Kr"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/blue"
             android:text="@string/el036"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="17"
-            app:layout_row="3"
-            />
+            app:layout_row="3" />
+
         <Button
             android:id="@+id/Rb"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/orangey"
             android:text="@string/el037"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Sr"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/redish"
             android:text="@string/el038"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="1"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Y"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el039"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="2"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Zr"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el040"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="3"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Nb"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el041"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="4"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Mo"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el042"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="5"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Tc"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el043"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="6"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Ru"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el044"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="7"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Rh"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el045"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="8"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Pd"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el046"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="9"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Ag"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el047"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="10"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Cd"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el048"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="11"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/In"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkgreen"
             android:text="@string/el049"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="12"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Sn"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkgreen"
             android:text="@string/el050"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="13"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Sb"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/green"
             android:text="@string/el051"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="14"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Te"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/green"
             android:text="@string/el052"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="15"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/I"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/lightblue"
             android:text="@string/el053"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="16"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Xe"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/blue"
             android:text="@string/el054"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="17"
-            app:layout_row="4"
-            />
+            app:layout_row="4" />
+
         <Button
             android:id="@+id/Cs"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/orangey"
             android:text="@string/el055"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Ba"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/redish"
             android:text="@string/el056"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="1"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/La"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el057"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="2"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Ce"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el058"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="3"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Pr"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el059"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="4"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Nd"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el060"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="5"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Pm"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el061"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="6"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Sm"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el062"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="7"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Eu"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el063"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="8"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Gd"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el064"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="9"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Tb"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el065"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="10"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Dy"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el066"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="11"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Ho"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el067"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="12"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Er"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el068"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="13"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Tm"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el069"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="14"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Yb"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el070"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="15"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Lu"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkred"
             android:text="@string/el071"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="16"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Hf"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el072"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="3"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Ta"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el073"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="4"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/W"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el074"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="5"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Re"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el075"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="6"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Os"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el076"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="7"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Ir"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el077"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="8"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Pt"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el078"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="9"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Au"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el079"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="10"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Hg"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/purple"
             android:text="@string/el080"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="11"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Tl"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkgreen"
             android:text="@string/el081"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="12"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Pb"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkgreen"
             android:text="@string/el082"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="13"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Bi"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkgreen"
             android:text="@string/el083"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="14"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Po"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/green"
             android:text="@string/el084"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="15"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/At"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/lightblue"
             android:text="@string/el085"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="16"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Rn"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/blue"
             android:text="@string/el086"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="17"
-            app:layout_row="5"
-            />
+            app:layout_row="5" />
+
         <Button
             android:id="@+id/Fr"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/orangey"
             android:text="@string/el087"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Ra"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/redish"
             android:text="@string/el088"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="1"
-            app:layout_row="6"
-            />
+            app:layout_row="6" />
+
         <Button
             android:id="@+id/Ac"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el089"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="2"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Th"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el090"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="3"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Pa"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el091"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="4"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/U"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el092"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="5"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Np"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el093"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="6"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Pu"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el094"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="7"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Am"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el095"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="8"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Cm"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el096"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="9"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Bk"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el097"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="10"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Cf"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el098"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="11"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Es"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el099"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="12"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Fm"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el100"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="13"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Md"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el101"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="14"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/No"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el102"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="15"
-            app:layout_row="7"
-            />
+            app:layout_row="7" />
+
         <Button
             android:id="@+id/Lr"
             android:layout_width="32dp"
             android:layout_height="36dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/darkpurple"
             android:text="@string/el103"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_column="16"
-            app:layout_row="7"
-            />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            app:layout_row="7" />
 
 
 
