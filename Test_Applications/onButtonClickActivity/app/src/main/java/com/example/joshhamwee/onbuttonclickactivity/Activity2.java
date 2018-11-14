@@ -9,6 +9,7 @@ public class Activity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Integer id;
+        System.out.println("Test");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
 
@@ -16,6 +17,7 @@ public class Activity2 extends AppCompatActivity {
         //if(dataFromMain != null) {
         id = dataFromMain.getInt("id");
         //}
+        System.out.println(id);
 
         currentElement current = new currentElement(id);
 

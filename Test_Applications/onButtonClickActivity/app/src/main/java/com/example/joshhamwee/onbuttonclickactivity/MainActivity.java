@@ -7,35 +7,46 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import java.lang.reflect.Array;
+
 public class MainActivity extends AppCompatActivity {
-    private Button buttonHydrogen;
-    private Button buttonHelium;
+
+    private static final int[] button_ids = {
+            R.id.b1,
+            R.id.b2,
+            R.id.b3,
+            R.id.b4,
+    };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonHydrogen = (Button) findViewById(R.id.openActivity2_0);
-        buttonHelium = (Button) findViewById(R.id.openActivity2_1);
-        buttonHydrogen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivity2(1);
-            }
-        });
-        buttonHelium.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivity2(2);
-            }
-        });
+        for (final int id : button_ids) {
+            Button button = (Button) findViewById(id);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    System.out.println(id);
+                    openActivity2(id);
+
+                }
+            });
+        }
     }
+
 
     public void openActivity2(Integer id){
         Intent intent = new Intent(this,Activity2.class);
         intent.putExtra("id",id);
         startActivity(intent);
     }
+
 
 }
