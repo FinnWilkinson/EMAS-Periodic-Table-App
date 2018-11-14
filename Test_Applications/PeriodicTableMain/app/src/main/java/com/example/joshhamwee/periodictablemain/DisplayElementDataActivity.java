@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+
 public class DisplayElementDataActivity extends AppCompatActivity {
 
     @Override
@@ -19,9 +20,12 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         //Create an element object that relates to the specific ID
         CurrentElement currentElement = new CurrentElement(id);
 
+        //fetched symbol for Carbon and displays on screen when any button is clicked
+        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
+
+
         //Temporary TextView with element name
         TextView ElementName = findViewById(R.id.ElementName);
-        ElementName.setText(currentElement.name);
-
+        ElementName.setText(currentElement.databaseAcc(databaseAccess));
     }
 }
