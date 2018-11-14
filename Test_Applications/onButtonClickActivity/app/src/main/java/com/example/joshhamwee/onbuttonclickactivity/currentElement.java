@@ -5,8 +5,11 @@ public class currentElement{
     Integer id;
 
     public currentElement(Integer id){
-        if(id == 1) this.name = "Helium";
-        if(id == 2) this.name = "Hydrogen";
+        if(id == R.id.b1) this.name = "Helium";
+        if(id == R.id.b2) this.name = "Hydrogen";
+        if(id == R.id.b3) this.name = "Lithium";
+        if(id == R.id.b4) this.name = "Nitrogen";
+
     }
 
     public String getName(){
