@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">customAppBar</string>
+    <string name="layout_thing1">appbar_scrolling_view_behavior</string>
+    <string name="layout_thing2">customAppBar</string>
 </resources>
