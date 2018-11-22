@@ -56,12 +56,15 @@ public class DatabaseAccess {
      *
      * @return a List of quotes
      */
-    public String getAtomicSymbol(String atomicSym) {
-        String sqlQuery = "SELECT Atomic_Number FROM 'Element_Data v0' WHERE Name = '" + atomicSym + "'" ;
+    public List<String> getElementData(String atomicSym) {
+        List<String> data = new ArrayList<>();
+        String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Name = '" + atomicSym + "'" ;
         Cursor cursor = database.rawQuery(sqlQuery, null);
         cursor.moveToFirst();
-        String symbol = (cursor.getString(0));
+        for(int i = 0; i < 30; i++) {
+            data.add(cursor.getString(i));
+        }
         cursor.close();
-        return symbol;
+        return data;
     }
 }

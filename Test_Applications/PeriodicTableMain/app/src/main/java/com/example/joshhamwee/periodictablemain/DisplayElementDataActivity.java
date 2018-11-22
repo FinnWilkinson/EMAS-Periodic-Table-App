@@ -28,6 +28,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
         //Temporary TextView with element name
         TextView ElementName = findViewById(R.id.ElementName);
-        ElementName.setText(currentElement.atomicSymbol);
+        ElementName.setText(currentElement.boilingPoint);
     }
 }
