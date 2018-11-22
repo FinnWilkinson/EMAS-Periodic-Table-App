@@ -17,15 +17,17 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         Bundle dataFromMain = getIntent().getExtras();
         id = dataFromMain.getInt("ElementID");
 
-        //Create an element object that relates to the specific ID
-        CurrentElement currentElement = new CurrentElement(id);
-
-        //fetched symbol for Carbon and displays on screen when any button is clicked
+        //create a new database instance
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
+
+        //Create an element object that relates to the specific ID
+        CurrentElement currentElement = new CurrentElement(id, databaseAccess);
+
+
 
 
         //Temporary TextView with element name
         TextView ElementName = findViewById(R.id.ElementName);
-        ElementName.setText(currentElement.databaseAcc(databaseAccess));
+        ElementName.setText(currentElement.atomicSymbol);
     }
 }
