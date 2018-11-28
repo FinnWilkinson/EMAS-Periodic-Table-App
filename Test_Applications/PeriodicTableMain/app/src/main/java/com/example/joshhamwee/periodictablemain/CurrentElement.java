@@ -61,4 +61,7 @@ public class CurrentElement {
         this.mBeta = data.get(28);
         this.mAlpha = data.get(29);
     }
+
+    //need to make a function to change units. can do Float.parseFloat to convert string to float
+    //string cannot be empty
 }
