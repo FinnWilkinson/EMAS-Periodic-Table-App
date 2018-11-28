@@ -23,11 +23,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         //Create an element object that relates to the specific ID
         CurrentElement currentElement = new CurrentElement(id, databaseAccess);
 
-
-
-
         //Temporary TextView with element name
         TextView ElementName = findViewById(R.id.ElementName);
-        ElementName.setText(currentElement.boilingPoint);
+        ElementName.setText(currentElement.atomicSymbol);
     }
 }
