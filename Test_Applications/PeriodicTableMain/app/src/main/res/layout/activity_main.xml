@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="73dp"
-    android:background="@color/niceblue">
+    android:background="@color/testgrey">
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/Table_View"

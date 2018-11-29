@@ -16,4 +16,6 @@
     <color name="blue">#088da5</color>
     <color name="darkred">#990000</color>
     <color name="darkpurple">#794044</color>
+    <color name="testgrey">#2B2B2B</color>
+    <color name="white">#FFFFFF</color>
 </resources>
