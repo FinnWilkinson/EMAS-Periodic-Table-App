@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         //For loop to create onClickListeners for each button
         //Override the onClick method to openActivityDisplayElementData
         for (final int id:button_ids){
-            Button button = findViewById(id);
+            ImageButton button = (ImageButton) findViewById(id);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
