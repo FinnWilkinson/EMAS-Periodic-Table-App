@@ -86,19 +86,19 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/H"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@color/grey"
-                android:text="@string/el001"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="12sp"
-                android:textStyle="bold"
+                android:contentDescription="@string/el001"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/el001"/>
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline"
@@ -108,20 +108,19 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.05555555555555555555555555555556" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/He"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@color/blue"
-                android:text="@string/el002"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="12sp"
-                android:textStyle="bold"
+                android:contentDescription="@string/el002"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="@string/el002" />
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/el002" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline2"
