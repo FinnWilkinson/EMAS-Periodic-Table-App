@@ -1,26 +1,25 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/code
+    working_directory: ~/Test_Applications/PeriodicTableMain
     docker:
       - image: circleci/android:api-28-alpha
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
-      - checkout:
-          path: ~/Test_Applications/PeriodicTableMain
+      - checkout
       - restore_cache:
-          key: jars-{{ checksum "Test_Applications/PeriodicTableMain/build.gradle" }}-{{ checksum  "Test_Applications/PeriodicTableMain/app/build.gradle" }}
-      - run:
-        name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-         command: sudo chmod +x ./gradlew
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       #- run:
-      #    name: Download Dependencies
-      #    command: ./Test_Applications/PeriodicTableMain/gradlew androidDependencies
+      #  name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+      #   command: sudo chmod +x ./gradlew
+      - run:
+          name: Download Dependencies
+          command: /.gradlew androidDependencies
       - save_cache:
           paths:
-            - ~/Test_Applications/PeriodicTableMain/.gradle
-          key: jars-{{ checksum "Test_Applications/PeriodicTableMain/build.gradle" }}-{{ checksum  "Test_Applications/PeriodicTableMain/app/build.gradle" }}
+            - ~/.gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       #- run:
       #    name: Run Tests
       #    command: ./gradlew lint test
