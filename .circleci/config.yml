@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/periodic-table-app/
+    working_directory: ~/periodic-table-app/Test_Applications/PeriodicTableMain/
     docker:
       - image: circleci/android:api-26-alpha
     environment:
