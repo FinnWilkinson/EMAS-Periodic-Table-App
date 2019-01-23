@@ -1,6 +1,7 @@
 package com.example.joshhamwee.periodictablemain;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        ImageButton searchButton = (ImageButton) findViewById(R.id.imageImageButton6);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSearchActivity();
+            }
+        });
     }
 
 
@@ -42,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,DisplayElementDataActivity.class); //Create the intent that opens the new activity
         intent.putExtra("ElementID",id);  //Put extra data into the intent so that next activity knows what element was clicked on
         startActivity(intent); //Execute the intent
+    }
+
+    private void openSearchActivity(){
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
     }
 
 }

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PeriodicTableMain</string>
+    <string-array name="array_elements">
+        <item>Hydrogen (H)</item>
+        <item>Helium (He)</item>
+        <item>Lithium (Li)</item>
+        <item>Beryllium (Be)</item>
+        <item>Boron (B)</item>
+        <item>Carbon (C)</item>
+        <item>Hydrogen (H)</item>
+        <item>Hydrogen (H)</item>
+        <item>Hydrogen (H)</item>
+
+    </string-array>
 </resources>
