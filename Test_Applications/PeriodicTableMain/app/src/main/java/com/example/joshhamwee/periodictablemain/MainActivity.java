@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Array of cutton id's to iterate over all buttons and set on click listeners
     private final int[] button_ids = {
             R.id.H,R.id.He,R.id.Li,R.id.Be,R.id.B,R.id.C,R.id.N,R.id.O,R.id.F,R.id.Ne,R.id.Na,R.id.Mg,R.id.Al,R.id.Si,R.id.P,R.id.S,R.id.Cl,R.id.Ar,
             R.id.K,R.id.Ca,R.id.Sc,R.id.Ti,R.id.V,R.id.Cr,R.id.Mn,R.id.Fe,R.id.Co,R.id.Ni,R.id.Cu,R.id.Zn,R.id.Ga,R.id.Ge,R.id.As,R.id.Se,R.id.Br,R.id.Kr,
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+        //Create a button listener to open the search activity
         ImageButton searchButton = (ImageButton) findViewById(R.id.imageImageButton6);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,13 +48,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    //When an element is clicked on, open new activiuty
     private void openActivityDisplayElementData(int id){
         Intent intent = new Intent(this,DisplayElementDataActivity.class); //Create the intent that opens the new activity
         intent.putExtra("ElementID",id);  //Put extra data into the intent so that next activity knows what element was clicked on
         startActivity(intent); //Execute the intent
     }
 
+    //Handle on click listener for opening search activity
     private void openSearchActivity(){
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);

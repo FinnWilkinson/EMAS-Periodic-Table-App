@@ -1,10 +1,13 @@
 package com.example.joshhamwee.periodictablemain;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -19,15 +22,27 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        //Assign the list view from the xml a variable
         ListView elementsList = (ListView) findViewById(R.id.listViewElements);
         ArrayList<String> arrayElements = new ArrayList<>();
-        arrayElements.addAll(Arrays.asList(getResources().getStringArray(R.array.array_elements)));
+        arrayElements.addAll(Arrays.asList(getResources().getStringArray(R.array.array_elements))); //Add elements to the list view
 
+        //Create new array adapter for the list View
         adapter = new ArrayAdapter<String>(
                 SearchActivity.this,
                 android.R.layout.simple_list_item_1,
                 arrayElements);
         elementsList.setAdapter(adapter);
+
+        //Create an onClickListener for each item that opens up a new activity
+        elementsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = (String) parent.getItemAtPosition(position);
+                handelListItemClick(selectedItem);
+            }
+        });
     }
 
     @Override
@@ -50,5 +65,12 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
         return super.onCreateOptionsMenu(menu);
+    }
+
+    private void handelListItemClick(String selectedItem) {
+        String[] splitElementName = selectedItem.split(" - ");
+        Intent intent = new Intent(this,DisplayElementDataActivity.class); //Create the intent that opens the new activity
+        intent.putExtra("ElementIDSearch",Integer.parseInt(splitElementName[2]));  //Put extra data into the intent so that next activity knows what element was clicked on
+        startActivity(intent); //Execute the intent
     }
 }
