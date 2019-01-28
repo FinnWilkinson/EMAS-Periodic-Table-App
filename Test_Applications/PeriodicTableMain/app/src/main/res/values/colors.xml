@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#2B2B2B</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="niceblue">#133337</color>
@@ -19,4 +19,5 @@
     <color name="testgrey">#2B2B2B</color>
     <color name="white">#FFFFFF</color>
     <color name="lightgrey">#AAAAAA</color>
+    <color name="menuBG">#000000</color>
 </resources>
