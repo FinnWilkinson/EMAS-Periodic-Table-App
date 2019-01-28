@@ -8,6 +8,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -36,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setUpToolbar();
+        setUpToolbar(); //Function that handles the toolbar, see below
+
+        //FInd the navigation view and set onlick listeners for each item in the navigation drawer
         navigationView = (NavigationView) findViewById(R.id.navigation_menu);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -45,9 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.home:
                         Toast.makeText(MainActivity.this, "YOU CLICKED A THING AND NOW IM HERE HELLO", Toast.LENGTH_SHORT).show();
                         break;
-                    //add more cases here
+                    //TODO add more cases here
                 }
-
                 return false;
             }
         });
@@ -63,15 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
-        //Create a button listener to open the search activity
-        ImageButton searchButton = (ImageButton) findViewById(R.id.imageImageButton6);
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSearchActivity();
-            }
-        });
     }
 
     //When an element is clicked on, open new activiuty
@@ -81,20 +75,38 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent); //Execute the intent
     }
 
-    //Handle on click listener for opening search activity
-    private void openSearchActivity(){
-        Intent intent = new Intent(this, SearchActivity.class);
-        startActivity(intent);
-    }
 
     private void setUpToolbar() {
+        //Find the toolbar by the specific id
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //Start the drawer layout and add an action listener to the button to open the drawer
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
 
+    //Create an option for the search button in the menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
+        return true;
+    }
+
+    //When the search button is clicked, start the search
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.search_m:
+                //start search dialog
+                super.onSearchRequested();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 }

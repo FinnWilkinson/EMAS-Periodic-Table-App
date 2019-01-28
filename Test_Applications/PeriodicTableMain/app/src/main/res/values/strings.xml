@@ -2,16 +2,5 @@
     <string name="app_name"> </string>
     <string name="search_icon">Search icon</string>
     <string name="menuuuuu">MENUUUUU</string>
-    <string-array name="array_elements">
-        <item>Hydrogen - H - 1</item>
-        <item>Helium - He - 2</item>
-        <item>Lithium - Li - 3</item>
-        <item>Beryllium - Be - 4</item>
-        <item>Boron - B - 5</item>
-        <item>Carbon - C - 6</item>
-        <item>Nitrogen - N - 7</item>
-        <item>Oxygen - O - 8</item>
-        <item>Flourine - F - 9</item>
-
-    </string-array>
+    <string name="search_hint">Please search for an element</string>
 </resources>
