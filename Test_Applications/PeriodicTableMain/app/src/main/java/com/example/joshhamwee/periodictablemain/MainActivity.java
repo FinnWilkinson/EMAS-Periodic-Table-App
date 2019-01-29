@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private final int[] button_ids = {
             R.id.H,R.id.He,R.id.Li,R.id.Be,R.id.B,R.id.C,R.id.N,R.id.O,R.id.F,R.id.Ne,R.id.Na,R.id.Mg,R.id.Al,R.id.Si,R.id.P,R.id.S,R.id.Cl,R.id.Ar,
             R.id.K,R.id.Ca,R.id.Sc,R.id.Ti,R.id.V,R.id.Cr,R.id.Mn,R.id.Fe,R.id.Co,R.id.Ni,R.id.Cu,R.id.Zn,R.id.Ga,R.id.Ge,R.id.As,R.id.Se,R.id.Br,R.id.Kr,
-            R.id.Rb,R.id.Sr,R.id.Y,R.id.Zr,R.id.Nb,R.id.Mo,R.id.Tc,R.id.Ru,R.id.Rh,R.id.Pd
+            R.id.Rb,R.id.Sr,R.id.Y,R.id.Zr,R.id.Nb,R.id.Mo,R.id.Tc,R.id.Ru,R.id.Rh,R.id.Pd, R.id.Ag, R.id.Cd, R.id.In, R.id.Sn, R.id.Sb, R.id.Te, R.id.I, R.id.Xe,
+            R.id.Cs, R.id.Ba, R.id.Hf, R.id.Ta, R.id.W, R.id.Re, R.id.Os, R.id.Ir, R.id.Pt, R.id.Au, R.id.Hg, R.id.Tl, R.id.Pb, R.id.Bi, R.id.Po, R.id.At, R.id.Rn,
+            R.id.Fr, R.id.Ra
     };
 
     @Override
@@ -40,16 +42,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setUpToolbar(); //Function that handles the toolbar, see below
 
-        //FInd the navigation view and set onlick listeners for each item in the navigation drawer
+        //Find the navigation view and set on click listeners for each item in the navigation drawer
         navigationView = (NavigationView) findViewById(R.id.navigation_menu);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.home:
-                        Toast.makeText(MainActivity.this, "YOU CLICKED A THING AND NOW IM HERE HELLO", Toast.LENGTH_SHORT).show();
+                        //should take to home page
+                        Toast.makeText(MainActivity.this, "YOU CLICKED A THING", Toast.LENGTH_SHORT).show();
                         break;
-                    //TODO add more cases here
+                    case R.id.graph:
+                        //link to energy graph activity
+                        break;
+                    case R.id.help:
+                        //link to help activity
+                        openHelpActivity();
+                        break;
                 }
                 return false;
             }
@@ -68,13 +77,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //When an element is clicked on, open new activiuty
+    //When an element is clicked on, open new activity
     private void openActivityDisplayElementData(int id){
         Intent intent = new Intent(this,DisplayElementDataActivity.class); //Create the intent that opens the new activity
         intent.putExtra("ElementID",id);  //Put extra data into the intent so that next activity knows what element was clicked on
         startActivity(intent); //Execute the intent
     }
 
+    private void openHelpActivity(){
+        Intent intent = new Intent(this, HelpActivity.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
+    }
 
     private void setUpToolbar() {
         //Find the toolbar by the specific id
