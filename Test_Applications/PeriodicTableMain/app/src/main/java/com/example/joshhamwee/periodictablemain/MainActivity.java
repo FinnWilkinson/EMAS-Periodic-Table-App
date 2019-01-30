@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
             R.id.K,R.id.Ca,R.id.Sc,R.id.Ti,R.id.V,R.id.Cr,R.id.Mn,R.id.Fe,R.id.Co,R.id.Ni,R.id.Cu,R.id.Zn,R.id.Ga,R.id.Ge,R.id.As,R.id.Se,R.id.Br,R.id.Kr,
             R.id.Rb,R.id.Sr,R.id.Y,R.id.Zr,R.id.Nb,R.id.Mo,R.id.Tc,R.id.Ru,R.id.Rh,R.id.Pd, R.id.Ag, R.id.Cd, R.id.In, R.id.Sn, R.id.Sb, R.id.Te, R.id.I, R.id.Xe,
             R.id.Cs, R.id.Ba, R.id.Hf, R.id.Ta, R.id.W, R.id.Re, R.id.Os, R.id.Ir, R.id.Pt, R.id.Au, R.id.Hg, R.id.Tl, R.id.Pb, R.id.Bi, R.id.Po, R.id.At, R.id.Rn,
-            R.id.Fr, R.id.Ra
+            R.id.Fr, R.id.Ra, R.id.Ac, R.id.Rf, R.id.Db, R.id.Sg, R.id.Bh, R.id.Hs, R.id.Mt, R.id.Ds, R.id.Rg, R.id.Cn, R.id.Nh, R.id.Fl, R.id.Mc, R.id.Lv,
+            R.id.Ts, R.id.Og, R.id.Ce, R.id.Pr, R.id.Nd, R.id.Pm, R.id.Sm, R.id.Eu, R.id.Gd, R.id.Tb, R.id.Dy, R.id.Ho, R.id.Er, R.id.Tm, R.id.Yb, R.id.Lu, R.id.Th,
+            R.id.Pa, R.id.U, R.id.Np, R.id.Pu, R.id.Am, R.id.Cm, R.id.Bk, R.id.Cf, R.id.Es, R.id.Fm, R.id.Md, R.id.No, R.id.Lr
     };
 
     @Override
