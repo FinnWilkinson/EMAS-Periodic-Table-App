@@ -20,4 +20,13 @@
     <color name="white">#FFFFFF</color>
     <color name="lightgrey">#AAAAAA</color>
     <color name="menuBG">#000000</color>
+    <color name="pastelYellow">#F3C35B</color>
+    <color name="pastelGreen">#54C796</color>
+    <color name="borderColor">#ffffff</color>
+    <color name="pastelPink">#f65f85</color>
+    <color name="pastelOrange">#fda053</color>
+    <color name="pastelBlue">#00aac3</color>
+    <color name="pastelPurple">#b66edf</color>
+    <color name="pastelGrey">#bdbdbd</color>
+
 </resources>

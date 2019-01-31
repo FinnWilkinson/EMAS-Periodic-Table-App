@@ -5,12 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/testgrey"
+    android:background="@color/white"
     tools:concontentDescription=".MainActivity"
     tools:layout_editor_absoluteY="73dp">
 
     <!-- so the toolbar shows up -->
     <include layout="@layout/menu_layout" />
+    <include layout="@layout/logo_layout"/>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -67,15 +68,15 @@
                 android:id="@+id/H"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/grey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour1"
                 android:contentDescription="@string/el001"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el001"/>
+                app:srcCompat="@drawable/el001" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline"
@@ -89,14 +90,14 @@
                 android:id="@+id/He"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/blue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour6"
                 android:contentDescription="@string/el002"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
                 app:srcCompat="@drawable/el002" />
 
             <android.support.constraint.Guideline
@@ -118,15 +119,15 @@
                 android:id="@+id/Li"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/orangey"
-                android:contentDescription="@string/el003"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el003"/>
+                android:background="@drawable/colour1"
+                android:contentDescription="@string/el003"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/el003" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline3"
@@ -140,14 +141,14 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:background="@color/orange"
+                android:background="@drawable/colour2"
                 android:contentDescription="@string/el004"
                 android:scaleType="fitCenter"
+                app:srcCompat="@drawable/el004"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline4"
                 app:layout_constraintStart_toEndOf="@+id/guideline3"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/el004" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline4"
@@ -160,15 +161,15 @@
                 android:id="@+id/B"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/green"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el005"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline6"
                 app:layout_constraintStart_toEndOf="@+id/guideline5"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el005"/>
+                app:srcCompat="@drawable/el005" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline5"
@@ -181,15 +182,15 @@
                 android:id="@+id/C"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el006"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/el006"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline7"
                 app:layout_constraintStart_toEndOf="@+id/guideline6"
-                app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el006"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline6"
@@ -202,15 +203,15 @@
                 android:id="@+id/N"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el007"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toEndOf="@+id/guideline7"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el007"/>
+                app:srcCompat="@drawable/el007" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline7"
@@ -223,15 +224,15 @@
                 android:id="@+id/O"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el008"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline9"
                 app:layout_constraintStart_toEndOf="@+id/guideline8"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el008"/>
+                app:srcCompat="@drawable/el008" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline8"
@@ -244,15 +245,15 @@
                 android:id="@+id/F"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el009"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline10"
                 app:layout_constraintStart_toEndOf="@+id/guideline9"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el009"/>
+                app:srcCompat="@drawable/el009" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline9"
@@ -265,15 +266,15 @@
                 android:id="@+id/Ne"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/blue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour6"
                 android:contentDescription="@string/el010"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/guideline10"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el010"/>
+                app:srcCompat="@drawable/el010" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline10"
@@ -292,15 +293,15 @@
                 android:id="@+id/Na"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/orangey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour1"
                 android:contentDescription="@string/el011"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline11"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el011"/>
+                app:srcCompat="@drawable/el011" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline11"
@@ -314,7 +315,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:background="@color/orange"
+                android:background="@drawable/colour2"
                 android:contentDescription="@string/el012"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -334,15 +335,15 @@
                 android:id="@+id/Al"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el013"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/el013"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline14"
                 app:layout_constraintStart_toEndOf="@+id/guideline13"
-                app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el013"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline13"
@@ -355,15 +356,15 @@
                 android:id="@+id/Si"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/green"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el014"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline15"
                 app:layout_constraintStart_toEndOf="@+id/guideline14"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el014"/>
+                app:srcCompat="@drawable/el014" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline14"
@@ -376,15 +377,15 @@
                 android:id="@+id/P"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el015"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline16"
                 app:layout_constraintStart_toEndOf="@+id/guideline15"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el015"/>
+                app:srcCompat="@drawable/el015" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline15"
@@ -397,15 +398,15 @@
                 android:id="@+id/S"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el016"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline17"
                 app:layout_constraintStart_toEndOf="@+id/guideline16"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el016"/>
+                app:srcCompat="@drawable/el016" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline16"
@@ -418,15 +419,15 @@
                 android:id="@+id/Cl"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el017"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline18"
                 app:layout_constraintStart_toEndOf="@+id/guideline17"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el017"/>
+                app:srcCompat="@drawable/el017" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline17"
@@ -439,15 +440,15 @@
                 android:id="@+id/Ar"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/blue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour6"
                 android:contentDescription="@string/el018"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el018"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/guideline18"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el018" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline18"
@@ -466,15 +467,15 @@
                 android:id="@+id/K"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/orangey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour1"
                 android:contentDescription="@string/el019"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el019"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline19"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el019" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline19"
@@ -488,7 +489,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:background="@color/orange"
+                android:background="@drawable/colour2"
                 android:contentDescription="@string/el020"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -508,15 +509,15 @@
                 android:id="@+id/Sc"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el021"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el021"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline21"
                 app:layout_constraintStart_toEndOf="@+id/guideline20"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el021" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline21"
@@ -529,15 +530,15 @@
                 android:id="@+id/Ti"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el022"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el022"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline22"
                 app:layout_constraintStart_toEndOf="@+id/guideline21"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el022" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline22"
@@ -550,15 +551,15 @@
                 android:id="@+id/V"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el023"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el023"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline23"
                 app:layout_constraintStart_toEndOf="@+id/guideline22"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el023" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline23"
@@ -571,15 +572,15 @@
                 android:id="@+id/Cr"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el024"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el024"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline24"
                 app:layout_constraintStart_toEndOf="@+id/guideline23"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el024" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline24"
@@ -592,15 +593,15 @@
                 android:id="@+id/Mn"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el025"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el025"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline25"
                 app:layout_constraintStart_toEndOf="@+id/guideline24"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el025" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline25"
@@ -613,15 +614,15 @@
                 android:id="@+id/Fe"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el026"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el026"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline26"
                 app:layout_constraintStart_toEndOf="@+id/guideline25"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el026" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline26"
@@ -634,15 +635,15 @@
                 android:id="@+id/Co"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el027"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el027"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline27"
                 app:layout_constraintStart_toEndOf="@+id/guideline26"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el027" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline27"
@@ -655,15 +656,15 @@
                 android:id="@+id/Ni"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el028"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el028"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline28"
                 app:layout_constraintStart_toEndOf="@+id/guideline27"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el028" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline28"
@@ -676,15 +677,15 @@
                 android:id="@+id/Cu"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el029"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el029"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline29"
                 app:layout_constraintStart_toEndOf="@+id/guideline28"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el029" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline29"
@@ -697,15 +698,15 @@
                 android:id="@+id/Zn"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el030"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
                 app:srcCompat="@drawable/el030"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline30"
                 app:layout_constraintStart_toEndOf="@+id/guideline29"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline30"
@@ -718,15 +719,15 @@
                 android:id="@+id/Ga"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el031"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el031"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline31"
                 app:layout_constraintStart_toEndOf="@+id/guideline30"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el031" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline31"
@@ -739,15 +740,15 @@
                 android:id="@+id/Ge"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/green"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el032"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el032"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline32"
                 app:layout_constraintStart_toEndOf="@+id/guideline31"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el032" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline32"
@@ -760,15 +761,15 @@
                 android:id="@+id/As"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/green"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el033"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el033"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline33"
                 app:layout_constraintStart_toEndOf="@+id/guideline32"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el033" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline33"
@@ -781,15 +782,15 @@
                 android:id="@+id/Se"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el034"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el034"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline34"
                 app:layout_constraintStart_toEndOf="@+id/guideline33"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el034" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline34"
@@ -802,15 +803,15 @@
                 android:id="@+id/Br"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el035"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el035"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline35"
                 app:layout_constraintStart_toEndOf="@+id/guideline34"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el035" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline35"
@@ -823,15 +824,15 @@
                 android:id="@+id/Kr"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/blue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour6"
                 android:contentDescription="@string/el036"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el036"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/guideline35"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el036" />
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
@@ -843,11 +844,11 @@
                 android:id="@+id/Rb"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/orangey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour1"
+                app:srcCompat="@drawable/el037"
                 android:contentDescription="@string/el037"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el037"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline36"
                 app:layout_constraintStart_toStartOf="parent"
@@ -858,14 +859,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.05555555555555555555555555555556" />
+                app:layout_constraintGuide_percent="0.057224605" />
 
             <ImageButton
                 android:id="@+id/Sr"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:background="@color/orange"
+                android:background="@drawable/colour2"
                 android:contentDescription="@string/el038"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -885,15 +886,15 @@
                 android:id="@+id/Y"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el039"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el039"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline38"
                 app:layout_constraintStart_toEndOf="@+id/guideline37"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el039" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline38"
@@ -906,15 +907,15 @@
                 android:id="@+id/Zr"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el040"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el040"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline39"
                 app:layout_constraintStart_toEndOf="@+id/guideline38"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el040" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline39"
@@ -927,15 +928,15 @@
                 android:id="@+id/Nb"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el041"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el041"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline40"
                 app:layout_constraintStart_toEndOf="@+id/guideline39"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el041" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline40"
@@ -948,15 +949,15 @@
                 android:id="@+id/Mo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el042"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el042"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline41"
                 app:layout_constraintStart_toEndOf="@+id/guideline40"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el042" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline41"
@@ -969,15 +970,15 @@
                 android:id="@+id/Tc"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el043"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el043"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline42"
                 app:layout_constraintStart_toEndOf="@+id/guideline41"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el043" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline42"
@@ -990,15 +991,15 @@
                 android:id="@+id/Ru"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el044"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el044"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline43"
                 app:layout_constraintStart_toEndOf="@+id/guideline42"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el044" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline43"
@@ -1011,15 +1012,15 @@
                 android:id="@+id/Rh"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el045"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el045"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline44"
                 app:layout_constraintStart_toEndOf="@+id/guideline43"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el045" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline44"
@@ -1032,15 +1033,15 @@
                 android:id="@+id/Pd"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el046"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el046"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline45"
                 app:layout_constraintStart_toEndOf="@+id/guideline44"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el046" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline45"
@@ -1053,15 +1054,15 @@
                 android:id="@+id/Ag"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el047"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el047"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline46"
                 app:layout_constraintStart_toEndOf="@+id/guideline45"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el047" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline46"
@@ -1074,15 +1075,15 @@
                 android:id="@+id/Cd"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el048"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el048"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline47"
                 app:layout_constraintStart_toEndOf="@+id/guideline46"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el048" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline47"
@@ -1095,15 +1096,15 @@
                 android:id="@+id/In"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el049"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el049"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline48"
                 app:layout_constraintStart_toEndOf="@+id/guideline47"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el049" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline48"
@@ -1116,15 +1117,15 @@
                 android:id="@+id/Sn"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el050"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el050"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline49"
                 app:layout_constraintStart_toEndOf="@+id/guideline48"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el050" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline49"
@@ -1137,10 +1138,10 @@
                 android:id="@+id/Sb"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/green"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el051"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
                 app:srcCompat="@drawable/el051"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline50"
@@ -1158,15 +1159,15 @@
                 android:id="@+id/Te"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/green"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el052"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el052"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline51"
                 app:layout_constraintStart_toEndOf="@+id/guideline50"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el052" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline51"
@@ -1179,15 +1180,15 @@
                 android:id="@+id/I"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightblue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el053"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el053"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline52"
                 app:layout_constraintStart_toEndOf="@+id/guideline51"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el053" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline52"
@@ -1200,15 +1201,15 @@
                 android:id="@+id/Xe"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/blue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour6"
                 android:contentDescription="@string/el054"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el054"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/guideline52"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el054" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -1221,15 +1222,15 @@
                 android:id="@+id/Cs"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/orangey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour1"
                 android:contentDescription="@string/el055"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
                 app:srcCompat="@drawable/el055"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline53"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline53"
@@ -1243,7 +1244,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:background="@color/orange"
+                android:background="@drawable/colour2"
                 android:contentDescription="@string/el056"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1263,15 +1264,15 @@
                 android:id="@+id/La"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el057"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el057"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline55"
                 app:layout_constraintStart_toEndOf="@+id/guideline54"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el057" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline55"
@@ -1284,15 +1285,15 @@
                 android:id="@+id/Hf"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el072"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el072"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline56"
                 app:layout_constraintStart_toEndOf="@+id/guideline55"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el072" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline56"
@@ -1305,15 +1306,15 @@
                 android:id="@+id/Ta"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el073"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el073"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline57"
                 app:layout_constraintStart_toEndOf="@+id/guideline56"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el073" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline57"
@@ -1326,15 +1327,15 @@
                 android:id="@+id/W"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el074"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el074"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline58"
                 app:layout_constraintStart_toEndOf="@+id/guideline57"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el074" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline58"
@@ -1347,15 +1348,15 @@
                 android:id="@+id/Re"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el075"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el075"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline59"
                 app:layout_constraintStart_toEndOf="@+id/guideline58"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el075" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline59"
@@ -1368,15 +1369,15 @@
                 android:id="@+id/Os"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el076"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el076"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline60"
                 app:layout_constraintStart_toEndOf="@+id/guideline59"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el076" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline60"
@@ -1389,15 +1390,15 @@
                 android:id="@+id/Ir"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el077"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el077"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline61"
                 app:layout_constraintStart_toEndOf="@+id/guideline60"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el077" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline61"
@@ -1410,15 +1411,15 @@
                 android:id="@+id/Pt"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el078"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el078"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline62"
                 app:layout_constraintStart_toEndOf="@+id/guideline61"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el078" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline62"
@@ -1431,15 +1432,15 @@
                 android:id="@+id/Au"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el079"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el079"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline63"
                 app:layout_constraintStart_toEndOf="@+id/guideline62"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el079" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline63"
@@ -1452,15 +1453,15 @@
                 android:id="@+id/Hg"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el080"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el080"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline64"
                 app:layout_constraintStart_toEndOf="@+id/guideline63"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el080" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline64"
@@ -1473,15 +1474,15 @@
                 android:id="@+id/Tl"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el081"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el081"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline65"
                 app:layout_constraintStart_toEndOf="@+id/guideline64"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el081" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline65"
@@ -1494,15 +1495,15 @@
                 android:id="@+id/Pb"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el082"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el082"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline66"
                 app:layout_constraintStart_toEndOf="@+id/guideline65"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el082" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline66"
@@ -1515,15 +1516,15 @@
                 android:id="@+id/Bi"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el083"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el083"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline67"
                 app:layout_constraintStart_toEndOf="@+id/guideline66"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el083" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline67"
@@ -1536,15 +1537,15 @@
                 android:id="@+id/Po"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el084"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el084"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline68"
                 app:layout_constraintStart_toEndOf="@+id/guideline67"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el084" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline68"
@@ -1557,15 +1558,15 @@
                 android:id="@+id/At"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/green"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour5"
                 android:contentDescription="@string/el085"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el085"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline69"
                 app:layout_constraintStart_toEndOf="@+id/guideline68"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el085" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline69"
@@ -1578,15 +1579,15 @@
                 android:id="@+id/Rn"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/blue"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour6"
                 android:contentDescription="@string/el086"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el086"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/guideline69"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el086" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -1599,15 +1600,15 @@
                 android:id="@+id/Fr"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/orangey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour1"
                 android:contentDescription="@string/el087"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el087"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline70"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el087" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline70"
@@ -1621,7 +1622,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:background="@color/orange"
+                android:background="@drawable/colour2"
                 android:contentDescription="@string/el088"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1641,15 +1642,15 @@
                 android:id="@+id/Ac"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el089"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el089"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline72"
                 app:layout_constraintStart_toEndOf="@+id/guideline71"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el089" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline72"
@@ -1662,15 +1663,15 @@
                 android:id="@+id/Rf"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el104"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el104"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline73"
                 app:layout_constraintStart_toEndOf="@+id/guideline72"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el104" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline73"
@@ -1683,15 +1684,15 @@
                 android:id="@+id/Db"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el105"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el105"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline74"
                 app:layout_constraintStart_toEndOf="@+id/guideline73"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el105" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline74"
@@ -1704,15 +1705,15 @@
                 android:id="@+id/Sg"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el106"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el106"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline75"
                 app:layout_constraintStart_toEndOf="@+id/guideline74"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el106" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline75"
@@ -1725,15 +1726,15 @@
                 android:id="@+id/Bh"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el107"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el107"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline76"
                 app:layout_constraintStart_toEndOf="@+id/guideline75"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el107" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline76"
@@ -1746,15 +1747,15 @@
                 android:id="@+id/Hs"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/purple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el108"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el108"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline77"
                 app:layout_constraintStart_toEndOf="@+id/guideline76"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el108" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline77"
@@ -1767,15 +1768,15 @@
                 android:id="@+id/Mt"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el109"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el109"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline78"
                 app:layout_constraintStart_toEndOf="@+id/guideline77"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el109" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline78"
@@ -1788,15 +1789,15 @@
                 android:id="@+id/Ds"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el110"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el110"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline79"
                 app:layout_constraintStart_toEndOf="@+id/guideline78"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el110" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline79"
@@ -1809,15 +1810,15 @@
                 android:id="@+id/Rg"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el111"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el111"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline80"
                 app:layout_constraintStart_toEndOf="@+id/guideline79"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el111" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline80"
@@ -1830,15 +1831,15 @@
                 android:id="@+id/Cn"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkgreen"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour3"
                 android:contentDescription="@string/el112"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el112"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline81"
                 app:layout_constraintStart_toEndOf="@+id/guideline80"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el112" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline81"
@@ -1851,15 +1852,15 @@
                 android:id="@+id/Nh"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el113"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el113"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline82"
                 app:layout_constraintStart_toEndOf="@+id/guideline81"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el113" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline82"
@@ -1872,15 +1873,15 @@
                 android:id="@+id/Fl"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el114"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el114"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline83"
                 app:layout_constraintStart_toEndOf="@+id/guideline82"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el114" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline83"
@@ -1893,15 +1894,15 @@
                 android:id="@+id/Mc"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el115"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el115"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline84"
                 app:layout_constraintStart_toEndOf="@+id/guideline83"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el115" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline84"
@@ -1914,15 +1915,15 @@
                 android:id="@+id/Lv"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el116"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el116"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline85"
                 app:layout_constraintStart_toEndOf="@+id/guideline84"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el116" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline85"
@@ -1935,15 +1936,15 @@
                 android:id="@+id/Ts"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour4"
                 android:contentDescription="@string/el117"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el117"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline86"
                 app:layout_constraintStart_toEndOf="@+id/guideline85"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el117" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline86"
@@ -1956,15 +1957,15 @@
                 android:id="@+id/Og"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/lightgrey"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour6"
                 android:contentDescription="@string/el118"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el118"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/guideline86"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el118" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -1989,15 +1990,15 @@
                 android:id="@+id/Ce"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el058"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el058"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline88"
                 app:layout_constraintStart_toEndOf="@+id/guideline87"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el058" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline88"
@@ -2010,15 +2011,15 @@
                 android:id="@+id/Pr"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el059"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el059"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline89"
                 app:layout_constraintStart_toEndOf="@+id/guideline88"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el059" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline89"
@@ -2031,15 +2032,15 @@
                 android:id="@+id/Nd"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el060"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el060"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline90"
                 app:layout_constraintStart_toEndOf="@+id/guideline89"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el060" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline90"
@@ -2052,15 +2053,15 @@
                 android:id="@+id/Pm"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el061"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el061"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline91"
                 app:layout_constraintStart_toEndOf="@+id/guideline90"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el061" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline91"
@@ -2073,15 +2074,15 @@
                 android:id="@+id/Sm"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el062"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el062"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline92"
                 app:layout_constraintStart_toEndOf="@+id/guideline91"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el062" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline92"
@@ -2094,15 +2095,15 @@
                 android:id="@+id/Eu"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el063"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el063"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline93"
                 app:layout_constraintStart_toEndOf="@+id/guideline92"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el063" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline93"
@@ -2115,15 +2116,15 @@
                 android:id="@+id/Gd"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el064"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el064"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline94"
                 app:layout_constraintStart_toEndOf="@+id/guideline93"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el064" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline94"
@@ -2136,15 +2137,15 @@
                 android:id="@+id/Tb"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el065"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el065"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline95"
                 app:layout_constraintStart_toEndOf="@+id/guideline94"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el065" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline95"
@@ -2157,15 +2158,15 @@
                 android:id="@+id/Dy"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el066"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el066"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline96"
                 app:layout_constraintStart_toEndOf="@+id/guideline95"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el066" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline96"
@@ -2178,15 +2179,15 @@
                 android:id="@+id/Ho"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el067"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el067"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline97"
                 app:layout_constraintStart_toEndOf="@+id/guideline96"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el067" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline97"
@@ -2199,15 +2200,15 @@
                 android:id="@+id/Er"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el068"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el068"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline98"
                 app:layout_constraintStart_toEndOf="@+id/guideline97"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el068" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline98"
@@ -2220,15 +2221,15 @@
                 android:id="@+id/Tm"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el069"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el069"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline99"
                 app:layout_constraintStart_toEndOf="@+id/guideline98"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el069" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline99"
@@ -2241,15 +2242,15 @@
                 android:id="@+id/Yb"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el070"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el070"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline100"
                 app:layout_constraintStart_toEndOf="@+id/guideline99"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el070" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline100"
@@ -2262,15 +2263,15 @@
                 android:id="@+id/Lu"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkred"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el071"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el071"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline101"
                 app:layout_constraintStart_toEndOf="@+id/guideline100"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el071" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline101"
@@ -2297,15 +2298,15 @@
                 android:id="@+id/Th"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el090"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el090"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline103"
                 app:layout_constraintStart_toEndOf="@+id/guideline102"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el090" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline103"
@@ -2318,15 +2319,15 @@
                 android:id="@+id/Pa"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el091"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el091"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline104"
                 app:layout_constraintStart_toEndOf="@+id/guideline103"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el091" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline104"
@@ -2339,15 +2340,15 @@
                 android:id="@+id/U"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el092"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el092"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline105"
                 app:layout_constraintStart_toEndOf="@+id/guideline104"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el092" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline105"
@@ -2360,15 +2361,15 @@
                 android:id="@+id/Np"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el093"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el093"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline106"
                 app:layout_constraintStart_toEndOf="@+id/guideline105"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el093" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline106"
@@ -2381,15 +2382,15 @@
                 android:id="@+id/Pu"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el094"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el094"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline107"
                 app:layout_constraintStart_toEndOf="@+id/guideline106"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el094" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline107"
@@ -2402,15 +2403,15 @@
                 android:id="@+id/Am"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el095"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el095"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline108"
                 app:layout_constraintStart_toEndOf="@+id/guideline107"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el095" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline108"
@@ -2423,15 +2424,15 @@
                 android:id="@+id/Cm"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el096"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el096"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline109"
                 app:layout_constraintStart_toEndOf="@+id/guideline108"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el096" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline109"
@@ -2444,15 +2445,15 @@
                 android:id="@+id/Bk"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el097"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el097"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline110"
                 app:layout_constraintStart_toEndOf="@+id/guideline109"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el097" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline110"
@@ -2465,15 +2466,15 @@
                 android:id="@+id/Cf"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el098"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el098"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline111"
                 app:layout_constraintStart_toEndOf="@+id/guideline110"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el098" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline111"
@@ -2486,15 +2487,15 @@
                 android:id="@+id/Es"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el099"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el099"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline112"
                 app:layout_constraintStart_toEndOf="@+id/guideline111"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el099" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline112"
@@ -2507,15 +2508,15 @@
                 android:id="@+id/Fm"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el100"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el100"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline113"
                 app:layout_constraintStart_toEndOf="@+id/guideline112"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el100" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline113"
@@ -2528,15 +2529,15 @@
                 android:id="@+id/Md"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el101"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el101"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline114"
                 app:layout_constraintStart_toEndOf="@+id/guideline113"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el101" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline114"
@@ -2549,15 +2550,15 @@
                 android:id="@+id/No"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el102"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el102"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline115"
                 app:layout_constraintStart_toEndOf="@+id/guideline114"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el102" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline115"
@@ -2570,15 +2571,15 @@
                 android:id="@+id/Lr"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/darkpurple"
+                android:adjustViewBounds="true"
+                android:background="@drawable/colour7"
                 android:contentDescription="@string/el103"
                 android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/el103"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline116"
                 app:layout_constraintStart_toEndOf="@+id/guideline115"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/el103" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline116"
