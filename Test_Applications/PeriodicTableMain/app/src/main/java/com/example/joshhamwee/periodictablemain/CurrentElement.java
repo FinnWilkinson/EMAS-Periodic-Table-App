@@ -14,18 +14,14 @@ public class CurrentElement {
 
 
     public CurrentElement(Integer id, DatabaseAccess db) {
-        if (id == R.id.H) this.name = "Hydrogen";
-        else if (id == R.id.He) this.name = "Helium";
-        else if (id == R.id.Li) this.name = "Lithium";
-        else this.name = "Other";
+        this.atomicNumber = Integer.toString(id);
         dataGetting(db);
         dataSetting();
     }
 
     private void dataGetting(DatabaseAccess db){
-        if(this.name == "Other") this.name = "Carbon";
         db.open();
-        this.data = db.getElementData(this.name);
+        this.data = db.getElementData(this.atomicNumber);
         db.close();
     }
 

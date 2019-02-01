@@ -46,9 +46,9 @@ public class DatabaseAccess {
 
      //Read all quotes from the database
      //@return a List of quotes
-    public List<String> getElementData(String atomicSym) {
+    public List<String> getElementData(String atomicNum) {
         List<String> data = new ArrayList<>();
-        String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Name = '" + atomicSym + "'" ;
+        String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + atomicNum + "'" ;
         Cursor cursor = database.rawQuery(sqlQuery, null);
         cursor.moveToFirst();
         for(int i = 0; i < 30; i++) {
