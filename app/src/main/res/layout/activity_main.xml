@@ -859,7 +859,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.057224605" />
+                app:layout_constraintGuide_percent="0.05555555555555555555555555555556" />
 
             <ImageButton
                 android:id="@+id/Sr"
