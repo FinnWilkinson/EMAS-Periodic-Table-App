@@ -1,6 +1,7 @@
 package com.example.joshhamwee.periodictablemain;
 
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.annotation.NonNull;
@@ -20,7 +21,7 @@ import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
-
+import android.graphics.Bitmap;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -111,8 +112,10 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
 
         actionBarDrawerToggle.setDrawerIndicatorEnabled(false);
-        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.el001, null);
-        actionBarDrawerToggle.setHomeAsUpIndicator(drawable);
+        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_view_headline, null);
+        Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
+        Drawable menulogo = new BitmapDrawable(getResources(),Bitmap.createScaledBitmap(bitmap,50,50,true));
+        actionBarDrawerToggle.setHomeAsUpIndicator(menulogo);
         actionBarDrawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
