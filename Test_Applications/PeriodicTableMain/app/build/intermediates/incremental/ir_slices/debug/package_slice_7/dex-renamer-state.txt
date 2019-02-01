@@ -1,0 +1,4 @@
+#Fri Feb 01 10:52:33 GMT 2019
+base.0=D\:\\Coding\\Periodic Table App\\Test_Applications\\PeriodicTableMain\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
+path.0=classes.dex
+renamed.0=classes.dex
