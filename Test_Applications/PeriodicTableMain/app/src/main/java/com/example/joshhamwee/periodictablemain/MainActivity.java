@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         //Override the onClick method to openActivityDisplayElementData
         for (final int id:button_ids){
             ImageButton button = (ImageButton) findViewById(id);
+            button.bringToFront();
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
