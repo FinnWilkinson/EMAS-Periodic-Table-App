@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
             R.id.Fr, R.id.Ra, R.id.Ac, R.id.Th, R.id.Pa, R.id.U, R.id.Np, R.id.Pu, R.id.Am, R.id.Cm, R.id.Bk, R.id.Cf, R.id.Es, R.id.Fm, R.id.Md, R.id.No, R.id.Lr,
             R.id.Rf, R.id.Db, R.id.Sg, R.id.Bh, R.id.Hs, R.id.Mt, R.id.Ds, R.id.Rg, R.id.Cn, R.id.Nh, R.id.Fl, R.id.Mc, R.id.Lv, R.id.Ts, R.id.Og
 
-
-
     };
     private ArrayList<Integer> button_ids = new ArrayList<>(Arrays.asList(listOfIds));
 
@@ -54,9 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpToolbar(); //Function that handles the toolbar, see below
-        setUpElements();
-
-        //Find the navigation view and set on click listeners for each item in the navigation drawer
+        setUpElements(); //Function that handles each button for the elemnts
 
     }
 
