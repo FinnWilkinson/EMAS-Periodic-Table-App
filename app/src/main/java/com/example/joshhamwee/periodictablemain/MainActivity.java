@@ -1,6 +1,7 @@
 package com.example.joshhamwee.periodictablemain;
 
 import android.content.Intent;
+import android.drm.DrmStore;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
@@ -9,6 +10,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,41 +54,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpToolbar(); //Function that handles the toolbar, see below
+        setUpElements();
 
         //Find the navigation view and set on click listeners for each item in the navigation drawer
-        navigationView = (NavigationView) findViewById(R.id.navigation_menu);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.home:
-                        //should take to home page
-                        Toast.makeText(MainActivity.this, "YOU CLICKED A THING", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.graph:
-                        //link to energy graph activity
-                        break;
-                    case R.id.help:
-                        //link to help activity
-                        openHelpActivity();
-                        break;
-                }
-                return false;
-            }
-        });
 
-        //For loop to create onClickListeners for each button
-        //Override the onClick method to openActivityDisplayElementData
-        for (final int id:button_ids){
-            ImageButton button = (ImageButton) findViewById(id);
-            button.bringToFront();
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    openActivityDisplayElementData(id);
-                }
-            });
-        }
     }
 
     //When an element is clicked on, open new activity
@@ -96,38 +67,63 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent); //Execute the intent
     }
 
+    //When help page is selected from drawer, start the new activity
     private void openHelpActivity(){
         Intent intent = new Intent(this, HelpActivity.class); //Create the intent that opens the new activity
         startActivity(intent); //Execute the intent
     }
 
-    private void setUpToolbar() {
-        //Find the toolbar by the specific id
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+    private void setUpElements(){
+        //For loop to create onClickListeners for each button
+        //Override the onClick method to openActivityDisplayElementData
+        for (final int id:button_ids){
+            ImageButton button = (ImageButton) findViewById(id);
+            button.bringToFront();
+            button.setOnClickListener(null);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openActivityDisplayElementData(id);
+                }
+            });
+        }
+    }
+
+    private void setUpToolbar(){
+        drawerLayout = findViewById(R.id.drawer_layout);
+
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Start the drawer layout and add an action listener to the button to open the drawer
-        final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
 
-        actionBarDrawerToggle.setDrawerIndicatorEnabled(false);
-        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_view_headline, null);
-        Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
-        Drawable menulogo = new BitmapDrawable(getResources(),Bitmap.createScaledBitmap(bitmap,50,50,true));
-        actionBarDrawerToggle.setHomeAsUpIndicator(menulogo);
-        actionBarDrawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                } else {
-                    drawerLayout.openDrawer(GravityCompat.START);
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                        switch (menuItem.getItemId()) {
+                            case R.id.home:
+                                //TODO should take to home page
+                                menuItem.setChecked(true);
+                                break;
+                            case R.id.graph:
+                                //TODO link to energy graph activity
+                                menuItem.setChecked(true);
+                                break;
+                            case R.id.help:
+                                //TODO link to help activity
+                                menuItem.setChecked(true);
+                                openHelpActivity();
+                                break;
+                        }
+                        return false;
+                    }
                 }
-            }
-        });
-
-        actionBarDrawerToggle.syncState();
+        );
     }
 
     //Create an option for the search button in the menu
@@ -145,6 +141,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.search_m:
                 //start search dialog
                 super.onSearchRequested();
+                return true;
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
