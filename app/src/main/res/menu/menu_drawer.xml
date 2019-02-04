@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:checkableBehavior="single"
         android:id="@+id/group1">
         <item
             android:id="@+id/home"
-            android:title="HOME"></item>
+            android:title="HOME"
+            tools:ignore="HardcodedText" />
         <item
             android:id="@+id/graph"
-            android:title="ENERGY GRAPH"></item>
+            android:title="ENERGY GRAPH"
+            tools:ignore="HardcodedText" />
     </group>
 
     <group android:checkableBehavior="single"
         android:id="@+id/group2">
         <item
             android:id="@+id/help"
-            android:title="HELP"></item>
+            android:title="HELP"
+            tools:ignore="HardcodedText"/>
     </group>
-
-
 
 </menu>

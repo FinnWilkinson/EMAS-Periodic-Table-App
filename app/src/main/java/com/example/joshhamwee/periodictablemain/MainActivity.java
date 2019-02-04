@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setUpToolbar(); //Function that handles the toolbar, see below
         setUpElements(); //Function that handles each button for the elemnts
-
     }
 
     //When an element is clicked on, open new activity
@@ -69,7 +68,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent); //Execute the intent
     }
 
+    //When energy graph is selected from drawer, start the new activity
+    private void openEnergyGraphActivity(){
+        Intent intent = new Intent(this, EnergyGraph.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
+    }
 
+    // add comment here
     private void setUpElements(){
         //For loop to create onClickListeners for each button
         //Override the onClick method to openActivityDisplayElementData
@@ -86,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setUpToolbar(){
+    public void setUpToolbar(){
         drawerLayout = findViewById(R.id.drawer_layout);
 
         toolbar = findViewById(R.id.toolbar);
@@ -103,15 +108,14 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.home:
-                                //TODO should take to home page
                                 menuItem.setChecked(true);
+                                drawerLayout.closeDrawer(navigationView);
                                 break;
                             case R.id.graph:
-                                //TODO link to energy graph activity
                                 menuItem.setChecked(true);
+                                openEnergyGraphActivity();
                                 break;
                             case R.id.help:
-                                //TODO link to help activity
                                 menuItem.setChecked(true);
                                 openHelpActivity();
                                 break;

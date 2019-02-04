@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/testgrey"
-    tools:context=".DisplayElementDataActivity">
+    tools:context=".HelpActivity">
 
     <!-- so the toolbar shows up -->
     <include
         layout="@layout/backbutton_layout"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="331dp"
-        android:layout_height="161dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="138dp" />
 
-
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.ConstraintLayout>
