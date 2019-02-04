@@ -51,7 +51,7 @@ public class DatabaseAccess {
         String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + atomicNum + "'" ;
         Cursor cursor = database.rawQuery(sqlQuery, null);
         cursor.moveToFirst();
-        for(int i = 0; i < 30; i++) {
+        for(int i = 0; i < cursor.getColumnCount(); i++) {
             data.add(cursor.getString(i));
         }
         cursor.close();

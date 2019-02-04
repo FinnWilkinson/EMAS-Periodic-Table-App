@@ -8,8 +8,7 @@ public class CurrentElement {
     String shellOccK, shellOccL, shellOccM, shellOccN, shellOccO, shellOccP, shellOccQ;
     String valencyCommon, valencies, meltingPoint, boilingPoint, density, ionicRadius;
     String kBeta, kAlpha, lGamma23, lGamma1, lBeta4, lBeta3, lBeta2, lBeta1, lAlpha;
-    String mGamma, mBeta, mAlpha;
-    Integer id;
+    String mGamma, mBeta, mAlpha, kEdge, l3Edge, l2Edge, l1Edge, m5Edge, m4Edge, m3Edge, m2Edge, m1Edge;
     List<String> data = new ArrayList<>();
 
 
@@ -56,6 +55,15 @@ public class CurrentElement {
         this.mGamma = data.get(27);
         this.mBeta = data.get(28);
         this.mAlpha = data.get(29);
+        this.kEdge = data.get(30);
+        this.l3Edge = data.get(31);
+        this.l2Edge = data.get(32);
+        this.l1Edge = data.get(33);
+        this.m5Edge = data.get(34);
+        this.m4Edge = data.get(35);
+        this.m3Edge = data.get(36);
+        this.m2Edge = data.get(37);
+        this.m1Edge = data.get(38);
     }
 
     //need to make a function to change units. can do Float.parseFloat to convert string to float
