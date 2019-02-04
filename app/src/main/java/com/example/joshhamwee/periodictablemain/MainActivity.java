@@ -69,6 +69,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent); //Execute the intent
     }
 
+    private void openEnergyActivity(){
+        Intent intent = new Intent(this, EnergyActivity.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
+    }
+
 
     private void setUpElements(){
         //For loop to create onClickListeners for each button
@@ -103,15 +108,13 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.home:
-                                //TODO should take to home page
                                 menuItem.setChecked(true);
                                 break;
                             case R.id.graph:
-                                //TODO link to energy graph activity
                                 menuItem.setChecked(true);
+                                openEnergyActivity();
                                 break;
                             case R.id.help:
-                                //TODO link to help activity
                                 menuItem.setChecked(true);
                                 openHelpActivity();
                                 break;
