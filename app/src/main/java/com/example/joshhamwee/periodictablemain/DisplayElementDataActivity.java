@@ -47,6 +47,13 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         //Temporary TextView with element name
         TextView ElementName = findViewById(R.id.ElementName);
         ElementName.setText(currentElement.name);
+        TextView AtomicNumber = findViewById(R.id.AtomicNumber);
+        AtomicNumber.setText("Atomic Number: " + currentElement.atomicNumber);
+        TextView AtomicSymbol = findViewById(R.id.AtomicSymbol);
+        AtomicSymbol.setText("Atomic Symbol: " + currentElement.atomicSymbol);
+        TextView AtomicMass = findViewById(R.id.AtomicMass);
+        AtomicMass.setText("Atomic Mass: " + currentElement.atomicMass);
+
         //need to set up different text colours matching colours in table
         if(atomicNumber == 1) {
             ElementName.setTextColor(getResources().getColor(R.color.pastelPink));
