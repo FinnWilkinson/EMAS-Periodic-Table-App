@@ -48,13 +48,24 @@ public class DatabaseAccess {
      //@return a List of quotes
     public List<String> getElementData(String atomicNum) {
         List<String> data = new ArrayList<>();
+        int length;
         String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + atomicNum + "'" ;
-        Cursor cursor = database.rawQuery(sqlQuery, null);
-        cursor.moveToFirst();
-        for(int i = 0; i < cursor.getColumnCount(); i++) {
-            data.add(cursor.getString(i));
+        try {
+            //retrieve data from database via SQL query
+            Cursor cursor = database.rawQuery(sqlQuery, null);
+            cursor.moveToFirst();
+            length = cursor.getColumnCount();
+            for(int i = 0; i < length; i++) {
+                data.add(cursor.getString(i));
+            }
+            cursor.close();
         }
-        cursor.close();
+        //catch any errors. Should not occur, but could happen if database is incomplete
+        catch (Exception e){
+            data.add(0, "null");
+            data.add(1, "Element not found");
+        }
+
         return data;
     }
 }
