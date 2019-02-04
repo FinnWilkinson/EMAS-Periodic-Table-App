@@ -47,6 +47,15 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         //Temporary TextView with element name
         TextView ElementName = findViewById(R.id.ElementName);
         ElementName.setText(currentElement.name);
+        //need to set up different text colours matching colours in table
+        if(atomicNumber == 1) {
+            ElementName.setTextColor(getResources().getColor(R.color.pastelPink));
+        }
+        else if(atomicNumber == 4){
+            ElementName.setTextColor(getResources().getColor(R.color.pastelOrange));
+        }
+        else
+            ElementName.setTextColor(getResources().getColor(R.color.darkpurple));
     }
 
     /********** this is repeated code, probs should find a way around it. hehh..... ***/
