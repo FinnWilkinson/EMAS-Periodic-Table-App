@@ -47,15 +47,7 @@
         <activity
             android:name=".DisplayElementDataActivity"
             android:screenOrientation="landscape" />
-        <activity
-            android:name=".HelpActivity"
-            android:label="@string/title_activity_help"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.joshhamwee.periodictablemain.MainActivity" />
-        </activity>
+        <activity android:name=".HelpActivity"></activity>
     </application>
 
 </manifest>

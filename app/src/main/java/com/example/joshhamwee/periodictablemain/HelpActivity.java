@@ -1,13 +1,10 @@
 package com.example.joshhamwee.periodictablemain;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 public class HelpActivity extends AppCompatActivity {
 
@@ -29,7 +26,10 @@ public class HelpActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-       // actionBar.setHomeAsUpIndicator(android.R.drawable.ic_ab_back_holo_light);
+        // actionBar.setHomeAsUpIndicator(android.R.drawable.ic_ab_back_holo_light);
         // TO DO: add black icon for the back button
     }
 }
+
+
+

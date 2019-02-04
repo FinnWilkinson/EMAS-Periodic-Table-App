@@ -68,11 +68,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent); //Execute the intent
     }
 
+    /*
     //When energy graph is selected from drawer, start the new activity
     private void openEnergyGraphActivity(){
         Intent intent = new Intent(this, EnergyGraph.class); //Create the intent that opens the new activity
         startActivity(intent); //Execute the intent
     }
+*/
+
 
     // add comment here
     private void setUpElements(){
@@ -113,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true);
-                                openEnergyGraphActivity();
+                                //openEnergyGraphActivity();
                                 break;
                             case R.id.help:
                                 menuItem.setChecked(true);
