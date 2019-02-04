@@ -103,19 +103,5 @@
     <string name="el101">Md</string>
     <string name="el102">No</string>
     <string name="el103">Lr</string>
-    <string name="el104">Rf</string>
-    <string name="el105">Db</string>
-    <string name="el106">Sg</string>
-    <string name="el107">Bh</string>
-    <string name="el108">Hs</string>
-    <string name="el109">Mt</string>
-    <string name="el110">Ds</string>
-    <string name="el111">Rg</string>
-    <string name="el112">Cn</string>
-    <string name="el113">Nh</string>
-    <string name="el114">Fl</string>
-    <string name="el115">Mc</string>
-    <string name="el116">Lv</string>
-    <string name="el117">Ts</string>
-    <string name="el118">Og</string>
+
 </resources>
