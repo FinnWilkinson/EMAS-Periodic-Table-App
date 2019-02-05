@@ -121,6 +121,7 @@
                     android:id="@+id/AtomicSymbol"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -137,6 +138,7 @@
                     android:id="@+id/CrystalStruct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -153,6 +155,7 @@
                     android:id="@+id/ShellOccL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -169,6 +172,7 @@
                     android:id="@+id/ShellOccN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -185,6 +189,7 @@
                     android:id="@+id/ShellOccP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -201,6 +206,7 @@
                     android:id="@+id/ValencyCommon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -217,6 +223,7 @@
                     android:id="@+id/MeltingPoint"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -233,6 +240,7 @@
                     android:id="@+id/Density"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -259,6 +267,7 @@
                     android:id="@+id/KBeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -275,6 +284,7 @@
                     android:id="@+id/LGamma23"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -291,6 +301,7 @@
                     android:id="@+id/LBeta4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -307,6 +318,7 @@
                     android:id="@+id/LBeta2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -323,6 +335,7 @@
                     android:id="@+id/LAlpha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -339,6 +352,7 @@
                     android:id="@+id/MBeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -355,6 +369,7 @@
                     android:id="@+id/Absorbsion_Edges_Header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="Absorbsion Edges:"
                     android:textColor="@color/textBlack"
@@ -373,6 +388,7 @@
                     android:id="@+id/L3Edge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -389,6 +405,7 @@
                     android:id="@+id/L1Edge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -405,6 +422,7 @@
                     android:id="@+id/M4Edge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
@@ -421,6 +439,7 @@
                     android:id="@+id/M2Edge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/textViewBackground"
                     android:fontFamily="@font/opensans_regular"
                     android:text="TextView"
                     android:textColor="@color/textBlack" />

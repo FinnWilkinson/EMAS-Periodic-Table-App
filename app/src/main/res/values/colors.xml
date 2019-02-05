@@ -29,4 +29,5 @@
     <color name="pastelPurple">#b66edf</color>
     <color name="pastelGrey">#bdbdbd</color>
     <color name="textBlack">#181C1D</color>
+    <color name="textViewBackground">#E9E9E9</color>
 </resources>

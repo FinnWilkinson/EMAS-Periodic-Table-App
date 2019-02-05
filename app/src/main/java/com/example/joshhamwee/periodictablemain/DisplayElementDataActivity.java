@@ -62,7 +62,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         TextView ElementName = findViewById(R.id.ElementName);
         ElementName.setText(currentElement.name);
         TextView AtomicNumber = findViewById(R.id.AtomicNumber);
-        AtomicNumber.setText("Atomic Number: " + currentElement.atomicNumber);
+        AtomicNumber.setText("Atomic Number:                   " + currentElement.atomicNumber);
         TextView AtomicSymbol = findViewById(R.id.AtomicSymbol);
         AtomicSymbol.setText("Atomic Symbol: " + currentElement.atomicSymbol);
         TextView AtomicMass = findViewById(R.id.AtomicMass);
@@ -140,6 +140,10 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         TextView M1Edge = findViewById(R.id.M1Edge);
         M1Edge.setText("M1 Edge: " + currentElement.m1Edge);
 
+        TextView KLM_Energies_Header = findViewById(R.id.KLM_Energies_Header);
+        KLM_Energies_Header.setText("KLM Energies:");
+        KLM_Energies_Header.setTextColor(ContextCompat.getColor(this,R.color.textBlack));
+        KLM_Energies_Header.setTextSize(18);
 
         //should probably define a separate function to set up colour-- too much repetition
         if(AlkMetals.contains(atomicNumber)) {
