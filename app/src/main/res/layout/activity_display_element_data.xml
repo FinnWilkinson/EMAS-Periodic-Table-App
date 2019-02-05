@@ -246,6 +246,16 @@
                     android:textColor="@color/textBlack" />
 
                 <TextView
+                    android:id="@+id/KLM_Energies_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="KLM Energies:"
+                    android:textColor="@color/textBlack"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/KBeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -342,6 +352,16 @@
                     android:textColor="@color/textBlack" />
 
                 <TextView
+                    android:id="@+id/Absorbsion_Edges_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="Absorbsion Edges:"
+                    android:textColor="@color/textBlack"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/KEdge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -413,29 +433,6 @@
                     android:text="TextView"
                     android:textColor="@color/textBlack" />
 
-                <TextView
-                    android:id="@+id/textView40"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/opensans_regular"
-                    android:text="TextView"
-                    android:textColor="@color/textBlack" />
-
-                <TextView
-                    android:id="@+id/textView41"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/opensans_regular"
-                    android:text="TextView"
-                    android:textColor="@color/textBlack" />
-
-                <TextView
-                    android:id="@+id/textView42"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/opensans_regular"
-                    android:text="TextView"
-                    android:textColor="@color/textBlack" />
             </LinearLayout>
         </ScrollView>
     </android.support.constraint.ConstraintLayout>
