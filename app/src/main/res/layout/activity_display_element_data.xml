@@ -83,7 +83,8 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="-10dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
@@ -1364,7 +1365,7 @@
                         android:id="@+id/L3Edge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/textViewBackground"
+                        android:background="@color/white"
                         android:fontFamily="@font/opensans_regular"
                         android:text="TextView"
                         android:textColor="@color/textBlack"
@@ -1444,7 +1445,7 @@
                         android:id="@+id/L1Edge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/textViewBackground"
+                        android:background="@color/white"
                         android:fontFamily="@font/opensans_regular"
                         android:text="TextView"
                         android:textColor="@color/textBlack"
