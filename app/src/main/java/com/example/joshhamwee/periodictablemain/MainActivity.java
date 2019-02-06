@@ -52,28 +52,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpToolbar(); //Function that handles the toolbar, see below
-        setUpElements(); //Function that handles each button for the elemnts
+        setUpElements(); //Function that handles each button for the elements
 
     }
-
-    //When an element is clicked on, open new activity
-    private void openActivityDisplayElementData(int id){
-        Intent intent = new Intent(this,DisplayElementDataActivity.class); //Create the intent that opens the new activity
-        intent.putExtra("ElementID",button_ids.indexOf(id) + 1);  //Put extra data into the intent so that next activity knows what element was clicked on
-        startActivity(intent); //Execute the intent
-    }
-
-    //When help page is selected from drawer, start the new activity
-    private void openHelpActivity(){
-        Intent intent = new Intent(this, HelpActivity.class); //Create the intent that opens the new activity
-        startActivity(intent); //Execute the intent
-    }
-
-    private void openEnergyActivity(){
-        Intent intent = new Intent(this, EnergyActivity.class); //Create the intent that opens the new activity
-        startActivity(intent); //Execute the intent
-    }
-
 
     private void setUpElements(){
         //For loop to create onClickListeners for each button
@@ -94,35 +75,54 @@ public class MainActivity extends AppCompatActivity {
     private void setUpToolbar(){
         drawerLayout = findViewById(R.id.drawer_layout);
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar = findViewById(R.id.toolbar); //Find the toolbar
+        setSupportActionBar(toolbar); //Start the toolbar
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
 
         navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(
+        navigationView.setNavigationItemSelectedListener( //On click listener for each item in the menu
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                        switch (menuItem.getItemId()) {
+                        switch (menuItem.getItemId()) { //Switch case for each item in the menu
                             case R.id.home:
-                                menuItem.setChecked(true);
+                                menuItem.setChecked(true); //Do nothing
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true);
-                                openEnergyActivity();
+                                openEnergyActivity(); //Open energy activity on click
                                 break;
                             case R.id.help:
                                 menuItem.setChecked(true);
-                                openHelpActivity();
+                                openHelpActivity(); //Open help activity on click
                                 break;
                         }
                         return false;
                     }
                 }
         );
+    }
+
+    //When an element is clicked on, open new activity
+    private void openActivityDisplayElementData(int id){
+        Intent intent = new Intent(this,DisplayElementDataActivity.class); //Create the intent that opens the new activity
+        intent.putExtra("ElementID",button_ids.indexOf(id) + 1);  //Put extra data into the intent so that next activity knows what element was clicked on
+        startActivity(intent); //Execute the intent
+    }
+
+    //When help page is selected from drawer, start the new activity
+    private void openHelpActivity(){
+        Intent intent = new Intent(this, HelpActivity.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
+    }
+
+    //When energy page is selected from drawer, start the new activity
+    private void openEnergyActivity(){
+        Intent intent = new Intent(this, EnergyActivity.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
     }
 
     //Create an option for the search button in the menu
@@ -138,11 +138,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.search_m:
-                //start search dialog
-                super.onSearchRequested();
+                super.onSearchRequested(); //Start search dialog
                 return true;
             case android.R.id.home:
-                drawerLayout.openDrawer(GravityCompat.START);
+                drawerLayout.openDrawer(GravityCompat.START); //When drawer button is clicked, open the drawer
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

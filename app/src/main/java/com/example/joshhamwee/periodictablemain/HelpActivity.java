@@ -28,29 +28,29 @@ public class HelpActivity extends AppCompatActivity {
     private void setUpToolbar(){
         drawerLayout = findViewById(R.id.drawer_layout);
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar = findViewById(R.id.toolbar); //Find the toolbar
+        setSupportActionBar(toolbar); //Start the toolbar
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
 
         navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(
+        navigationView.setNavigationItemSelectedListener( //On click listener for each item in the menu
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                        switch (menuItem.getItemId()) {
+                        switch (menuItem.getItemId()) { //Switch case for each item in the menu
                             case R.id.home:
                                 menuItem.setChecked(true);
-                                openMainActivity();
+                                openMainActivity(); //Open main activity on click
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true);
-                                openEnergyActivity();
+                                openEnergyActivity(); //Open energy activity on click
                                 break;
                             case R.id.help:
-                                menuItem.setChecked(true);
+                                menuItem.setChecked(true); //Do nothing
                                 break;
                         }
                         return false;
@@ -59,11 +59,13 @@ public class HelpActivity extends AppCompatActivity {
         );
     }
 
+    //When main page is selected from drawer, start the new activity
     private void openMainActivity(){
         Intent intent = new Intent(this, MainActivity.class); //Create the intent that opens the new activity
         startActivity(intent); //Execute the intent
     }
 
+    //When energy page is selected from drawer, start the new activity
     private void openEnergyActivity(){
         Intent intent = new Intent(this, EnergyActivity.class); //Create the intent that opens the new activity
         startActivity(intent); //Execute the intent
@@ -74,7 +76,7 @@ public class HelpActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                drawerLayout.openDrawer(GravityCompat.START);
+                drawerLayout.openDrawer(GravityCompat.START); //When drawer button is clicked, open the drawer
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
