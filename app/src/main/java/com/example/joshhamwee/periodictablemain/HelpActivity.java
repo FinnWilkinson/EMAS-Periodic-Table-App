@@ -22,7 +22,6 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         setUpToolbar(); //Function that handles the toolbar, see below
-
     }
 
     private void setUpToolbar(){
