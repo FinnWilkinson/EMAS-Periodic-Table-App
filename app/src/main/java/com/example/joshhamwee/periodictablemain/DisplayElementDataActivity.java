@@ -8,6 +8,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -140,6 +142,16 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         TextView M1Edge = findViewById(R.id.M1Edge);
         M1Edge.setText(currentElement.m1Edge);
 
+        //Underlining the headers
+        TextView KLMHeader = findViewById(R.id.KLM_Energies_Header);
+        SpannableString KLM = new SpannableString("KLM Energies:");
+        KLM.setSpan(new UnderlineSpan(),0,KLM.length(),0);
+        KLMHeader.setText(KLM);
+
+        TextView AbsorptionHeader = findViewById(R.id.Absorbsion_Edges_Header);
+        SpannableString Absorption = new SpannableString("Absorption Edges:");
+        Absorption.setSpan(new UnderlineSpan(),0,Absorption.length(),0);
+        AbsorptionHeader.setText(Absorption);
 
         //should probably define a separate function to set up colour-- too much repetition
         if(AlkMetals.contains(atomicNumber)) {
