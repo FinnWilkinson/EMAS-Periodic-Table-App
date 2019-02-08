@@ -96,8 +96,10 @@ public class MainActivity extends AppCompatActivity{
 
         toolbar = findViewById(R.id.toolbar); //Find the toolbar
         setSupportActionBar(toolbar); //Start the toolbar
-        //setting up the drop down menu
 
+        //setting up the drop down menu icon
+        Drawable dropDown = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_arrow_drop_down_circle_black_24dp);
+        toolbar.setOverflowIcon(dropDown);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
