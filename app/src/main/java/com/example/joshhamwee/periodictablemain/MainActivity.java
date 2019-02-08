@@ -1,5 +1,6 @@
 package com.example.joshhamwee.periodictablemain;
 
+import android.content.Context;
 import android.content.Intent;
 import android.drm.DrmStore;
 import android.graphics.drawable.BitmapDrawable;
@@ -7,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,16 +20,20 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.support.v7.widget.Toolbar;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.graphics.Bitmap;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Toolbar toolbar;
     DrawerLayout drawerLayout;
@@ -77,6 +83,16 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar); //Find the toolbar
         setSupportActionBar(toolbar); //Start the toolbar
+        //setting up the drop down menu
+
+        Spinner spinner = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Instruments,
+                android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.bringToFront();
+        spinner.setOnItemSelectedListener(this);
+
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -148,4 +164,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void highlightElements(Integer instrument, Integer crystal){
+        elementHighlighted current = new elementHighlighted(instrument,crystal);
+        for(Integer i = 1; i < listOfIds.length + 1; i++){
+            if (i >= current.minRangeA & i <= current.maxRangeA){
+                continue;
+            } else if (i >= current.minRangeB & i <= current.maxRangeB){
+                continue;
+            } else if (i >= current.minRangeC & i <= current.maxRangeC){
+                continue;
+            } else {
+                ImageButton working = (ImageButton) findViewById(button_ids.get(i-1));
+                working.setBackgroundColor(ContextCompat.getColor(this,R.color.grey));
+            }
+
+        }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
