@@ -203,6 +203,15 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void setCamecaValues(String crystal, CurrentElement element){
+        List<String> newData = new ArrayList<>();
+        for (int i = 18; i < 30; i++){
+            float n = Float.parseFloat(element.data.get(i));
+            newData.add(String.valueOf(500*changeUnitsJOEL("H-type", crystal, n)));
+        }
+        updateEnergyValues(newData);
+    }
+
 
     private double changeUnitsJOEL(String spectrometer, String crystal, double energy){
         double R = 0, two_d = 0, E = 0;
@@ -214,9 +223,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
         //TBD about 'n'
         double l_value = (24.792 * R) / (two_d * energy);
-
         return l_value;
-
     }
 
     private void setLValue(CurrentElement element, String spectrometer, String crystal){
@@ -225,7 +232,11 @@ public class DisplayElementDataActivity extends AppCompatActivity {
             float n = Float.parseFloat(element.data.get(i));
             newData.add(String.valueOf(changeUnitsJOEL(spectrometer, crystal, n)));
         }
+        updateEnergyValues(newData);
+    }
 
+
+    private void updateEnergyValues(List<String> newData){
         TextView KBeta = findViewById(R.id.KBeta);
         KBeta.setText(newData.get(0));
         TextView KAlpha = findViewById(R.id.KAlpha);
@@ -250,9 +261,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         MBeta.setText(newData.get(10));
         TextView MAlpha = findViewById(R.id.MAlpha);
         MAlpha.setText(newData.get(11));
-
     }
-
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
 
