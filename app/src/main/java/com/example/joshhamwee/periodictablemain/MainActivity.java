@@ -199,6 +199,7 @@ public class MainActivity extends AppCompatActivity{
         intent.putExtra("instrument",instrument);
         intent.putExtra("crystal",crystal);
         startActivity(intent);
+        
     }
 
     private void highlightElements(Integer instrument, Integer crystal){
