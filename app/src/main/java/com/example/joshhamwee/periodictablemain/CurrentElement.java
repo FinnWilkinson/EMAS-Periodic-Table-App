@@ -20,7 +20,7 @@ public class CurrentElement {
 
     private void dataGetting(DatabaseAccess db){
         db.open();
-        this.data = db.getElementData(this.atomicNumber);
+        this.data = db.getElementData(this.atomicNumber, "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + this.atomicNumber + "'");
         db.close();
     }
 
@@ -67,7 +67,6 @@ public class CurrentElement {
             this.m1Edge = data.get(38);
         }
         catch (Exception e){
-
         }
     }
 
