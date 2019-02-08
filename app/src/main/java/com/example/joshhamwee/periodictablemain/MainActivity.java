@@ -1,5 +1,6 @@
 package com.example.joshhamwee.periodictablemain;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.drm.DrmStore;
@@ -33,7 +34,7 @@ import android.graphics.Bitmap;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity{
 
     Toolbar toolbar;
     DrawerLayout drawerLayout;
@@ -52,12 +53,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     };
 
-    Integer[] listDropDown = {
-            R.id.C_LiF_200, R.id.C_PET, R.id.C_TAP,R.id.C_LiF_220,R.id.C_Qtz_1011
-    };
-
     private ArrayList<Integer> button_ids = new ArrayList<>(Arrays.asList(listOfIds));
-    private ArrayList<Integer> dropDownIDS = new ArrayList<>(Arrays.asList(listDropDown));
+    //private ArrayList<Integer> dropDownIDS = new ArrayList<>(Arrays.asList(listDropDown));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
         setUpToolbar(); //Function that handles the toolbar, see below
         setUpElements(); //Function that handles each button for the elements
-
     }
 
     private void setUpElements(){
@@ -82,6 +78,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
             });
         }
+
+        Bundle dataFromMain = getIntent().getExtras();
+        if (dataFromMain != null){
+            Integer instrument = dataFromMain.getInt("instrument");                  //get passed atomic number
+            Integer crystal = dataFromMain.getInt("crystal");   //gets passed atomic number
+            if (instrument != 0 & crystal != 0){
+                highlightElements(instrument,crystal);
+            }
+
+        }
+
     }
 
     private void setUpToolbar(){
@@ -107,7 +114,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true);
-                                openEnergyActivity(); //Open energy activity on click
+                                //openEnergyActivity(); //Open energy activity on click
+                                highlightElements(1,3);
                                 break;
                             case R.id.help:
                                 menuItem.setChecked(true);
@@ -159,9 +167,39 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START); //When drawer button is clicked, open the drawer
                 return true;
+            case R.id.C_LiF_200: onRefreshActivity(1,1); return true;
+            case R.id.C_PET: onRefreshActivity(1,2); return true;
+            case R.id.C_TAP: onRefreshActivity(1,3); return true;
+            case R.id.C_LiF_220: onRefreshActivity(1,4); return true;
+            case R.id.C_Qtz_1011: onRefreshActivity(1,5); return true;
+            case R.id.JX_LiF_200: onRefreshActivity(2,1); return true;
+            case R.id.JX_PET: onRefreshActivity(2,2); return true;
+            case R.id.JX_TAP: onRefreshActivity(2,3); return true;
+            case R.id.JX_LiF_220: onRefreshActivity(2,4); return true;
+            case R.id.JX_Qtz_1011: onRefreshActivity(2,5); return true;
+            case R.id.JF_LiF_200: onRefreshActivity(3,1); return true;
+            case R.id.JF_PET: onRefreshActivity(3,2); return true;
+            case R.id.JF_TAP: onRefreshActivity(3,3); return true;
+            case R.id.JF_LiF_220: onRefreshActivity(3,4); return true;
+            case R.id.JF_Qtz_1011: onRefreshActivity(3,5); return true;
+            case R.id.JH_LiF_200: onRefreshActivity(4,1); return true;
+            case R.id.JH_PET: onRefreshActivity(4,2); return true;
+            case R.id.JH_TAP: onRefreshActivity(4,3); return true;
+            case R.id.JH_LiF_220: onRefreshActivity(4,4); return true;
+            case R.id.JH_Qtz_1011: onRefreshActivity(4,5); return true;
+            case R.id.reset: onRefreshActivity(0,0);
+
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void onRefreshActivity(Integer instrument, Integer crystal){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("instrument",instrument);
+        intent.putExtra("crystal",crystal);
+        startActivity(intent);
+        
     }
 
     private void highlightElements(Integer instrument, Integer crystal){
@@ -181,13 +219,4 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }
