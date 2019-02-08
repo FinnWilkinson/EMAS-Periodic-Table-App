@@ -220,8 +220,11 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
         if (crystal.equals("PET")) two_d = 8.74;
         else if (crystal.equals("TAP")) two_d = 25.75;
+        else if (crystal.equals("QTZ1011")) two_d = 6.686;
+        else if (crystal.equals("LIF200")) two_d = 4.0267;
+        else if (crystal.equals("LIF220")) two_d = 2.848;
 
-        //TBD about 'n'
+        //N IS FIXED AS 1 !!!!
         double l_value = (24.792 * R) / (two_d * energy);
         return l_value;
     }
