@@ -39,29 +39,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <android.support.constraint.Guideline
-                android:id="@+id/guideline189"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.8" />
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="132dp"
-                android:layout_height="53dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline189"
-                app:layout_constraintStart_toStartOf="@+id/guideline73"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <android.support.constraint.Guideline
-                android:id="@+id/guideline73"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.6" />
-
             <android.support.constraint.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"

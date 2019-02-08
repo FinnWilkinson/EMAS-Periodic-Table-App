@@ -51,7 +51,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
     };
+
+    Integer[] listDropDown = {
+            R.id.C_LiF_200, R.id.C_PET, R.id.C_TAP,R.id.C_LiF_220,R.id.C_Qtz_1011
+    };
+
     private ArrayList<Integer> button_ids = new ArrayList<>(Arrays.asList(listOfIds));
+    private ArrayList<Integer> dropDownIDS = new ArrayList<>(Arrays.asList(listDropDown));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,14 +90,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         toolbar = findViewById(R.id.toolbar); //Find the toolbar
         setSupportActionBar(toolbar); //Start the toolbar
         //setting up the drop down menu
-
-        Spinner spinner = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Instruments,
-                android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.bringToFront();
-        spinner.setOnItemSelectedListener(this);
 
 
         ActionBar actionBar = getSupportActionBar();
@@ -145,7 +143,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.dropdown_menu,menu);
         inflater.inflate(R.menu.menu_search, menu);
+
         return true;
     }
 
