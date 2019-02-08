@@ -46,10 +46,10 @@ public class DatabaseAccess {
 
      //Read all quotes from the database
      //@return a List of quotes
-    public List<String> getElementData(String atomicNum) {
+    public List<String> getElementData(String atomicNum, String sqlQuery) {
         List<String> data = new ArrayList<>();
         int length;
-        String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + atomicNum + "'" ;
+        //String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + atomicNum + "'" ;
         try {
             //retrieve data from database via SQL query
             Cursor cursor = database.rawQuery(sqlQuery, null);
@@ -65,7 +65,6 @@ public class DatabaseAccess {
             data.add(0, "null");
             data.add(1, "Element not found");
         }
-
         return data;
     }
 }
