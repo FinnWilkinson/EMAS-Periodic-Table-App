@@ -1,5 +1,6 @@
 package com.example.joshhamwee.periodictablemain;
 
+import android.content.Context;
 import android.content.Intent;
 import android.drm.DrmStore;
 import android.graphics.drawable.BitmapDrawable;
@@ -7,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -145,6 +147,23 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void highlightElements(Integer instrument, Integer crystal){
+        elementHighlighted current = new elementHighlighted(instrument,crystal);
+        for(Integer i = 1; i < listOfIds.length + 1; i++){
+            if (i >= current.minRangeA & i <= current.maxRangeA){
+                continue;
+            } else if (i >= current.minRangeB & i <= current.maxRangeB){
+                continue;
+            } else if (i >= current.minRangeC & i <= current.maxRangeC){
+                continue;
+            } else {
+                ImageButton working = (ImageButton) findViewById(button_ids.get(i-1));
+                working.setBackgroundColor(ContextCompat.getColor(this,R.color.grey));
+            }
+
         }
     }
 
