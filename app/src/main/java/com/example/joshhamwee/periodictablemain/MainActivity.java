@@ -33,7 +33,7 @@ import android.graphics.Bitmap;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity{
 
     Toolbar toolbar;
     DrawerLayout drawerLayout;
@@ -107,7 +107,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true);
-                                openEnergyActivity(); //Open energy activity on click
+                                //openEnergyActivity(); //Open energy activity on click
+                                highlightElements(1,3);
                                 break;
                             case R.id.help:
                                 menuItem.setChecked(true);
@@ -181,13 +182,4 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }
