@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity{
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true);
-                                //openEnergyActivity(); //Open energy activity on click
+                                openEnergyActivity(); //Open energy activity on click
                                 highlightElements(1,3);
                                 break;
                             case R.id.help:

@@ -43,6 +43,8 @@
     <string name="IR">Ionic Radius in Common Valence state (nm): </string>
     <string name="KLMHeader">KLM Energies:</string>
     <string name="ABEHeader">Absorption Edges:</string>
+    <string name="energy_graph_1">energy graph 1</string>
+    <string name="energy_graph_2">energy graph 2</string>
 
     <string-array name="Instruments">
         <item>Home</item>

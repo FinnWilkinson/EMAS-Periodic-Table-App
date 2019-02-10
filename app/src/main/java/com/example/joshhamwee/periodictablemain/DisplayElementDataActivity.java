@@ -66,7 +66,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         ElementName.setText(currentElement.name);
         displayKeVValues(currentElement);
 
-
         //Underlining the headers
         TextView KLMHeader = findViewById(R.id.KLM_Energies_Header);
         SpannableString KLM = new SpannableString("KLM Energies:");

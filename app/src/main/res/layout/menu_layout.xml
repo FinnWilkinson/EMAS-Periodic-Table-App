@@ -28,8 +28,4 @@
         </android.support.v7.widget.Toolbar>
     </android.support.v7.widget.LinearLayoutCompat>
 
-
-
-<!-- android:forceHasOverlappingRendering="true" -->
-
 </android.support.v4.widget.DrawerLayout>
