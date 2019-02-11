@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.content.ContextCompat;
@@ -44,6 +48,9 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_element_data);
+
+        /******* testing using the tests in the test function  *******/
+        // test();
 
         //Sets up the toolbar on this activity
         setUpToolbar();
@@ -99,6 +106,18 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         else{
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelGreen));
         }
+
+        /*
+        // Spinner stuff
+        Spinner spinner = (Spinner) findViewById(R.id.units_spinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Unit_Change, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
+        */
+
     }
 
     private void displayKeVValues(CurrentElement currentElement){
@@ -202,6 +221,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     private void setCamecaValues(String crystal, CurrentElement element){
         List<String> newData = new ArrayList<>();
         for (int i = 18; i < 30; i++){
@@ -266,5 +286,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
+    //a tester function because proper tests are meh
+    private void test() {
+    }
 
 }

@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity{
             R.id.Cs, R.id.Ba, R.id.La, R.id.Ce, R.id.Pr, R.id.Nd, R.id.Pm, R.id.Sm, R.id.Eu, R.id.Gd, R.id.Tb, R.id.Dy, R.id.Ho, R.id.Er, R.id.Tm, R.id.Yb, R.id.Lu,
             R.id.Hf, R.id.Ta, R.id.W, R.id.Re, R.id.Os, R.id.Ir, R.id.Pt, R.id.Au, R.id.Hg, R.id.Tl, R.id.Pb, R.id.Bi, R.id.Po, R.id.At, R.id.Rn,
             R.id.Fr, R.id.Ra, R.id.Ac, R.id.Th, R.id.Pa, R.id.U, R.id.Np, R.id.Pu, R.id.Am, R.id.Cm, R.id.Bk, R.id.Cf, R.id.Es, R.id.Fm, R.id.Md, R.id.No, R.id.Lr
-
-
     };
 
     private ArrayList<Integer> button_ids = new ArrayList<>(Arrays.asList(listOfIds));
@@ -86,9 +84,7 @@ public class MainActivity extends AppCompatActivity{
             if (instrument != 0 & crystal != 0){
                 highlightElements(instrument,crystal);
             }
-
         }
-
     }
 
     private void setUpToolbar(){

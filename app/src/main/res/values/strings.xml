@@ -1,4 +1,5 @@
 <resources>
+    <!-- TO DO remove all unnecessary ones -->
     <string name="app_name"> </string>
     <string name="search_icon">Search icon</string>
     <string name="menuuuuu">MENUUUUU</string>
@@ -45,6 +46,9 @@
     <string name="ABEHeader">Absorption Edges:</string>
     <string name="energy_graph_1">energy graph 1</string>
     <string name="energy_graph_2">energy graph 2</string>
+    <string name="textview">TextView</string>
+    <string name="select_instrument">Select Instrument</string>
+    <string name="select_crystal">Select Crystal</string>
 
     <string-array name="Instruments">
         <item>Home</item>
@@ -53,4 +57,19 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+
+    <string-array name="Unit_Change_Ins">
+        <item>Energy (keV)</item>
+        <item>Cameca (Sine Theta units)</item>
+        <item>Joel (L-Value)</item>
+    </string-array>
+
+    <string-array name="Unit_Change_Crystal">
+        <item>PET</item>
+        <item>TAP</item>
+        <item>QTZ 1011</item>
+        <item>LIF 200</item>
+        <item>LIF 220</item>
+    </string-array>
+
 </resources>
