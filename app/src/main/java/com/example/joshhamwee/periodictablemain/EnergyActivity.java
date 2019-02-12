@@ -40,6 +40,7 @@ public class EnergyActivity extends AppCompatActivity {
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                        navigationView.bringToFront();
                         switch (menuItem.getItemId()) { //Switch case for each item in the menu
                             case R.id.home:
                                 menuItem.setChecked(true);

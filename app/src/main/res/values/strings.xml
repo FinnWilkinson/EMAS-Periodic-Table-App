@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"> </string>
+    <string name="app_name"> EMAS Periodic Table App</string>
     <string name="search_icon">Search icon</string>
     <string name="menuuuuu">MENUUUUU</string>
     <string name="search_hint">Please search for an element</string>

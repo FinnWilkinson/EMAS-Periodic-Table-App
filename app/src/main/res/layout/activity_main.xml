@@ -37,7 +37,8 @@
                 android:background="@color/white"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <android.support.constraint.ConstraintLayout
             android:id="@+id/constraintLayout"

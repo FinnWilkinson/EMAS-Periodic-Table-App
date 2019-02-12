@@ -86,9 +86,7 @@ public class MainActivity extends AppCompatActivity{
             if (instrument != 0 & crystal != 0){
                 highlightElements(instrument,crystal);
             }
-
         }
-
     }
 
     private void setUpToolbar(){
@@ -96,6 +94,7 @@ public class MainActivity extends AppCompatActivity{
 
         toolbar = findViewById(R.id.toolbar); //Find the toolbar
         setSupportActionBar(toolbar); //Start the toolbar
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         //setting up the drop down menu icon
         Drawable dropDown = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_arrow_drop_down_circle_black_24dp);
