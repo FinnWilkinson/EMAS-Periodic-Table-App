@@ -197,47 +197,29 @@
         <!-- layout for ins spinner -->
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="@+id/constraintLayout2"
-            android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <android.support.constraint.ConstraintLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/textviewofins"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/select_instrument" />
-
-            </android.support.constraint.ConstraintLayout>
-
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="38dp"
-                android:layout_height="62dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                app:layout_constraintEnd_toEndOf="parent">
 
                 <Spinner
                     android:id="@+id/spinner_instrument"
                     android:layout_width="fill_parent"
                     android:layout_height="55dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:entries="@array/Unit_Change_Ins"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    android:entries="@array/Unit_Change_Ins" />
+
             </android.support.constraint.ConstraintLayout>
+
         </LinearLayout>
 
         <!-- layout for crystal spinner -->
@@ -252,7 +234,7 @@
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/cl1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -261,28 +243,11 @@
                     android:layout_height="wrap_content"
                     android:text="@string/select_crystal" />
 
-            </android.support.constraint.ConstraintLayout>
-
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="38dp"
-                android:layout_height="62dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                app:layout_constraintEnd_toEndOf="parent">
-
                 <Spinner
                     android:id="@+id/spinner_crystal"
                     android:layout_width="fill_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:entries="@array/Unit_Change_Ins"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="55dp" />
+
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
 

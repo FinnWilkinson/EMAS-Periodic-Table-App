@@ -28,8 +28,6 @@ import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.support.v7.widget.Toolbar;
-import android.widget.Spinner;
-import android.widget.Toast;
 import android.graphics.Bitmap;
 import java.util.ArrayList;
 import java.util.Arrays;
