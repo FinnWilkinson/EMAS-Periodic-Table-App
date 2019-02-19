@@ -20,6 +20,19 @@
                 android:background="@color/white"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">>
+
+            <ExpandableListView
+                android:id="@+id/help_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></ExpandableListView>
+        </LinearLayout>
+
     </FrameLayout>
 
     <!-- Container for contents of drawer - use NavigationView to make configuration easier -->

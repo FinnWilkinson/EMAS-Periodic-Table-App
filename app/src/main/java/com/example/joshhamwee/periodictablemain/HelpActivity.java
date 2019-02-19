@@ -10,20 +10,71 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class HelpActivity extends AppCompatActivity {
 
     NavigationView navigationView;
     Toolbar toolbar;
     DrawerLayout drawerLayout;
+    private ExpandableListView listView;
+    private ExpandableListAdapter listAdapter;
+    private List<String> listDataHeader;
+    private HashMap<String,List<String>> listHash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         setUpToolbar(); //Function that handles the toolbar, see below
+        setUpList();
     }
 
+    private void setUpList(){
+        listView = (ExpandableListView)findViewById(R.id.help_view);
+        listDataHeader = new ArrayList<>();
+        listHash = new HashMap<>();
+
+        listDataHeader.add("Filter Functions");
+        listDataHeader.add("Changing Instrument");
+        listDataHeader.add("About Us");
+        listDataHeader.add("Privacy Policy");
+
+        List<String> edmtDev = new ArrayList<>();
+        edmtDev.add("This is Expandable ListView");
+
+        List<String> androidStudio = new ArrayList<>();
+        androidStudio.add("Expandable ListView");
+        androidStudio.add("Google Map");
+        androidStudio.add("Chat Application");
+        androidStudio.add("Firebase ");
+
+        List<String> xamarin = new ArrayList<>();
+        xamarin.add("Xamarin Expandable ListView");
+        xamarin.add("Xamarin Google Map");
+        xamarin.add("Xamarin Chat Application");
+        xamarin.add("Xamarin Firebase ");
+
+        List<String> uwp = new ArrayList<>();
+        uwp.add("UWP Expandable ListView");
+        uwp.add("UWP Google Map");
+        uwp.add("UWP Chat Application");
+        uwp.add("UWP Firebase ");
+
+        listHash.put(listDataHeader.get(0),edmtDev);
+        listHash.put(listDataHeader.get(1),androidStudio);
+        listHash.put(listDataHeader.get(2),xamarin);
+        listHash.put(listDataHeader.get(3),uwp);
+
+        listAdapter = new com.example.joshhamwee.periodictablemain.ExpandableListAdapter(this,listDataHeader,listHash);
+        listView.setAdapter(listAdapter);
+
+    }
     private void setUpToolbar(){
         drawerLayout = findViewById(R.id.drawer_layout);
 
