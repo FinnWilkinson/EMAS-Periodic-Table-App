@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.content.ContextCompat;
@@ -196,12 +197,19 @@ public class DisplayElementDataActivity extends AppCompatActivity {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 getSupportActionBar().setDisplayShowHomeEnabled(true);
             }
-        }
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                finish();
+            }
+        });
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home)
-            finish();
+            this.finish();
         return super.onOptionsItemSelected(item);
     }
 
@@ -269,6 +277,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
+
     private void setUpButtons(final Integer currentElement){
         ImageButton nextElement = (ImageButton) findViewById(R.id.next_element);
         nextElement.setOnClickListener(new View.OnClickListener() {
@@ -289,4 +298,5 @@ public class DisplayElementDataActivity extends AppCompatActivity {
             }
         });
     }
+
 }
