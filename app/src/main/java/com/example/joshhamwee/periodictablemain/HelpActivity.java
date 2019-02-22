@@ -32,7 +32,7 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         setUpToolbar(); //Function that handles the toolbar, see below
-        setUpList();
+        setUpList(); //Function that handles the FAQ's
     }
 
     private void setUpList(){
@@ -45,8 +45,8 @@ public class HelpActivity extends AppCompatActivity {
         listDataHeader.add("About Us");
         listDataHeader.add("Privacy Policy");
 
-        List<String> edmtDev = new ArrayList<>();
-        edmtDev.add("This is Expandable ListView");
+        List<String> faqs = new ArrayList<>();
+        faqs.add("These are a list of FAQ's and other useful information!");
 
         List<String> androidStudio = new ArrayList<>();
         androidStudio.add("Expandable ListView");
@@ -66,7 +66,7 @@ public class HelpActivity extends AppCompatActivity {
         uwp.add("UWP Chat Application");
         uwp.add("UWP Firebase ");
 
-        listHash.put(listDataHeader.get(0),edmtDev);
+        listHash.put(listDataHeader.get(0),faqs);
         listHash.put(listDataHeader.get(1),androidStudio);
         listHash.put(listDataHeader.get(2),xamarin);
         listHash.put(listDataHeader.get(3),uwp);
