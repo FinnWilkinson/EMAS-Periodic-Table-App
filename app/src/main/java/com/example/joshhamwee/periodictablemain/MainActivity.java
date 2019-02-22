@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity{
     public void onBackPressed() {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
-        finish();
+        this.finish();
     }
 
     private void onRefreshActivity(Integer instrument, Integer crystal){

@@ -97,6 +97,12 @@ public class HelpActivity extends AppCompatActivity {
                 }
         );
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
 
     //When main page is selected from drawer, start the new activity
     private void openMainActivity(){
