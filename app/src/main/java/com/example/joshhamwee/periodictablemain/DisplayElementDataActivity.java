@@ -106,7 +106,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
 
     private void displayKeVValues(CurrentElement currentElement){
-        //Create textViews to display chosen elements information
+        //Create textViews to display the chosen element's information
+
         TextView AtomicNumber = findViewById(R.id.AtomicNumber);
         AtomicNumber.setText(currentElement.atomicNumber);
         TextView AtomicSymbol = findViewById(R.id.AtomicSymbol);
@@ -213,6 +214,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     private void setCamecaValues(String crystal, CurrentElement element){
         List<String> newData = new ArrayList<>();
         for (int i = 18; i < 30; i++){
@@ -234,7 +236,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         else if (crystal.equals("LIF200")) two_d = 4.0267;
         else if (crystal.equals("LIF220")) two_d = 2.848;
 
-        //N IS FIXED AS 1 !!!!
+        //n is fixed at 1 so not needed in conversion equation
         double l_value = (24.792 * R) / (two_d * energy);
         return l_value;
     }
@@ -247,7 +249,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         }
         updateEnergyValues(newData);
     }
-
 
     private void updateEnergyValues(List<String> newData){
         TextView KBeta = findViewById(R.id.KBeta);
