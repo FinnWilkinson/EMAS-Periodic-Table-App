@@ -194,6 +194,13 @@ public class MainActivity extends AppCompatActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
+    //Overriding the default android backbutton to go to main page
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     private void onRefreshActivity(Integer instrument, Integer crystal){
         Intent intent = new Intent(this, MainActivity.class);

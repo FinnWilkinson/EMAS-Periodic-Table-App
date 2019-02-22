@@ -214,6 +214,13 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
 
     private void setCamecaValues(String crystal, CurrentElement element){
         List<String> newData = new ArrayList<>();
