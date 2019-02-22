@@ -17,6 +17,8 @@ import android.widget.ImageButton;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 import android.support.v4.content.ContextCompat;
 
@@ -29,7 +31,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public class DisplayElementDataActivity extends AppCompatActivity{
+public class DisplayElementDataActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     Toolbar toolbar;
     //NavigationView navigationView;
@@ -106,10 +108,28 @@ public class DisplayElementDataActivity extends AppCompatActivity{
         }
 
         Spinner spinner_instrument = findViewById(R.id.spinner_instrument);
-        
+        spinner_instrument.setOnItemSelectedListener(this);
 
+        ArrayAdapter adapterInstrument = new ArrayAdapter(this,android.R.layout.simple_spinner_item, R.array.Unit_Change_Ins);
+        adapterInstrument.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_instrument.setAdapter(adapterInstrument);
 
         Spinner spinner_crystal = findViewById(R.id.spinner_crystal);
+        spinner_crystal.setOnItemSelectedListener(this);
+
+        ArrayAdapter adapterCrystal = new ArrayAdapter(this,android.R.layout.simple_spinner_item, R.array.Unit_Change_Crystal);
+        adapterCrystal.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_crystal.setAdapter(adapterInstrument);
+    }
+
+    //Performing action onItemSelected and onNothing selected
+    @Override
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
+        
+    }
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
+
     }
 
     private void displayKeVValues(CurrentElement currentElement){
