@@ -59,7 +59,9 @@
     <string-array name="Unit_Change_Ins">
         <item>Energy (keV)</item>
         <item>Cameca (Sine Theta units)</item>
-        <item>Joel (L-Value)</item>
+        <item>Joel-X (L-Value)</item>
+        <item>Joel-F (L-Value)</item>
+        <item>Joel-H (L-Value)</item>
     </string-array>
 
     <string-array name="Unit_Change_Crystal">
