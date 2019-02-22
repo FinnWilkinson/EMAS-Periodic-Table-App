@@ -11,6 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.content.ContextCompat;
@@ -55,7 +58,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         if(elementSize != 0){
             atomicNumber = elementSize;
         }
-
+        setUpButtons(atomicNumber);
         //create a new database instance
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
 
@@ -266,5 +269,24 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
-
+    private void setUpButtons(final Integer currentElement){
+        ImageButton nextElement = (ImageButton) findViewById(R.id.next_element);
+        nextElement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),DisplayElementDataActivity.class); //Create the intent that opens the new activity
+                intent.putExtra("ElementID",currentElement + 1);  //Put extra data into the intent so that next activity knows what element was clicked on
+                startActivity(intent); //Execute the intent
+            }
+        });
+        ImageButton prevElement = (ImageButton) findViewById(R.id.previous_element);
+        prevElement.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),DisplayElementDataActivity.class); //Create the intent that opens the new activity
+                intent.putExtra("ElementID",currentElement - 1);  //Put extra data into the intent so that next activity knows what element was clicked on
+                startActivity(intent); //Execute the intent
+            }
+        });
+    }
 }
