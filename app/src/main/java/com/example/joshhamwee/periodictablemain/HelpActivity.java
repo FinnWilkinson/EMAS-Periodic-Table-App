@@ -80,6 +80,7 @@ public class HelpActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar); //Find the toolbar
         setSupportActionBar(toolbar); //Start the toolbar
+        toolbar.bringToFront();
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
