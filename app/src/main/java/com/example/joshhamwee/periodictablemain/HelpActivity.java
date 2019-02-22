@@ -43,33 +43,21 @@ public class HelpActivity extends AppCompatActivity {
         listDataHeader.add("Filter Functions");
         listDataHeader.add("Changing Instrument");
         listDataHeader.add("About Us");
-        listDataHeader.add("Privacy Policy");
 
-        List<String> faqs = new ArrayList<>();
-        faqs.add("These are a list of FAQ's and other useful information!");
+        List<String> filterfunctions = new ArrayList<>();
+        filterfunctions.add("To filter between the different crystals and machines, on the home page click on the top right hand dropdown menu. The elements will be filtered by colour.");
 
-        List<String> androidStudio = new ArrayList<>();
-        androidStudio.add("Expandable ListView");
-        androidStudio.add("Google Map");
-        androidStudio.add("Chat Application");
-        androidStudio.add("Firebase ");
+        List<String> changinginstrument = new ArrayList<>();
+        changinginstrument.add("Once you have selected an element from either the periodic table or the search function then you will be presented with the element data page.");
+        changinginstrument.add("To switch between the different instruments to change the units of the data, select the drop down menu that you require.");
 
-        List<String> xamarin = new ArrayList<>();
-        xamarin.add("Xamarin Expandable ListView");
-        xamarin.add("Xamarin Google Map");
-        xamarin.add("Xamarin Chat Application");
-        xamarin.add("Xamarin Firebase ");
+        List<String> aboutus = new ArrayList<>();
+        aboutus.add("EMAS is a non-profit organisation that required an application to be able to easily access alot of data.");
+        aboutus.add("This application was a project created for a Software Product Engineering module at the University of Bristol.");
 
-        List<String> uwp = new ArrayList<>();
-        uwp.add("UWP Expandable ListView");
-        uwp.add("UWP Google Map");
-        uwp.add("UWP Chat Application");
-        uwp.add("UWP Firebase ");
-
-        listHash.put(listDataHeader.get(0),faqs);
-        listHash.put(listDataHeader.get(1),androidStudio);
-        listHash.put(listDataHeader.get(2),xamarin);
-        listHash.put(listDataHeader.get(3),uwp);
+        listHash.put(listDataHeader.get(0),filterfunctions);
+        listHash.put(listDataHeader.get(1),changinginstrument);
+        listHash.put(listDataHeader.get(2),aboutus);
 
         listAdapter = new com.example.joshhamwee.periodictablemain.ExpandableListAdapter(this,listDataHeader,listHash);
         listView.setAdapter(listAdapter);
