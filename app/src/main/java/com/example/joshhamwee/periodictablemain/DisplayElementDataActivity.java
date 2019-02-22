@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.content.ContextCompat;
@@ -55,7 +59,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         if(elementSize != 0){
             atomicNumber = elementSize;
         }
-
+        setUpButtons(atomicNumber);
         //create a new database instance
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
 
@@ -102,7 +106,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
 
     private void displayKeVValues(CurrentElement currentElement){
-        //Create textViews to display chosen elements information
+        //Create textViews to display the chosen element's information
+
         TextView AtomicNumber = findViewById(R.id.AtomicNumber);
         AtomicNumber.setText(currentElement.atomicNumber);
         TextView AtomicSymbol = findViewById(R.id.AtomicSymbol);
@@ -193,14 +198,22 @@ public class DisplayElementDataActivity extends AppCompatActivity {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 getSupportActionBar().setDisplayShowHomeEnabled(true);
             }
-        }
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                finish();
+            }
+        });
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home)
-            finish();
+            this.finish();
         return super.onOptionsItemSelected(item);
     }
+
 
     private void setCamecaValues(String crystal, CurrentElement element){
         List<String> newData = new ArrayList<>();
@@ -223,7 +236,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         else if (crystal.equals("LIF200")) two_d = 4.0267;
         else if (crystal.equals("LIF220")) two_d = 2.848;
 
-        //N IS FIXED AS 1 !!!!
+        //n is fixed at 1 so not needed in conversion equation
         double l_value = (24.792 * R) / (two_d * energy);
         return l_value;
     }
@@ -236,7 +249,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         }
         updateEnergyValues(newData);
     }
-
 
     private void updateEnergyValues(List<String> newData){
         TextView KBeta = findViewById(R.id.KBeta);
@@ -266,5 +278,26 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
+
+    private void setUpButtons(final Integer currentElement){
+        ImageButton nextElement = (ImageButton) findViewById(R.id.next_element);
+        nextElement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),DisplayElementDataActivity.class); //Create the intent that opens the new activity
+                intent.putExtra("ElementID",currentElement + 1);  //Put extra data into the intent so that next activity knows what element was clicked on
+                startActivity(intent); //Execute the intent
+            }
+        });
+        ImageButton prevElement = (ImageButton) findViewById(R.id.previous_element);
+        prevElement.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),DisplayElementDataActivity.class); //Create the intent that opens the new activity
+                intent.putExtra("ElementID",currentElement - 1);  //Put extra data into the intent so that next activity knows what element was clicked on
+                startActivity(intent); //Execute the intent
+            }
+        });
+    }
 
 }
