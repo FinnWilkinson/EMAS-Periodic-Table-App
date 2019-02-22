@@ -69,7 +69,4 @@ public class CurrentElement {
         catch (Exception e){
         }
     }
-
-    //need to make a function to change units. can do Float.parseFloat to convert string to float
-    //string cannot be empty
 }

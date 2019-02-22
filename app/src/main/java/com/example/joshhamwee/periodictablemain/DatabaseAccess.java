@@ -49,7 +49,6 @@ public class DatabaseAccess {
     public List<String> getElementData(String atomicNum, String sqlQuery) {
         List<String> data = new ArrayList<>();
         int length;
-        //String sqlQuery = "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + atomicNum + "'" ;
         try {
             //retrieve data from database via SQL query
             Cursor cursor = database.rawQuery(sqlQuery, null);
