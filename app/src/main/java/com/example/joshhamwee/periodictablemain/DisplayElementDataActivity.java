@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.content.ContextCompat;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public class DisplayElementDataActivity extends AppCompatActivity {
+public class DisplayElementDataActivity extends AppCompatActivity{
 
     Toolbar toolbar;
     //NavigationView navigationView;
@@ -103,6 +104,12 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         else{
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelGreen));
         }
+
+        Spinner spinner_instrument = findViewById(R.id.spinner_instrument);
+        
+
+
+        Spinner spinner_crystal = findViewById(R.id.spinner_crystal);
     }
 
     private void displayKeVValues(CurrentElement currentElement){
@@ -299,5 +306,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
