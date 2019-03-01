@@ -103,13 +103,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/select_instrument" />
 
-                <Spinner
-                    android:id="@+id/spinner_instrument"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:prompt="@string/select_instrument"
-                    android:entries="@array/Unit_Change_Ins" />
-
             </android.support.constraint.ConstraintLayout>
 
         </LinearLayout>
@@ -134,13 +127,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/select_crystal" />
-
-                <Spinner
-                    android:id="@+id/spinner_crystal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="55dp"
-                    android:prompt="@string/select_crystal"
-                    android:entries="@array/Unit_Change_Crystal" />
 
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>

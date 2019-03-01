@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +33,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public class DisplayElementDataActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class DisplayElementDataActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     //NavigationView navigationView;
@@ -43,6 +45,7 @@ public class DisplayElementDataActivity extends AppCompatActivity implements Ada
     private static final Set<Integer> Metaloids = new HashSet<>(Arrays.asList(new Integer []{13,31,32,49,50,51,81,82,83,84}));
     private static final Set<Integer> NonMetals = new HashSet<>(Arrays.asList(new Integer []{5,6,7,8,9,14,15,16,17,33,34,35,52,53,85}));
     private static final Set<Integer> NobleGases = new HashSet<>(Arrays.asList(new Integer []{2,10,18,36,54,86}));
+    private CurrentElement currentElement;
     //redundant --> may find another use later remove if not
    // private static final Set<Integer> HeavyEl = new HashSet<>(Arrays.asList(new Integer []{57,58,59}))
 
@@ -67,7 +70,7 @@ public class DisplayElementDataActivity extends AppCompatActivity implements Ada
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
 
         //Create an element object that relates to the specific ID
-        CurrentElement currentElement = new CurrentElement(atomicNumber, databaseAccess);
+        currentElement = new CurrentElement(atomicNumber, databaseAccess);
 
         TextView ElementName = findViewById(R.id.ElementName);
         ElementName.setText(currentElement.name);
@@ -107,7 +110,7 @@ public class DisplayElementDataActivity extends AppCompatActivity implements Ada
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelGreen));
         }
 
-        Spinner spinner_instrument = findViewById(R.id.spinner_instrument);
+        /*Spinner spinner_instrument = findViewById(R.id.spinner_instrument);
         spinner_instrument.setOnItemSelectedListener(this);
 
         ArrayAdapter adapterInstrument = new ArrayAdapter(this,android.R.layout.simple_spinner_item, R.array.Unit_Change_Ins);
@@ -120,17 +123,9 @@ public class DisplayElementDataActivity extends AppCompatActivity implements Ada
         ArrayAdapter adapterCrystal = new ArrayAdapter(this,android.R.layout.simple_spinner_item, R.array.Unit_Change_Crystal);
         adapterCrystal.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_crystal.setAdapter(adapterInstrument);
+        */
     }
 
-    //Performing action onItemSelected and onNothing selected
-    @Override
-    public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
-        
-    }
-    @Override
-    public void onNothingSelected(AdapterView<?> arg0) {
-
-    }
 
     private void displayKeVValues(CurrentElement currentElement){
         //Create textViews to display the chosen element's information
@@ -236,19 +231,66 @@ public class DisplayElementDataActivity extends AppCompatActivity implements Ada
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home)
+        /*if (item.getItemId() == android.R.id.home)
             this.finish();
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);*/
+
+        switch(item.getItemId()) {
+            case android.R.id.home : this.finish(); return super.onOptionsItemSelected(item);
+
+            case R.id.C_LiF_200: onRefreshActivity("Cameca","LIF200", ""); return true;
+            case R.id.C_PET: onRefreshActivity("Cameca","PET", ""); return true;
+            case R.id.C_TAP: onRefreshActivity("Cameca","TAP", ""); return true;
+            case R.id.C_LiF_220: onRefreshActivity("Cameca","LIF220", ""); return true;
+            case R.id.C_Qtz_1011: onRefreshActivity("Cameca","QTZ1011", ""); return true;
+            case R.id.JX_LiF_200: onRefreshActivity("Joel","LIF200", "XCE"); return true;
+            case R.id.JX_PET: onRefreshActivity("Joel","PET", "XCE"); return true;
+            case R.id.JX_TAP: onRefreshActivity("Joel","TAP", "XCE"); return true;
+            case R.id.JX_LiF_220: onRefreshActivity("Joel","LIF220", "XCE"); return true;
+            case R.id.JX_Qtz_1011: onRefreshActivity("Joel","QTZ1011", "XCE"); return true;
+            case R.id.JF_LiF_200: onRefreshActivity("Joel","LIF200", "FCE"); return true;
+            case R.id.JF_PET: onRefreshActivity("Joel","PET", "FCE"); return true;
+            case R.id.JF_TAP: onRefreshActivity("Joel","TAP", "FCE"); return true;
+            case R.id.JF_LiF_220: onRefreshActivity("Joel","LIF220", "FCE"); return true;
+            case R.id.JF_Qtz_1011: onRefreshActivity("Joel","QTZ1011", "FCE"); return true;
+            case R.id.JH_LiF_200: onRefreshActivity("Joel","LIF200", "H-type"); return true;
+            case R.id.JH_PET: onRefreshActivity("Joel","PET", "H-type"); return true;
+            case R.id.JH_TAP: onRefreshActivity("Joel","TAP", "H-type"); return true;
+            case R.id.JH_LiF_220: onRefreshActivity("Joel","LIF220", "H-type"); return true;
+            case R.id.JH_Qtz_1011: onRefreshActivity("Joel","QTZ1011", "H-type"); return true;
+            case R.id.reset: onRefreshActivity("Reset","Reset", "Reset");
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void onRefreshActivity(String instrument, String crystal, String spectrometer){
+        if (instrument == "Reset"){
+            displayKeVValues(currentElement);
+        }
+        else if (instrument == "Cameca"){
+            setCamecaValues(crystal, currentElement);
+        }
+        else if (instrument == "Joel") {
+            setLValue(currentElement, spectrometer, crystal);
+        }
+
     }
 
 
     private void setCamecaValues(String crystal, CurrentElement element){
         List<String> newData = new ArrayList<>();
         for (int i = 18; i < 30; i++){
-            float n = Float.parseFloat(element.data.get(i));
-            newData.add(String.valueOf(500*changeUnitsJOEL("H-type", crystal, n)));
+            try {
+                float n = Float.parseFloat(element.data.get(i));
+                newData.add(String.format("%.3f", (500*changeUnitsJOEL("H-type", crystal, n))));
+            }
+            catch(Exception e){
+                newData.add("-");
+            }
         }
-        updateEnergyValues(newData);
+        updateEnergyValues(newData, "Cameca");
     }
 
 
@@ -271,37 +313,45 @@ public class DisplayElementDataActivity extends AppCompatActivity implements Ada
     private void setLValue(CurrentElement element, String spectrometer, String crystal){
         List<String> newData = new ArrayList<>();
         for (int i = 18; i < 30; i++){
-            float n = Float.parseFloat(element.data.get(i));
-            newData.add(String.valueOf(changeUnitsJOEL(spectrometer, crystal, n)));
+            try{
+                float n = Float.parseFloat(element.data.get(i));
+                newData.add(String.format("%.3f",(changeUnitsJOEL(spectrometer, crystal, n))));
+            }
+            catch(Exception e){
+                newData.add("-");
+            }
         }
-        updateEnergyValues(newData);
+        updateEnergyValues(newData, "Joel");
     }
 
-    private void updateEnergyValues(List<String> newData){
+    private void updateEnergyValues(List<String> newData, String instrument){
+        String unit = new String();
+        if (instrument == "Cameca") unit = " (Sine Theta)";
+        if (instrument == "Joel") unit = " (L-Value)";
         TextView KBeta = findViewById(R.id.KBeta);
-        KBeta.setText(newData.get(0));
+        KBeta.setText(newData.get(0) + unit);
         TextView KAlpha = findViewById(R.id.KAlpha);
-        KAlpha.setText(newData.get(1));
+        KAlpha.setText(newData.get(1) + unit);
         TextView LGamma23 = findViewById(R.id.LGamma23);
-        LGamma23.setText(newData.get(2));
+        LGamma23.setText(newData.get(2) + unit);
         TextView LGamma1 = findViewById(R.id.LGamma1);
-        LGamma1.setText(newData.get(3));
+        LGamma1.setText(newData.get(3) + unit);
         TextView LBeta4 = findViewById(R.id.LBeta4);
-        LBeta4.setText(newData.get(4));
+        LBeta4.setText(newData.get(4) + unit);
         TextView LBeta3 = findViewById(R.id.LBeta3);
-        LBeta3.setText(newData.get(5));
+        LBeta3.setText(newData.get(5) + unit);
         TextView LBeta2 = findViewById(R.id.LBeta2);
-        LBeta2.setText(newData.get(6));
+        LBeta2.setText(newData.get(6) + unit);
         TextView LBeta1 = findViewById(R.id.LBeta1);
-        LBeta1.setText(newData.get(7));
+        LBeta1.setText(newData.get(7) + unit);
         TextView LAlpha = findViewById(R.id.LAlpha);
-        LAlpha.setText(newData.get(8));
+        LAlpha.setText(newData.get(8) + unit);
         TextView MGamma = findViewById(R.id.MGamma);
-        MGamma.setText(newData.get(9));
+        MGamma.setText(newData.get(9) + unit);
         TextView MBeta = findViewById(R.id.MBeta);
-        MBeta.setText(newData.get(10));
+        MBeta.setText(newData.get(10) + unit);
         TextView MAlpha = findViewById(R.id.MAlpha);
-        MAlpha.setText(newData.get(11));
+        MAlpha.setText(newData.get(11) + unit);
     }
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
@@ -327,5 +377,12 @@ public class DisplayElementDataActivity extends AppCompatActivity implements Ada
         });
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.dropdown_menu,menu);
+        return true;
+    }
 
 }
