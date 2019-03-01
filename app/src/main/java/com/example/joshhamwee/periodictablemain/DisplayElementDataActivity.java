@@ -135,59 +135,67 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         TextView Valencies = findViewById(R.id.Valencies);
         Valencies.setText(currentElement.valencies);
         TextView MeltingPoint = findViewById(R.id.MeltingPoint);
-        MeltingPoint.setText(currentElement.meltingPoint);
+        MeltingPoint.setText(currentElement.meltingPoint + "°C");
         TextView BoilingPoint = findViewById(R.id.BoilingPoint);
-        BoilingPoint.setText(currentElement.boilingPoint);
+        BoilingPoint.setText(currentElement.boilingPoint + "°C");
         TextView Density = findViewById(R.id.Density);
-        Density.setText(currentElement.density);
+        Density.setText(currentElement.density + "g.cm-3");
         TextView IonicRadius = findViewById(R.id.IonicRadius);
-        IonicRadius.setText(currentElement.ionicRadius);
+        IonicRadius.setText(currentElement.ionicRadius + "nm");
         TextView KBeta = findViewById(R.id.KBeta);
-        KBeta.setText(currentElement.kBeta);
+        KBeta.setText(setUpEnergyUnits(currentElement.kBeta));
         TextView KAlpha = findViewById(R.id.KAlpha);
-        KAlpha.setText(currentElement.kAlpha);
+        KAlpha.setText(setUpEnergyUnits(currentElement.kAlpha));
         TextView LGamma23 = findViewById(R.id.LGamma23);
-        LGamma23.setText(currentElement.lGamma23);
+        LGamma23.setText(setUpEnergyUnits(currentElement.lGamma23));
         TextView LGamma1 = findViewById(R.id.LGamma1);
-        LGamma1.setText(currentElement.lGamma1);
+        LGamma1.setText(setUpEnergyUnits(currentElement.lGamma1));
         TextView LBeta4 = findViewById(R.id.LBeta4);
-        LBeta4.setText(currentElement.lBeta4);
+        LBeta4.setText(setUpEnergyUnits(currentElement.lBeta4));
         TextView LBeta3 = findViewById(R.id.LBeta3);
-        LBeta3.setText(currentElement.lBeta3);
+        LBeta3.setText(setUpEnergyUnits(currentElement.lBeta3));
         TextView LBeta2 = findViewById(R.id.LBeta2);
-        LBeta2.setText(currentElement.lBeta2);
+        LBeta2.setText(setUpEnergyUnits(currentElement.lBeta2));
         TextView LBeta1 = findViewById(R.id.LBeta1);
-        LBeta1.setText( currentElement.lBeta1);
+        LBeta1.setText(setUpEnergyUnits(currentElement.lBeta1));
         TextView LAlpha = findViewById(R.id.LAlpha);
-        LAlpha.setText(currentElement.lAlpha);
+        LAlpha.setText(setUpEnergyUnits(currentElement.lAlpha));
         TextView MGamma = findViewById(R.id.MGamma);
-        MGamma.setText(currentElement.mGamma);
+        MGamma.setText(setUpEnergyUnits(currentElement.mGamma));
         TextView MBeta = findViewById(R.id.MBeta);
-        MBeta.setText( currentElement.mBeta);
+        MBeta.setText(setUpEnergyUnits(currentElement.mBeta));
         TextView MAlpha = findViewById(R.id.MAlpha);
-        MAlpha.setText(currentElement.mAlpha);
+        MAlpha.setText(setUpEnergyUnits(currentElement.mAlpha));
         TextView KEdge = findViewById(R.id.KEdge);
-        KEdge.setText(currentElement.kEdge);
+        KEdge.setText(setUpEnergyUnits(currentElement.kEdge));
         TextView L3Edge = findViewById(R.id.L3Edge);
-        L3Edge.setText(currentElement.l3Edge);
+        L3Edge.setText(setUpEnergyUnits(currentElement.l3Edge));
         TextView L2Edge = findViewById(R.id.L2Edge);
-        L2Edge.setText(currentElement.l2Edge);
+        L2Edge.setText(setUpEnergyUnits(currentElement.l2Edge));
         TextView L1Edge = findViewById(R.id.L1Edge);
-        L1Edge.setText(currentElement.l1Edge);
+        L1Edge.setText(setUpEnergyUnits(currentElement.l1Edge));
         TextView M5Edge = findViewById(R.id.M5Edge);
-        M5Edge.setText(currentElement.m5Edge);
+        M5Edge.setText(setUpEnergyUnits(currentElement.m5Edge));
         TextView M4Edge = findViewById(R.id.M4Edge);
-        M4Edge.setText(currentElement.m4Edge);
+        M4Edge.setText(setUpEnergyUnits(currentElement.m4Edge));
         TextView M3Edge = findViewById(R.id.M3Edge);
-        M3Edge.setText(currentElement.m3Edge);
+        M3Edge.setText(setUpEnergyUnits(currentElement.m3Edge));
         TextView M2Edge = findViewById(R.id.M2Edge);
-        M2Edge.setText(currentElement.m2Edge);
+        M2Edge.setText(setUpEnergyUnits(currentElement.m2Edge));
         TextView M1Edge = findViewById(R.id.M1Edge);
-        M1Edge.setText(currentElement.m1Edge);
+        M1Edge.setText(setUpEnergyUnits(currentElement.m1Edge));
     }
 
     /********** this is repeated code, probs should find a way around it. hehh..... ***/
 
+    //helper function to set up energy units
+    private String setUpEnergyUnits(String string){
+        String units = "";
+        if(!(string.equals("-"))){
+            units = " keV";
+        }
+        return (string + units);
+    }
 
     private void setUpToolbar() {
         //Find the toolbar by the specific id
@@ -286,7 +294,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
-
+    //Function to move between previous and next element
     private void setUpButtons(final Integer currentElement){
         ImageButton nextElement = (ImageButton) findViewById(R.id.next_element);
         nextElement.setOnClickListener(new View.OnClickListener() {

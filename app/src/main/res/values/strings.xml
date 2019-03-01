@@ -40,7 +40,7 @@
     <string name="M3E">M3 Edge:</string>
     <string name="M2E">M2 Edge:</string>
     <string name="M1E">M1 Edge:</string>
-    <string name="IR">Ionic Radius in Common Valence state (nm): </string>
+    <string name="IR">Ionic Radius in Common Valence state: </string>
     <string name="KLMHeader">KLM Energies:</string>
     <string name="ABEHeader">Absorption Edges:</string>
     <string name="energy_graph_1">energy graph 1</string>
