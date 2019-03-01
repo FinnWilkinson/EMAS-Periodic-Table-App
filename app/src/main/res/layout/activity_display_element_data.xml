@@ -93,14 +93,15 @@
             android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline74"
-            app:srcCompat="@drawable/ic_chevron_left" />
+            app:srcCompat="@drawable/ic_chevron_left"
+            android:contentDescription="previous_element_button" />
 
         <ImageButton
             android:id="@+id/next_element"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:contentDescription="TODO"
+            android:contentDescription="next_element_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/previous_element"
             app:srcCompat="@drawable/ic_chevron_right" />
