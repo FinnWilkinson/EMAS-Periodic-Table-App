@@ -223,7 +223,6 @@ public class MainActivity extends AppCompatActivity{
                 ImageButton working = (ImageButton) findViewById(button_ids.get(i-1));
                 working.setBackground(ContextCompat.getDrawable(this,R.drawable.colour8));
             }
-
         }
     }
 
