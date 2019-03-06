@@ -17,7 +17,7 @@ public class CurrentElement {
         dataGetting(db);
         dataSetting();
     }
-
+//comment
     private void dataGetting(DatabaseAccess db){
         db.open();
         this.data = db.getElementData(this.atomicNumber, "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + this.atomicNumber + "'");
