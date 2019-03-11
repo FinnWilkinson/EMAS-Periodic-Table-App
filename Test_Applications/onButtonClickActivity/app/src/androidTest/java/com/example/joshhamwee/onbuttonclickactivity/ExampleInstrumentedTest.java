@@ -1,4 +1,4 @@
-package com.example.joshhamwee.onbuttonclickactivity;
+package com.pta.joshhamwee.onbuttonclickactivity;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

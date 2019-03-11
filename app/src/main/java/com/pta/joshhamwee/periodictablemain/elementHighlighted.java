@@ -1,6 +1,4 @@
-package com.example.joshhamwee.periodictablemain;
-
-import java.util.List;
+package com.pta.joshhamwee.periodictablemain;
 
 public class elementHighlighted {
     Integer instrument, crystal, minRangeA, maxRangeA, minRangeB, maxRangeB, minRangeC, maxRangeC;

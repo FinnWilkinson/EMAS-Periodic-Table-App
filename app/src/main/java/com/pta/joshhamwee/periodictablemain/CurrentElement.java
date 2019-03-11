@@ -1,4 +1,4 @@
-package com.example.joshhamwee.periodictablemain;
+package com.pta.joshhamwee.periodictablemain;
 
 import java.util.ArrayList;
 import java.util.List;

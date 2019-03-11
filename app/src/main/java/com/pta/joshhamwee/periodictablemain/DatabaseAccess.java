@@ -1,4 +1,4 @@
-package com.example.joshhamwee.periodictablemain;
+package com.pta.joshhamwee.periodictablemain;
 
 import android.content.Context;
 import android.database.Cursor;

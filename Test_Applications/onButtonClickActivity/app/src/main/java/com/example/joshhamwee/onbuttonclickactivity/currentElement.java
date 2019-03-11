@@ -1,4 +1,4 @@
-package com.example.joshhamwee.onbuttonclickactivity;
+package com.pta.joshhamwee.onbuttonclickactivity;
 
 public class currentElement{
     String name;

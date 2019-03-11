@@ -19,13 +19,13 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <provider
-            android:name="com.example.joshhamwee.periodictablemain.ElementsSearchContentProvider"
+            android:name="com.pta.joshhamwee.periodictablemain.ElementsSearchContentProvider"
             android:authorities="elements"
             android:enabled="true"
             android:exported="true" />
 
         <activity
-            android:name="com.example.joshhamwee.periodictablemain.MainActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.MainActivity"
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +38,7 @@
                 android:value=".ElementSearchActivity" />
         </activity>
         <activity
-            android:name="com.example.joshhamwee.periodictablemain.ElementSearchActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.ElementSearchActivity"
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -49,12 +49,12 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name="com.example.joshhamwee.periodictablemain.DisplayElementDataActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.DisplayElementDataActivity"
             android:screenOrientation="landscape" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.example.joshhamwee.periodictablemain.com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.pta.joshhamwee.periodictablemain.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
     </application>
 

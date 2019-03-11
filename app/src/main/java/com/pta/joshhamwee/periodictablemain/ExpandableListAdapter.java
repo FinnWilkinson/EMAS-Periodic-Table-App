@@ -1,4 +1,4 @@
-package com.example.joshhamwee.periodictablemain;
+package com.pta.joshhamwee.periodictablemain;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.List;

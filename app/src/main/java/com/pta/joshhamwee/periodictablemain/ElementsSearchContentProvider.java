@@ -1,4 +1,4 @@
-package com.example.joshhamwee.periodictablemain;
+package com.pta.joshhamwee.periodictablemain;
 import android.app.SearchManager;
 import android.content.ContentProvider;
 import android.content.ContentValues;

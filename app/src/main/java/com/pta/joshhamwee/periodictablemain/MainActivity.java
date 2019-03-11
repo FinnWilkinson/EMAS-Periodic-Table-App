@@ -1,16 +1,10 @@
-package com.example.joshhamwee.periodictablemain;
+package com.pta.joshhamwee.periodictablemain;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.drm.DrmStore;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -21,16 +15,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.support.v7.widget.Toolbar;
-import android.widget.Spinner;
-import android.widget.Toast;
-import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

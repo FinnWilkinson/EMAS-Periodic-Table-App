@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.joshhamwee.periodictablemain">
+    package="com.pta.joshhamwee.periodictablemain">
 
     <application
         android:allowBackup="true"
@@ -11,13 +11,13 @@
         android:theme="@style/AppTheme">
 
         <provider
-            android:name=".ElementsSearchContentProvider"
+            android:name="com.pta.joshhamwee.periodictablemain.ElementsSearchContentProvider"
             android:authorities="elements"
             android:enabled="true"
             android:exported="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.MainActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,7 @@
         </activity>
 
         <activity
-            android:name=".ElementSearchActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.ElementSearchActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -42,15 +42,15 @@
         </activity>
 
         <activity
-            android:name=".DisplayElementDataActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.DisplayElementDataActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".HelpActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.HelpActivity"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".EnergyActivity"
+            android:name="com.pta.joshhamwee.periodictablemain.EnergyActivity"
             android:screenOrientation="landscape" />
 
     </application>

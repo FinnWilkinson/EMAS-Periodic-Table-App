@@ -1,4 +1,4 @@
-package com.example.joshhamwee.onbuttonclickactivity;
+package com.pta.joshhamwee.onbuttonclickactivity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

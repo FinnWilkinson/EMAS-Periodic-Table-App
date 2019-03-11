@@ -1,4 +1,4 @@
-package com.example.joshhamwee.periodictablemain;
+package com.pta.joshhamwee.periodictablemain;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
