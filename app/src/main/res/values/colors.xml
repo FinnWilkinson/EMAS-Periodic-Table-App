@@ -30,4 +30,5 @@
     <color name="pastelGrey">#bdbdbd</color>
     <color name="textBlack">#181C1D</color>
     <color name="textViewBackground">#E9E9E9</color>
+    <color name="EMAS_text_color">#495FAE</color>
 </resources>

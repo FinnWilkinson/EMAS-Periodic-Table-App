@@ -71,8 +71,7 @@
         </android.support.constraint.ConstraintLayout>
 
 
-
-        <LinearLayout
+            <LinearLayout
             android:id="@+id/linearLayout6"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -88,7 +87,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-            <android.support.constraint.ConstraintLayout
+                <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1">
