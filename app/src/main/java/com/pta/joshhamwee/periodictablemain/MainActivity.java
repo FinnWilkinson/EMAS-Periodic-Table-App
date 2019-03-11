@@ -200,14 +200,15 @@ public class MainActivity extends AppCompatActivity{
     private void highlightElements(Integer instrument, Integer crystal){
         elementHighlighted current = new elementHighlighted(instrument,crystal);
         for(Integer i = 1; i < listOfIds.length + 1; i++){
+            ImageButton working = (ImageButton) findViewById(button_ids.get(i-1));
             if (i >= current.minRangeA & i <= current.maxRangeA){
-                continue;
+                working.setBackground(ContextCompat.getDrawable(this,R.drawable.colour1));
             } else if (i >= current.minRangeB & i <= current.maxRangeB){
-                continue;
+                working.setBackground(ContextCompat.getDrawable(this,R.drawable.colour7));
             } else if (i >= current.minRangeC & i <= current.maxRangeC){
-                continue;
+                working.setBackground(ContextCompat.getDrawable(this,R.drawable.colour4));
             } else {
-                ImageButton working = (ImageButton) findViewById(button_ids.get(i-1));
+
                 working.setBackground(ContextCompat.getDrawable(this,R.drawable.colour8));
             }
         }
