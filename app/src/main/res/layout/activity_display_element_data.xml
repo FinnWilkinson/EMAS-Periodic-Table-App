@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -84,48 +85,76 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <Button
+            android:id="@+id/previous_element"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:background="@drawable/button_colour1"
+            android:elevation="8dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/prev_element"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline196"
+            app:layout_constraintEnd_toStartOf="@+id/guideline194"
+            app:layout_constraintStart_toStartOf="@+id/guideline75"
+            app:layout_constraintTop_toTopOf="@+id/guideline74" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline196"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline194"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline77"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.6" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="143dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/textviewofins"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/select_instrument" />
-
-            </android.support.constraint.ConstraintLayout>
-
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/previous_element"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline74"
-            app:srcCompat="@drawable/ic_chevron_left"
-            android:contentDescription="previous_element_button" />
-
-        <ImageButton
+        <Button
             android:id="@+id/next_element"
-            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_colour1"
+            android:elevation="8dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/next_element"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline195"
+            app:layout_constraintEnd_toStartOf="@+id/guideline194"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline75"
+            app:layout_constraintTop_toTopOf="@+id/guideline77" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline195"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:contentDescription="next_element_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/previous_element"
-            app:srcCompat="@drawable/ic_chevron_right" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"

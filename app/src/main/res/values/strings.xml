@@ -48,6 +48,8 @@
     <string name="select_instrument" />
     <string name="select_crystal" />
     <string name="EMAS">European Microbeam Analysis Society</string>
+    <string name="prev_element">Previous Element</string>
+    <string name="next_element">Next Element</string>
     <string-array name="Instruments">
         <item>Home</item>
         <item>1</item>

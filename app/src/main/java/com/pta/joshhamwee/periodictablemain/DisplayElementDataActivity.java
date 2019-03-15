@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 import android.support.v4.content.ContextCompat;
 
@@ -29,13 +29,11 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     private static final Set<Integer> AlkMetals = new HashSet<>(Arrays.asList(new Integer[]{1,3,11,19,37,55,87}));
     private static final Set<Integer> AlkEMetals = new HashSet<>(Arrays.asList(new Integer []{4,12,20,38,56,88}));
     private static final Set<Integer> TranMetals = new HashSet<>(Arrays.asList(new Integer []{21,22,23,24,25,26,27,28,29,30,
-    39,40,41,42,43,45,46,47,48,72,73,74,75,76,77,78,79,80}));
+    39,40,41,42,43,44,45,46,47,48,57,72,73,74,75,76,77,78,79,80,89}));
     private static final Set<Integer> Metaloids = new HashSet<>(Arrays.asList(new Integer []{13,31,32,49,50,51,81,82,83,84}));
     private static final Set<Integer> NonMetals = new HashSet<>(Arrays.asList(new Integer []{5,6,7,8,9,14,15,16,17,33,34,35,52,53,85}));
     private static final Set<Integer> NobleGases = new HashSet<>(Arrays.asList(new Integer []{2,10,18,36,54,86}));
     private CurrentElement currentElement;
-    //redundant --> may find another use later remove if not
-   // private static final Set<Integer> HeavyEl = new HashSet<>(Arrays.asList(new Integer []{57,58,59}))
 
 
     @Override
@@ -75,27 +73,44 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         Absorption.setSpan(new UnderlineSpan(),0,Absorption.length(),0);
         AbsorptionHeader.setText(Absorption);
 
-        //should probably define a separate function to set up colour-- too much repetition
+        //changing colours of element name and buttons according to position in table
+        Button nextElement = (Button) findViewById(R.id.next_element);
+        Button prevElement = (Button) findViewById(R.id.previous_element);
+
         if(AlkMetals.contains(atomicNumber)) {
             ElementName.setTextColor(ContextCompat.getColor(this, R.color.pastelPink));
+            nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour1));
+            prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour1));
         }
         else if(AlkEMetals.contains(atomicNumber)){
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelOrange));
+            nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour2));
+            prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour2));
         }
         else if(TranMetals.contains(atomicNumber)){
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelYellow));
+            nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour3));
+            prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour3));
         }
         else if(Metaloids.contains(atomicNumber)){
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelBlue));
+            nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour4));
+            prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour4));
         }
         else if(NonMetals.contains(atomicNumber)){
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelPurple));
+            nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour5));
+            prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour5));
         }
         else if(NobleGases.contains(atomicNumber)){
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelGrey));
+            nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour6));
+            prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour6));
         }
         else{
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelGreen));
+            nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour7));
+            prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour7));
         }
 
     }
@@ -139,56 +154,57 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         TextView IonicRadius = findViewById(R.id.IonicRadius);
         IonicRadius.setText(currentElement.ionicRadius + "nm");
         TextView KBeta = findViewById(R.id.KBeta);
-        KBeta.setText(setUpEnergyUnits(currentElement.kBeta));
+        //Set up units
+        String units = " keV";
+        KBeta.setText(setUpEnergyUnits(currentElement.kBeta,units));
         TextView KAlpha = findViewById(R.id.KAlpha);
-        KAlpha.setText(setUpEnergyUnits(currentElement.kAlpha));
+        KAlpha.setText(setUpEnergyUnits(currentElement.kAlpha,units));
         TextView LGamma23 = findViewById(R.id.LGamma23);
-        LGamma23.setText(setUpEnergyUnits(currentElement.lGamma23));
+        LGamma23.setText(setUpEnergyUnits(currentElement.lGamma23,units));
         TextView LGamma1 = findViewById(R.id.LGamma1);
-        LGamma1.setText(setUpEnergyUnits(currentElement.lGamma1));
+        LGamma1.setText(setUpEnergyUnits(currentElement.lGamma1,units));
         TextView LBeta4 = findViewById(R.id.LBeta4);
-        LBeta4.setText(setUpEnergyUnits(currentElement.lBeta4));
+        LBeta4.setText(setUpEnergyUnits(currentElement.lBeta4,units));
         TextView LBeta3 = findViewById(R.id.LBeta3);
-        LBeta3.setText(setUpEnergyUnits(currentElement.lBeta3));
+        LBeta3.setText(setUpEnergyUnits(currentElement.lBeta3,units));
         TextView LBeta2 = findViewById(R.id.LBeta2);
-        LBeta2.setText(setUpEnergyUnits(currentElement.lBeta2));
+        LBeta2.setText(setUpEnergyUnits(currentElement.lBeta2,units));
         TextView LBeta1 = findViewById(R.id.LBeta1);
-        LBeta1.setText(setUpEnergyUnits(currentElement.lBeta1));
+        LBeta1.setText(setUpEnergyUnits(currentElement.lBeta1,units));
         TextView LAlpha = findViewById(R.id.LAlpha);
-        LAlpha.setText(setUpEnergyUnits(currentElement.lAlpha));
+        LAlpha.setText(setUpEnergyUnits(currentElement.lAlpha,units));
         TextView MGamma = findViewById(R.id.MGamma);
-        MGamma.setText(setUpEnergyUnits(currentElement.mGamma));
+        MGamma.setText(setUpEnergyUnits(currentElement.mGamma,units));
         TextView MBeta = findViewById(R.id.MBeta);
-        MBeta.setText(setUpEnergyUnits(currentElement.mBeta));
+        MBeta.setText(setUpEnergyUnits(currentElement.mBeta,units));
         TextView MAlpha = findViewById(R.id.MAlpha);
-        MAlpha.setText(setUpEnergyUnits(currentElement.mAlpha));
+        MAlpha.setText(setUpEnergyUnits(currentElement.mAlpha,units));
         TextView KEdge = findViewById(R.id.KEdge);
-        KEdge.setText(setUpEnergyUnits(currentElement.kEdge));
+        KEdge.setText(setUpEnergyUnits(currentElement.kEdge,units));
         TextView L3Edge = findViewById(R.id.L3Edge);
-        L3Edge.setText(setUpEnergyUnits(currentElement.l3Edge));
+        L3Edge.setText(setUpEnergyUnits(currentElement.l3Edge,units));
         TextView L2Edge = findViewById(R.id.L2Edge);
-        L2Edge.setText(setUpEnergyUnits(currentElement.l2Edge));
+        L2Edge.setText(setUpEnergyUnits(currentElement.l2Edge,units));
         TextView L1Edge = findViewById(R.id.L1Edge);
-        L1Edge.setText(setUpEnergyUnits(currentElement.l1Edge));
+        L1Edge.setText(setUpEnergyUnits(currentElement.l1Edge,units));
         TextView M5Edge = findViewById(R.id.M5Edge);
-        M5Edge.setText(setUpEnergyUnits(currentElement.m5Edge));
+        M5Edge.setText(setUpEnergyUnits(currentElement.m5Edge,units));
         TextView M4Edge = findViewById(R.id.M4Edge);
-        M4Edge.setText(setUpEnergyUnits(currentElement.m4Edge));
+        M4Edge.setText(setUpEnergyUnits(currentElement.m4Edge,units));
         TextView M3Edge = findViewById(R.id.M3Edge);
-        M3Edge.setText(setUpEnergyUnits(currentElement.m3Edge));
+        M3Edge.setText(setUpEnergyUnits(currentElement.m3Edge,units));
         TextView M2Edge = findViewById(R.id.M2Edge);
-        M2Edge.setText(setUpEnergyUnits(currentElement.m2Edge));
+        M2Edge.setText(setUpEnergyUnits(currentElement.m2Edge,units));
         TextView M1Edge = findViewById(R.id.M1Edge);
-        M1Edge.setText(setUpEnergyUnits(currentElement.m1Edge));
+        M1Edge.setText(setUpEnergyUnits(currentElement.m1Edge,units));
     }
 
     /********** this is repeated code, probs should find a way around it. hehh..... ***/
 
     //helper function to set up energy units
-    private String setUpEnergyUnits(String string){
-        String units = "";
-        if(!(string.equals("-") || string.equals(""))){
-            units = " keV";
+    private String setUpEnergyUnits(String string,String units){
+        if((string.equals("-") || string.equals(""))){
+            units = "";
         }
         return (string + units);
     }
@@ -319,35 +335,35 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         if (instrument == "Cameca") unit = " (Sine Theta)";
         if (instrument == "Joel") unit = " (L-Value)";
         TextView KBeta = findViewById(R.id.KBeta);
-        KBeta.setText(newData.get(0) + unit);
+        KBeta.setText(setUpEnergyUnits(newData.get(0),unit));
         TextView KAlpha = findViewById(R.id.KAlpha);
-        KAlpha.setText(newData.get(1) + unit);
+        KAlpha.setText(setUpEnergyUnits(newData.get(1),unit));
         TextView LGamma23 = findViewById(R.id.LGamma23);
-        LGamma23.setText(newData.get(2) + unit);
+        LGamma23.setText(setUpEnergyUnits(newData.get(2),unit));
         TextView LGamma1 = findViewById(R.id.LGamma1);
-        LGamma1.setText(newData.get(3) + unit);
+        LGamma1.setText(setUpEnergyUnits(newData.get(3),unit));
         TextView LBeta4 = findViewById(R.id.LBeta4);
-        LBeta4.setText(newData.get(4) + unit);
+        LBeta4.setText(setUpEnergyUnits(newData.get(4),unit));
         TextView LBeta3 = findViewById(R.id.LBeta3);
-        LBeta3.setText(newData.get(5) + unit);
+        LBeta3.setText(setUpEnergyUnits(newData.get(5),unit));
         TextView LBeta2 = findViewById(R.id.LBeta2);
-        LBeta2.setText(newData.get(6) + unit);
+        LBeta2.setText(setUpEnergyUnits(newData.get(6), unit));
         TextView LBeta1 = findViewById(R.id.LBeta1);
-        LBeta1.setText(newData.get(7) + unit);
+        LBeta1.setText(setUpEnergyUnits(newData.get(7),unit));
         TextView LAlpha = findViewById(R.id.LAlpha);
-        LAlpha.setText(newData.get(8) + unit);
+        LAlpha.setText(setUpEnergyUnits(newData.get(8), unit));
         TextView MGamma = findViewById(R.id.MGamma);
-        MGamma.setText(newData.get(9) + unit);
+        MGamma.setText(setUpEnergyUnits(newData.get(9),unit));
         TextView MBeta = findViewById(R.id.MBeta);
-        MBeta.setText(newData.get(10) + unit);
+        MBeta.setText(setUpEnergyUnits(newData.get(10),unit));
         TextView MAlpha = findViewById(R.id.MAlpha);
-        MAlpha.setText(newData.get(11) + unit);
+        MAlpha.setText(setUpEnergyUnits(newData.get(11),unit));
     }
     //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
     //Function to move between previous and next element
     private void setUpButtons(final Integer currentElement){
-        ImageButton nextElement = (ImageButton) findViewById(R.id.next_element);
+        Button nextElement = (Button) findViewById(R.id.next_element);
         nextElement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -356,7 +372,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
                 startActivity(intent); //Execute the intent
             }
         });
-        ImageButton prevElement = (ImageButton) findViewById(R.id.previous_element);
+        Button prevElement = (Button) findViewById(R.id.previous_element);
         prevElement.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
