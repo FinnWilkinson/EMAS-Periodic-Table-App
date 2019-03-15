@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity{
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         //setting up the drop down menu icon
-        Drawable dropDown = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_arrow_drop_down_circle_black_24dp);
+        Drawable dropDown = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_filter_outline);
         toolbar.setOverflowIcon(dropDown);
 
         ActionBar actionBar = getSupportActionBar();
@@ -193,6 +193,7 @@ public class MainActivity extends AppCompatActivity{
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("instrument",instrument);
         intent.putExtra("crystal",crystal);
+        this.finish();
         startActivity(intent);
         
     }

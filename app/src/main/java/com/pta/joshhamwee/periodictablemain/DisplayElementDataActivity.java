@@ -1,6 +1,7 @@
 package com.pta.joshhamwee.periodictablemain;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -211,6 +212,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         //Find the toolbar by the specific id
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Drawable dropDown = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_filter_outline);
+        toolbar.setOverflowIcon(dropDown);
 
             if (getSupportActionBar()!=null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
