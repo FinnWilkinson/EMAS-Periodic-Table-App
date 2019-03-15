@@ -187,7 +187,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     //helper function to set up energy units
     private String setUpEnergyUnits(String string){
         String units = "";
-        if(!(string.equals("-"))){
+        if(!(string.equals("-") || string.equals(""))){
             units = " keV";
         }
         return (string + units);
