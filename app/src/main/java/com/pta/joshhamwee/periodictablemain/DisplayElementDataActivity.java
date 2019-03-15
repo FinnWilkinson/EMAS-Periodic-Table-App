@@ -319,8 +319,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
     private void updateEnergyValues(List<String> newData, String instrument){
         String unit = new String();
-        if (instrument == "Cameca") unit = " (Sine Theta)";
-        if (instrument == "Joel") unit = " (L-Value)";
+        if (instrument == "Cameca") unit = " Sine(Θ)";
+        if (instrument == "Joel") unit = " L-Value";
         TextView KBeta = findViewById(R.id.KBeta);
         KBeta.setText(newData.get(0) + unit);
         TextView KAlpha = findViewById(R.id.KAlpha);
