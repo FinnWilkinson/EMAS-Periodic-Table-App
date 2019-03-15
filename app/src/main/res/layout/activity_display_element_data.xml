@@ -107,31 +107,6 @@
 
         </LinearLayout>
 
-        <!-- layout for crystal spinner -->
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="@+id/constraintLayout2"
-            android:layout_height="65dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/cl1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/text1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/select_crystal" />
-
-            </android.support.constraint.ConstraintLayout>
-        </LinearLayout>
-
-
         <ImageButton
             android:id="@+id/previous_element"
             android:layout_width="match_parent"

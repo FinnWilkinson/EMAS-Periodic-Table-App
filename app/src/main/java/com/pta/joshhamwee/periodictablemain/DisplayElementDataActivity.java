@@ -98,20 +98,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelGreen));
         }
 
-        /*Spinner spinner_instrument = findViewById(R.id.spinner_instrument);
-        spinner_instrument.setOnItemSelectedListener(this);
-
-        ArrayAdapter adapterInstrument = new ArrayAdapter(this,android.R.layout.simple_spinner_item, R.array.Unit_Change_Ins);
-        adapterInstrument.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner_instrument.setAdapter(adapterInstrument);
-
-        Spinner spinner_crystal = findViewById(R.id.spinner_crystal);
-        spinner_crystal.setOnItemSelectedListener(this);
-
-        ArrayAdapter adapterCrystal = new ArrayAdapter(this,android.R.layout.simple_spinner_item, R.array.Unit_Change_Crystal);
-        adapterCrystal.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner_crystal.setAdapter(adapterInstrument);
-        */
     }
 
 
