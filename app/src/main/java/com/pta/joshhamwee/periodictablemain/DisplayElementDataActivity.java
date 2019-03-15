@@ -1,6 +1,7 @@
 package com.pta.joshhamwee.periodictablemain;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -213,6 +214,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         //Find the toolbar by the specific id
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Drawable dropDown = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_filter_outline);
+        toolbar.setOverflowIcon(dropDown);
 
             if (getSupportActionBar()!=null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -332,8 +335,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
     private void updateEnergyValues(List<String> newData, String instrument){
         String unit = new String();
-        if (instrument == "Cameca") unit = " (Sine Theta)";
-        if (instrument == "Joel") unit = " (L-Value)";
+        if (instrument == "Cameca") unit = " Sine(Θ)";
+        if (instrument == "Joel") unit = " L-Value";
         TextView KBeta = findViewById(R.id.KBeta);
         KBeta.setText(setUpEnergyUnits(newData.get(0),unit));
         TextView KAlpha = findViewById(R.id.KAlpha);

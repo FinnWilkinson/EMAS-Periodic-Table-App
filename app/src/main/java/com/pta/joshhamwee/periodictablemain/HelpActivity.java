@@ -53,7 +53,7 @@ public class HelpActivity extends AppCompatActivity {
 
         List<String> aboutus = new ArrayList<>();
         aboutus.add("EMAS is a non-profit organisation that required an application to be able to easily access alot of data.");
-        aboutus.add("This application was a project created for a Software Product Engineering module at the University of Bristol.");
+        aboutus.add("This application was a project created for a Software Product Engineering module at the University of Bristol by Josh Hamwee, Sharlene D'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu.");
 
         listHash.put(listDataHeader.get(0),filterfunctions);
         listHash.put(listDataHeader.get(1),changinginstrument);
