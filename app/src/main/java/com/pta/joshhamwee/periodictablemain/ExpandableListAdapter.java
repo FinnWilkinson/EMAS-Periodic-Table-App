@@ -1,6 +1,7 @@
 package com.pta.joshhamwee.periodictablemain;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,10 +69,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         {
             LayoutInflater inflater = (LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.list_group,null);
+            view.setBackgroundColor(R.drawable.colour4);
         }
         TextView lblListHeader = (TextView)view.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
+        lblListHeader.setTextColor(Color.WHITE);
         return view;
     }
 
@@ -82,6 +85,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         {
             LayoutInflater inflater = (LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.list_item,null);
+
         }
 
         TextView txtListChild = (TextView)view.findViewById(R.id.lblListItem);
