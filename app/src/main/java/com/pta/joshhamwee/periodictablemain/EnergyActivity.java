@@ -33,6 +33,7 @@ public class EnergyActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Energy Graphs");
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
 
         navigationView = findViewById(R.id.nav_view);
@@ -48,10 +49,15 @@ public class EnergyActivity extends AppCompatActivity {
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true); //Do nothing
+                                drawerLayout.closeDrawer(GravityCompat.START);
                                 break;
                             case R.id.help:
                                 menuItem.setChecked(true);
                                 openHelpActivity(); //Open help activity on click
+                                break;
+                            case R.id.about_us:
+                                menuItem.setChecked(true);
+                                openAboutUsActivity(); //Open about us activity on click
                                 break;
                         }
                         return false;
@@ -75,6 +81,12 @@ public class EnergyActivity extends AppCompatActivity {
     //When help page is selected from drawer, start the new activity
     private void openHelpActivity(){
         Intent intent = new Intent(this, HelpActivity.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
+    }
+
+    //When about us page is selected from drawer, start the new activity
+    private void openAboutUsActivity(){
+        Intent intent = new Intent(this, AboutUsActivity.class); //Create the intent that opens the new activity
         startActivity(intent); //Execute the intent
     }
 

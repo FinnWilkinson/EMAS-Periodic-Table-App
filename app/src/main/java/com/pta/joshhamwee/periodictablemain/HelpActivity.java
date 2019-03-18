@@ -42,7 +42,7 @@ public class HelpActivity extends AppCompatActivity {
 
         listDataHeader.add("Filter Functions");
         listDataHeader.add("Changing Instrument");
-        listDataHeader.add("About Us");
+        //listDataHeader.add("About Us");
 
         List<String> filterfunctions = new ArrayList<>();
         filterfunctions.add("To filter between the different crystals and machines, on the home page click on the top right hand dropdown menu. The elements will be filtered by colour.");
@@ -51,13 +51,13 @@ public class HelpActivity extends AppCompatActivity {
         changinginstrument.add("Once you have selected an element from either the periodic table or the search function then you will be presented with the element data page.");
         changinginstrument.add("To switch between the different instruments to change the units of the data, select the drop down menu that you require.");
 
-        List<String> aboutus = new ArrayList<>();
-        aboutus.add("EMAS is a non-profit organisation that required an application to be able to easily access alot of data.");
-        aboutus.add("This application was a project created for a Software Product Engineering module at the University of Bristol by Josh Hamwee, Sharlene D'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu.");
+       // List<String> aboutus = new ArrayList<>();
+       // aboutus.add("EMAS is a non-profit organisation that required an application to be able to easily access alot of data.");
+       // aboutus.add("This application was a project created for a Software Product Engineering module at the University of Bristol by Josh Hamwee, Sharlene D'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu.");
 
         listHash.put(listDataHeader.get(0),filterfunctions);
         listHash.put(listDataHeader.get(1),changinginstrument);
-        listHash.put(listDataHeader.get(2),aboutus);
+       // listHash.put(listDataHeader.get(2),aboutus);
 
         listAdapter = new com.pta.joshhamwee.periodictablemain.ExpandableListAdapter(this,listDataHeader,listHash);
         listView.setAdapter(listAdapter);
@@ -72,6 +72,7 @@ public class HelpActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Help");
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
 
         navigationView = findViewById(R.id.nav_view);
@@ -90,6 +91,11 @@ public class HelpActivity extends AppCompatActivity {
                                 break;
                             case R.id.help:
                                 menuItem.setChecked(true); //Do nothing
+                                drawerLayout.closeDrawer(GravityCompat.START); //Close the drawer
+                                break;
+                            case R.id.about_us:
+                                menuItem.setChecked(true);
+                                openAboutUsActivity(); //Open about us activity on click
                                 break;
                         }
                         return false;
@@ -113,6 +119,12 @@ public class HelpActivity extends AppCompatActivity {
     //When energy page is selected from drawer, start the new activity
     private void openEnergyActivity(){
         Intent intent = new Intent(this, EnergyActivity.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
+    }
+
+    //When about us page is selected from drawer, start the new activity
+    private void openAboutUsActivity(){
+        Intent intent = new Intent(this, AboutUsActivity.class); //Create the intent that opens the new activity
         startActivity(intent); //Execute the intent
     }
 

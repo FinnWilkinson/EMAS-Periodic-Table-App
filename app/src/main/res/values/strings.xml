@@ -50,6 +50,14 @@
     <string name="EMAS">European Microbeam Analysis Society</string>
     <string name="prev_element">Previous Element</string>
     <string name="next_element">Next Element</string>
+    <string name="home">HOME</string>
+    <string name="energy_graph">ENERGY GRAPH</string>
+    <string name="help">HELP</string>
+    <string name="about_us">ABOUT US</string>
+    <string name="about_us_para">EMAS is a non-profit organisation that required an application to be able to easily access a lot of data. </string>
+    <string name="about_us_para2"> This application was a project created for a Software Product Engineering module at the University of Bristol by Josh Hamwee, Sharlene D\'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu. </string>
+
+
     <string-array name="Instruments">
         <item>Home</item>
         <item>1</item>

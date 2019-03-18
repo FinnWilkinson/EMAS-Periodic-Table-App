@@ -214,12 +214,14 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         //Find the toolbar by the specific id
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         Drawable dropDown = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_filter_outline);
         toolbar.setOverflowIcon(dropDown);
 
             if (getSupportActionBar()!=null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 getSupportActionBar().setDisplayShowHomeEnabled(true);
+                getSupportActionBar().setDisplayShowTitleEnabled(false);
             }
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

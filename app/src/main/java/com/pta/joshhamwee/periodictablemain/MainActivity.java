@@ -99,16 +99,20 @@ public class MainActivity extends AppCompatActivity{
                         switch (menuItem.getItemId()) { //Switch case for each item in the menu
                             case R.id.home:
                                 menuItem.setChecked(true); //Do nothing
+                                drawerLayout.closeDrawer(GravityCompat.START); //Close the drawer
                                 break;
                             case R.id.graph:
                                 menuItem.setChecked(true);
                                 openEnergyActivity(); //Open energy activity on click
-                                highlightElements(1,3);
                                 break;
                             case R.id.help:
                                 menuItem.setChecked(true);
                                 openHelpActivity(); //Open help activity on click
                                 break;
+                            case R.id.about_us:
+                                menuItem.setChecked(true);
+                                openAboutUsActivity(); //Open about us activity on click
+                            break;
                         }
                         return false;
                     }
@@ -132,6 +136,12 @@ public class MainActivity extends AppCompatActivity{
     //When energy page is selected from drawer, start the new activity
     private void openEnergyActivity(){
         Intent intent = new Intent(this, EnergyActivity.class); //Create the intent that opens the new activity
+        startActivity(intent); //Execute the intent
+    }
+
+    //When about us page is selected from drawer, start the new activity
+    private void openAboutUsActivity(){
+        Intent intent = new Intent(this, AboutUsActivity.class); //Create the intent that opens the new activity
         startActivity(intent); //Execute the intent
     }
 
