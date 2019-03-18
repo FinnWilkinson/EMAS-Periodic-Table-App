@@ -40,7 +40,6 @@ public class AboutUsActivity extends AppCompatActivity{
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle("About Us");
 
-            //bar.setDisplayShowTitleEnabled(false);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
 
             navigationView = findViewById(R.id.nav_view);
