@@ -50,7 +50,12 @@ public class AboutUsActivity extends AppCompatActivity{
                             switch (menuItem.getItemId()) { //Switch case for each item in the menu
                                 case R.id.home:
                                     menuItem.setChecked(true);
-                                    openMainActivity(); //Open main activity on click
+                                    try {
+                                        openActivity("menu");
+                                    } catch (ClassNotFoundException e) {
+                                        e.printStackTrace();
+                                    }
+                                    //openMainActivity(); //Open main activity on click
                                     break;
                                 case R.id.graph:
                                     menuItem.setChecked(true);
@@ -75,6 +80,12 @@ public class AboutUsActivity extends AppCompatActivity{
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
             this.finish();
+        }
+
+        private void openActivity(String activityName) throws ClassNotFoundException {
+            //Class test = Class.forName("activityName");
+            Intent intent = new Intent(this, Class.forName(activityName)); //Create the intent that opens the new activity
+            startActivity(intent); //Execute the intent
         }
 
         //When main page is selected from drawer, start the new activity
