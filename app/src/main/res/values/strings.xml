@@ -54,9 +54,10 @@
     <string name="energy_graph">ENERGY GRAPH</string>
     <string name="help">HELP</string>
     <string name="about_us">ABOUT US</string>
-    <string name="about_us_para">EMAS is a non-profit organisation that required an application to be able to easily access a lot of data. </string>
-    <string name="about_us_para2"> This application was a project created for a Software Product Engineering module at the University of Bristol by Josh Hamwee, Sharlene D\'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu. </string>
-
+    <string name="about_emas_para">  EMAS is a non-profit organisation founded to meet the growing demands of microbeam analysis users and scientists for further education, communication and professional advice. Membership is open to all scientists and technicians active in the development and application of microbeam analysis techniques and equipment.
+        </string>
+    <string name="about_the_app"> EMAS required a mobile application to access and display key information for electron microanalysis. This will be based around a periodic table designed by M Matthews. The design is very information rich and consequently cannot be viewed in full at any scale smaller than approximately A3. This app, designed as a part of the module Software Product Engineering at the University of Bristol by Josh Hamwee, Sharlene D\'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu, solves this problem.
+        </string>
 
     <string-array name="Instruments">
         <item>Home</item>

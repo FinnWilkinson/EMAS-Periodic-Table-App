@@ -11,7 +11,7 @@
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -27,8 +27,8 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="650dp"
-                android:layout_height="22dp"
+                android:layout_width="634dp"
+                android:layout_height="83dp"
 
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -36,29 +36,91 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="@string/about_us_para"
+                android:text="@string/about_emas_para"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.492"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintEnd_toStartOf="@+id/guideline191"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline79"
+                app:layout_constraintTop_toTopOf="@+id/guideline78" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="683dp"
-                android:layout_height="74dp"
+                android:layout_width="632dp"
+                android:layout_height="110dp"
 
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="228dp"
-                android:text="@string/about_us_para2"
+                android:layout_marginBottom="32dp"
+                android:text="@string/about_the_app"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toStartOf="@+id/guideline191"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline79" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="85dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/EMAS_text_color"
+                android:text="About Emas"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline191"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline79"
+                app:layout_constraintTop_toTopOf="@+id/guideline78"
+                app:layout_constraintVertical_bias="0.548"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/EMAS_text_color"
+                android:text="About the app"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView3"
+                app:layout_constraintEnd_toStartOf="@+id/guideline191"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline79"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.612"
+                tools:ignore="HardcodedText" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline78"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="48dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline79"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="35dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline191"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="685dp" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -72,6 +134,6 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/menu_drawer"/>
+        app:menu="@menu/menu_drawer" />
 
 </android.support.v4.widget.DrawerLayout>
