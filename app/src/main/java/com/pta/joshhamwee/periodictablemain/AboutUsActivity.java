@@ -51,7 +51,7 @@ public class AboutUsActivity extends AppCompatActivity{
                                 case R.id.home:
                                     menuItem.setChecked(true);
                                     try {
-                                        openActivity("menu");
+                                        openActivity("MainActivity");
                                     } catch (ClassNotFoundException e) {
                                         e.printStackTrace();
                                     }
