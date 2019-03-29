@@ -45,11 +45,12 @@ public class HelpActivity extends AppCompatActivity {
         //listDataHeader.add("About Us");
 
         List<String> filterfunctions = new ArrayList<>();
-        filterfunctions.add("To filter between the different crystals and machines, on the home page click on the top right hand dropdown menu. The elements will be filtered by colour.");
+        filterfunctions.add("To filter between the different crystals and machines, on the home page click on the top right hand dropdown menu. The elements will be filtered based on of they are within the crystal's range, and elements within this range will be distinguished by colour.");
+        filterfunctions.add("To search for an element, click on the icon in the top right hand corner of the home page. You can search for an element by name, atomic symbol, and atomic number.");
 
         List<String> changinginstrument = new ArrayList<>();
         changinginstrument.add("Once you have selected an element from either the periodic table or the search function then you will be presented with the element data page.");
-        changinginstrument.add("To switch between the different instruments to change the units of the data, select the drop down menu that you require.");
+        changinginstrument.add("To switch between the different instruments to change the units of the data, select the drop down menu that you require, again in the top right.");
 
        // List<String> aboutus = new ArrayList<>();
        // aboutus.add("EMAS is a non-profit organisation that required an application to be able to easily access alot of data.");
