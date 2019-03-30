@@ -12,10 +12,8 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by reale on 21/11/2016.
- */
-
+//Expandable list adapter used in the help page
+//Used a pre created format and made some minor changes for design and functionality
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Context context;
     private List<String> listDataHeader;
@@ -69,7 +67,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         {
             LayoutInflater inflater = (LayoutInflater)this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.list_group,null);
-            //view.setBackgroundColor(R.drawable.colour6);
         }
         TextView lblListHeader = (TextView)view.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);

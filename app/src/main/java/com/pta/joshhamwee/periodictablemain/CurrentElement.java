@@ -11,19 +11,21 @@ public class CurrentElement {
     String mGamma, mBeta, mAlpha, kEdge, l3Edge, l2Edge, l1Edge, m5Edge, m4Edge, m3Edge, m2Edge, m1Edge;
     List<String> data = new ArrayList<>();
 
-
+    //Get the ID of what element to required data for
     public CurrentElement(Integer id, DatabaseAccess db) {
         this.atomicNumber = Integer.toString(id);
         dataGetting(db);
         dataSetting();
     }
-//comment
+
+    //Open the database and get all the data required
     private void dataGetting(DatabaseAccess db){
         db.open();
         this.data = db.getElementData(this.atomicNumber, "SELECT * FROM 'Element_Data v0' WHERE Atomic_Number = '" + this.atomicNumber + "'");
         db.close();
     }
 
+    //Set the data specific to each value from the requested data
     private void dataSetting(){
         try {
             this.atomicNumber = data.get(0);

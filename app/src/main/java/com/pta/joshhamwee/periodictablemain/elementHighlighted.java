@@ -2,6 +2,7 @@ package com.pta.joshhamwee.periodictablemain;
 
 public class elementHighlighted {
     Integer instrument, crystal, minRangeA, maxRangeA, minRangeB, maxRangeB, minRangeC, maxRangeC;
+    //Check if a specific element is within a boundary so that it knows whether it needs to be highlighted or not
     public elementHighlighted(Integer instrument, Integer crystal){
         this.crystal = crystal;
         this.instrument = instrument;
@@ -20,6 +21,7 @@ public class elementHighlighted {
         }
     }
 
+    //Hard coded in the boundaries as it is not possible to do this through the database
     private void setBoundariesCameca(Integer crystal){
         if (crystal == 1){ //LiF(200)
             this.minRangeA = 21;

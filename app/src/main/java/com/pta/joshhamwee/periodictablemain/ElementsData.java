@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ElementsData {
+    //List of elements for the search function
     private static List<String> elements ;
     static {
         elements =  new ArrayList<String>();
@@ -111,10 +112,12 @@ public class ElementsData {
         elements.add("Lawrencium - Lr - 103");
     }
 
+    //Return function if full list is required
     public static List<String> getElements(){
         return elements;
     }
 
+    //Filter function for the search
     public static List<String> filterData(String searchString){
         List<String> searchResults =  new ArrayList<String>();
         if(searchString != null){

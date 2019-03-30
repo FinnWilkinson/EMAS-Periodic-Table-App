@@ -78,6 +78,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         Button nextElement = (Button) findViewById(R.id.next_element);
         Button prevElement = (Button) findViewById(R.id.previous_element);
 
+        //This is the colour change to the specific atomic number
         if(AlkMetals.contains(atomicNumber)) {
             ElementName.setTextColor(ContextCompat.getColor(this, R.color.pastelPink));
             nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour1));
@@ -118,8 +119,8 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
 
     private void displayKeVValues(CurrentElement currentElement){
-        //Create textViews to display the chosen element's information
 
+        //Create textViews to display the chosen element's information
         TextView AtomicNumber = findViewById(R.id.AtomicNumber);
         AtomicNumber.setText(currentElement.atomicNumber);
         TextView AtomicSymbol = findViewById(R.id.AtomicSymbol);
@@ -155,6 +156,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         TextView IonicRadius = findViewById(R.id.IonicRadius);
         IonicRadius.setText(currentElement.ionicRadius + "nm");
         TextView KBeta = findViewById(R.id.KBeta);
+
         //Set up units
         String units = " keV";
         KBeta.setText(setUpEnergyUnits(currentElement.kBeta,units));
@@ -200,9 +202,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         M1Edge.setText(setUpEnergyUnits(currentElement.m1Edge,units));
     }
 
-    /********** this is repeated code, probs should find a way around it. hehh..... ***/
-
-    //helper function to set up energy units
+    //Helper function to set up energy units
     private String setUpEnergyUnits(String string,String units){
         if((string.equals("-") || string.equals(""))){
             units = "";
@@ -223,6 +223,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
                 getSupportActionBar().setDisplayShowHomeEnabled(true);
                 getSupportActionBar().setDisplayShowTitleEnabled(false);
             }
+        //Set on click listener on the navigation bar
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -234,13 +235,9 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        /*if (item.getItemId() == android.R.id.home)
-            this.finish();
-        return super.onOptionsItemSelected(item);*/
-
+        //Change the units dependant on what instrument and crystal are selected
         switch(item.getItemId()) {
             case android.R.id.home : this.finish(); return super.onOptionsItemSelected(item);
-
             case R.id.C_LiF_200: onRefreshActivity("Cameca","LIF200", ""); return true;
             case R.id.C_PET: onRefreshActivity("Cameca","PET", ""); return true;
             case R.id.C_TAP: onRefreshActivity("Cameca","TAP", ""); return true;
@@ -262,7 +259,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
             case R.id.JH_LiF_220: onRefreshActivity("Joel","LIF220", "H-type"); return true;
             case R.id.JH_Qtz_1011: onRefreshActivity("Joel","QTZ1011", "H-type"); return true;
             case R.id.reset: onRefreshActivity("Reset","Reset", "Reset");
-
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -281,6 +277,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
     }
 
+    //Make sure that the activity is closed for when it has been left
     @Override
     public void onBackPressed()
     {
@@ -289,7 +286,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         this.finish();
     }
 
-
+    //Change the values specific to the Cameca machine
     private void setCamecaValues(String crystal, CurrentElement element){
         List<String> newData = new ArrayList<>();
         for (int i = 18; i < 30; i++){
@@ -304,7 +301,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         updateEnergyValues(newData, "Cameca");
     }
 
-
+    //Change the values specific to the Jeol machine
     private double changeUnitsJOEL(String spectrometer, String crystal, double energy){
         double R = 0, two_d = 0, E = 0;
         if (spectrometer.equals("XCE") || spectrometer.equals("FCE")) R = 140;
@@ -335,6 +332,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         updateEnergyValues(newData, "Joel");
     }
 
+    //Function to reset data to KeV on display done by calling function that initially displays the data onscreen
     private void updateEnergyValues(List<String> newData, String instrument){
         String unit = new String();
         if (instrument == "Cameca") unit = " Sine(Θ)";
@@ -364,7 +362,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         TextView MAlpha = findViewById(R.id.MAlpha);
         MAlpha.setText(setUpEnergyUnits(newData.get(11),unit));
     }
-    //function to reset data to KeV on display done by calling function that initially displays the data onscreen
 
     //Function to move between previous and next element
     private void setUpButtons(final Integer currentElement){

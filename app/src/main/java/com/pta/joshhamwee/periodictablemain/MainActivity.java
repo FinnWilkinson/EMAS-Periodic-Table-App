@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity{
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START); //When drawer button is clicked, open the drawer
                 return true;
+            //When a specifc instrument and crystal is selected refresh the activity with data coded into its Intent
             case R.id.C_LiF_200: onRefreshActivity(1,1); return true;
             case R.id.C_PET: onRefreshActivity(1,2); return true;
             case R.id.C_TAP: onRefreshActivity(1,3); return true;
@@ -191,7 +192,7 @@ public class MainActivity extends AppCompatActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
-    //Overriding the default android backbutton to go to main page
+    //Overriding the default android back button to go to main page
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this,MainActivity.class);
@@ -199,6 +200,7 @@ public class MainActivity extends AppCompatActivity{
         this.finish();
     }
 
+    //Refresh the current activity each time a colour change has been requested
     private void onRefreshActivity(Integer instrument, Integer crystal){
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("instrument",instrument);
@@ -208,6 +210,7 @@ public class MainActivity extends AppCompatActivity{
         
     }
 
+    //Change an elements colour dependant on whether the specific element is within the given boundaries
     private void highlightElements(Integer instrument, Integer crystal){
         elementHighlighted current = new elementHighlighted(instrument,crystal);
         for(Integer i = 1; i < listOfIds.length + 1; i++){
