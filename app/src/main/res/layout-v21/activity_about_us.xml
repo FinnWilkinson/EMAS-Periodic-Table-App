@@ -30,20 +30,20 @@
                 android:layout_width="634dp"
                 android:layout_height="83dp"
 
+                android:layout_marginTop="8dp"
                 android:text="@string/about_emas_para"
-                app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toStartOf="@+id/guideline191"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
-                app:layout_constraintTop_toTopOf="@+id/guideline78" />
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="632dp"
                 android:layout_height="110dp"
 
+                android:layout_marginTop="8dp"
                 android:text="@string/about_the_app"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
@@ -58,10 +58,8 @@
                 android:textColor="@color/textBlack"
                 android:textSize="18sp"
                 android:textStyle="normal|italic"
-                app:layout_constraintBottom_toTopOf="@+id/textView2"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toTopOf="@+id/guideline78"
-                app:layout_constraintVertical_bias="0.548"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -74,10 +72,8 @@
                 android:textColor="@color/textBlack"
                 android:textSize="18sp"
                 android:textStyle="normal|italic"
-                app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
-                app:layout_constraintVertical_bias="0.612"
                 tools:ignore="HardcodedText" />
 
             <android.support.constraint.Guideline
@@ -85,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.18" />
+                app:layout_constraintGuide_percent="0.14" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline192"
