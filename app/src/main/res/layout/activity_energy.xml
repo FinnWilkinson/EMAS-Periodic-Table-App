@@ -68,6 +68,22 @@
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         app:srcCompat="@drawable/energy_graph_2" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="Graph 3"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/energy_grap_3" />
+
                 </LinearLayout>
             </ScrollView>
         </android.support.constraint.ConstraintLayout>
