@@ -49,16 +49,16 @@
 
             <TextView
                 android:id="@+id/textView42"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/about_colour"
                 android:elevation="8dp"
                 android:fontFamily="@font/opensans_regular"
-                android:text=" About Emas"
+                android:text=" About Emas "
+                android:textColor="@color/textBlack"
                 android:textSize="18sp"
                 android:textStyle="normal|italic"
                 app:layout_constraintBottom_toTopOf="@+id/textView2"
-                app:layout_constraintEnd_toStartOf="@+id/guideline192"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toTopOf="@+id/guideline78"
                 app:layout_constraintVertical_bias="0.548"
@@ -68,9 +68,12 @@
                 android:id="@+id/textView43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/EMAS_text_color"
-                android:text="About the app"
-                android:textStyle="bold"
+                android:background="@drawable/about_colour"
+                android:fontFamily="@font/opensans_regular"
+                android:text=" About the app "
+                android:textColor="@color/textBlack"
+                android:textSize="18sp"
+                android:textStyle="normal|italic"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -89,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.2" />
+                app:layout_constraintGuide_percent="0.21" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline79"
