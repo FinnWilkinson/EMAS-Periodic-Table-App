@@ -43,8 +43,9 @@
     <string name="IR">Ionic Radius in Common Valence state: </string>
     <string name="KLMHeader">KLM Energies:</string>
     <string name="ABEHeader">Absorption Edges:</string>
-    <string name="energy_graph_1">energy graph 1</string>
-    <string name="energy_graph_2">energy graph 2</string>
+    <string name="energy_graph_1"><u>X-Ray Energies Plot</u></string>
+    <string name="energy_graph_2"><u>Spectrometer Element Ranges Plot</u></string>
+    <string name="energy_graph_3"><u>Soft X-Ray Energies Plot</u></string>
     <string name="select_instrument" />
     <string name="select_crystal" />
     <string name="EMAS">European Microbeam Analysis Society</string>
@@ -58,7 +59,6 @@
         </string>
     <string name="about_the_app"> EMAS required a mobile application to access and display key information for electron microanalysis. This will be based around a periodic table designed by M Matthews. The design is very information rich and consequently cannot be viewed in full at any scale smaller than approximately A3. This app, designed as a part of the module Software Product Engineering at the University of Bristol by Josh Hamwee, Sharlene D\'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu, solves this problem.
         </string>
-
     <string-array name="Instruments">
         <item>Home</item>
         <item>1</item>
