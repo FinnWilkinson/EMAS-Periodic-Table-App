@@ -3,7 +3,7 @@
 ## Stakeholders
 
 #### Mike Matthews
-The periodic table application was requested by Mr Matthews. He provided the initial specification and functionality of the app. Mr Matthews is a user and his 
+The periodic table application was requested by Mr Matthews. He provided the initial specification and functionality of the app. His vision for the app was for it to be a means of providing essential microbeam-analysis information in an efficient way.
 
 #### Dr Stuart Kearns
 Lecturer and researcher at the University of Bristol working closely with Mr Matthews.
@@ -12,7 +12,7 @@ Lecturer and researcher at the University of Bristol working closely with Mr Mat
 Researcher at the University of Bristol working alongside both Mr Matthews and Dr Kearns.
 
 #### EMAS
-The European Microbeam Analysis Society is an organization that will consist of the majority of our user base. The application will facilitate members of the society. Our client is part of this organization.
+The European Microbeam Analysis Society is an organisation that will consist of the majority of our user base. The application will facilitate members of the society. Our client is part of this organisation.
 
 
 #### Research students
@@ -25,9 +25,9 @@ Technicians in charge of equipment in microbeam analysis laboratories in differe
 The app will be available on the Google play-store hence anyone could make use of it.
 
 ## High User Case Diagram
+Our users will interact with the application in very similar ways due to the nature of the system. Therefore  all interactions can be encompassed by the following diagram:
 
-![usercase](images/usercase.png "usercase")
-
+![usercase](images/usercase2.png "usercase")
 
 ## The core set of the use-case goals:
 1. View information on each element
