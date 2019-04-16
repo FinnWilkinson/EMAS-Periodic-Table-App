@@ -40,25 +40,28 @@ public class HelpActivity extends AppCompatActivity {
         listDataHeader = new ArrayList<>();
         listHash = new HashMap<>();
 
-        listDataHeader.add("Filter Functions");
-        listDataHeader.add("Changing Instrument");
-        //listDataHeader.add("About Us");
+        listDataHeader.add("Search for Elements");
+        listDataHeader.add("Filter Elements");
+        listDataHeader.add("Changing Units");
+        listDataHeader.add("View Energy Graph");
 
-        List<String> filterfunctions = new ArrayList<>();
-        filterfunctions.add("To filter between the different crystals and machines, on the home page click on the top right hand dropdown menu. The elements will be filtered based on of they are within the crystal's range, and elements within this range will be distinguished by colour.");
-        filterfunctions.add("To search for an element, click on the icon in the top right hand corner of the home page. You can search for an element by name, atomic symbol, and atomic number.");
+        List<String> searchElements = new ArrayList<>();
+        searchElements.add("To search for an element, click on the search icon in the top right corner of the home page. You can search for an element by name, atomic symbol, or atomic number.");
 
-        List<String> changinginstrument = new ArrayList<>();
-        changinginstrument.add("Once you have selected an element from either the periodic table or the search function then you will be presented with the element data page.");
-        changinginstrument.add("To switch between the different instruments to change the units of the data, select the drop down menu that you require, again in the top right.");
+        List<String> filterElements = new ArrayList<>();
+        filterElements.add("To filter elements based on different crystal and instrument pairs, click the filter icon in the top right corner top of the home page. The elements will be highlighted if they are detectable within that crystal's range given the instrument chosen.");
 
-       // List<String> aboutus = new ArrayList<>();
-       // aboutus.add("EMAS is a non-profit organisation that required an application to be able to easily access alot of data.");
-       // aboutus.add("This application was a project created for a Software Product Engineering module at the University of Bristol by Josh Hamwee, Sharlene D'Silva, Andrei Bogdan, Finn Wilkinson and Kshitiv Upmanyu.");
+        List<String> changeUnits = new ArrayList<>();
+        changeUnits.add("Once you have selected an element from either the periodic table or the search function then you will be presented with the element data page.");
+        changeUnits.add("You can change the units of the data by selecting the instrument and crystal pair from the dropdown list found in the top right corner of element page. The default unit is keV.");
 
-        listHash.put(listDataHeader.get(0),filterfunctions);
-        listHash.put(listDataHeader.get(1),changinginstrument);
-       // listHash.put(listDataHeader.get(2),aboutus);
+        List<String> viewGraphs = new ArrayList<>();
+        viewGraphs.add("The energy graphs can be viewed by clicking the 'Energy Graph' option in the menu drawer. You can scroll down to view all the graphs.");
+
+        listHash.put(listDataHeader.get(0),searchElements);
+        listHash.put(listDataHeader.get(1),filterElements);
+        listHash.put(listDataHeader.get(2),changeUnits);
+        listHash.put(listDataHeader.get(3),viewGraphs);
 
         listAdapter = new com.pta.joshhamwee.periodictablemain.ExpandableListAdapter(this,listDataHeader,listHash);
         listView.setAdapter(listAdapter);
@@ -73,7 +76,7 @@ public class HelpActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Help");
+        actionBar.setTitle("Help: How to use the app ");
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
 
         navigationView = findViewById(R.id.nav_view);

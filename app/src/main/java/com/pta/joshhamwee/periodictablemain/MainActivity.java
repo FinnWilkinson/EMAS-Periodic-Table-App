@@ -21,6 +21,9 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+ This is the main activity of the app, i.e. the home page. It contains the periodic table.
+ */
 public class MainActivity extends AppCompatActivity{
 
     Toolbar toolbar;
@@ -36,8 +39,6 @@ public class MainActivity extends AppCompatActivity{
             R.id.Cs, R.id.Ba, R.id.La, R.id.Ce, R.id.Pr, R.id.Nd, R.id.Pm, R.id.Sm, R.id.Eu, R.id.Gd, R.id.Tb, R.id.Dy, R.id.Ho, R.id.Er, R.id.Tm, R.id.Yb, R.id.Lu,
             R.id.Hf, R.id.Ta, R.id.W, R.id.Re, R.id.Os, R.id.Ir, R.id.Pt, R.id.Au, R.id.Hg, R.id.Tl, R.id.Pb, R.id.Bi, R.id.Po, R.id.At, R.id.Rn,
             R.id.Fr, R.id.Ra, R.id.Ac, R.id.Th, R.id.Pa, R.id.U, R.id.Np, R.id.Pu, R.id.Am, R.id.Cm, R.id.Bk, R.id.Cf, R.id.Es, R.id.Fm, R.id.Md, R.id.No, R.id.Lr
-
-
     };
 
     private ArrayList<Integer> button_ids = new ArrayList<>(Arrays.asList(listOfIds));
@@ -165,7 +166,7 @@ public class MainActivity extends AppCompatActivity{
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START); //When drawer button is clicked, open the drawer
                 return true;
-            //When a specifc instrument and crystal is selected refresh the activity with data coded into its Intent
+            //When a specific instrument and crystal is selected refresh the activity with data coded into its Intent
             case R.id.C_LiF_200: onRefreshActivity(1,1); return true;
             case R.id.C_PET: onRefreshActivity(1,2); return true;
             case R.id.C_TAP: onRefreshActivity(1,3); return true;
@@ -207,7 +208,6 @@ public class MainActivity extends AppCompatActivity{
         intent.putExtra("crystal",crystal);
         this.finish();
         startActivity(intent);
-        
     }
 
     //Change an elements colour dependant on whether the specific element is within the given boundaries
@@ -222,7 +222,6 @@ public class MainActivity extends AppCompatActivity{
             } else if (i >= current.minRangeC & i <= current.maxRangeC){
                 working.setBackground(ContextCompat.getDrawable(this,R.drawable.colour4));
             } else {
-
                 working.setBackground(ContextCompat.getDrawable(this,R.drawable.colour8));
             }
         }
