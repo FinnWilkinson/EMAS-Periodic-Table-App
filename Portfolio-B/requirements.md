@@ -28,6 +28,7 @@ The app will be available on the Google play-store hence anyone could make use o
 Our users will interact with the application in very similar ways due to the nature of the system. Therefore  all interactions can be encompassed by the following diagram:
 
 ![usercase](images/usercase2.png "usercase")
+Due to the application being offline, interaction with non-human actors is  not possible.
 
 ## Functional requirements:
 * View information on each element
