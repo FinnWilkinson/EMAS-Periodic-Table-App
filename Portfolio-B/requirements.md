@@ -1,4 +1,4 @@
-# Requirements
+# **Requirements**
 
 ## Stakeholders
 
@@ -29,14 +29,36 @@ Our users will interact with the application in very similar ways due to the nat
 
 ![usercase](images/usercase2.png "usercase")
 
+## Functional requirements:
+* View information on each element
+    * Must display the periodic table
+    * Must show information of elements when button is clicked
+    * Must be able to change units by pressing a button or using a toggle
+    * User must be able to read the information displayed
+* Search for an element
+    * Must be able to search for elements by symbol or name
+    * Must autocomplete the name of element
+    * Must show a list of the elements and should reduce the items shown as element is being typed
+* View the energy graph
+    * Must display the basic image of the energy chart
+* User must not be able to see or make changes to code
+
+## Non-Functional requirements:e
+* Be able to find an element on the periodic table display in under 10 seconds
+* Make sure text is readable half a meter away from face when user has 20/20 vision
+* User should be able to find and use the changing unit/instrument feature in under 5 seconds
+* After reading the help page of the app, user should be able to use all features of the app confidently and quickly
+* User should take no longer than 15 seconds to find the information they're looking for
+* If user clicked wrong element, they must be able to find the desired element in less than 5 seconds
+
 ## The core set of the use-case goals:
 1. View information on each element
 1. Search for an element
 1. Use the navigation drawer
 1. Switch between instruments
-1. View the energy graph
+1. View the energy graphs
 
-##  User Flow
+##  Flow Breakdown
 #### _Basic flow_:
 1. View information on each element
     - Periodic table will be displayed, fitted to the screen
@@ -56,12 +78,13 @@ Our users will interact with the application in very similar ways due to the nat
 3. Use the navigation drawer to perform the following activities:
     * Switch between instruments  (this step also involves changing the units based on the instrument being used)
         - Option 1:
-            * Open menu drawer
-            * Use the toggle to switch between instruments
+            * Open filter drawer
+            * Use the menu to switch between instruments
+            * Elements in the instrument' range are displayed
         - Option 2:
             * Click the element from the table or using the search bar
             * Element page appears
-            * Use the toggle on the element page to switch between instruments
+            * Use the filter drawer on the element page to switch between instruments
     * View the energy graph
         * Open Menu drawer
         * Click on the energy graph tab
@@ -77,8 +100,8 @@ Our users will interact with the application in very similar ways due to the nat
         * Use the toggle to change default instruments
 
 #### _Alternative flow_ :
-* User may utilize the search bar to look for an element rather than clicking on the periodic table display
-* User may switch between instruments first then look for an element (this can be done using the toggle in the menu rather than on the individual element pages)
+* User may utilise the search bar to look for an element rather than clicking on the periodic table display
+* User may switch between instruments first then look for an element (this can be done using the filter in the toolbar rather than on the individual element pages)
 * User may change the default settings from one instrument to another before looking at an individual element data
 
 #### _Exceptional flow_ :
@@ -88,25 +111,3 @@ Our users will interact with the application in very similar ways due to the nat
     * Error message will be displayed on the screen to assist the user in rectifying their mistake
 * User is stuck on the search bar and cannot return to homepage
     * Back button is provided on all screens so that user can return to the homepage at any point
-
-
-## Functional requirements:
-* View information on each element
-    * Must display the periodic table
-    * Must show information of elements when button is clicked
-    * Must be able to change units by pressing a button or using a toggle
-* Search for an element
-    * Must be able to search for elements by symbol or name
-    * Must autocomplete the name of element
-    * Must show a list of the elements and should reduce the items shown as element is being typed
-* View the energy graph
-    * Must display the basic image of the energy chart
-* User must not be able to see or make changes to code
-
-## Non-Functional requirements:
-* The element that they are searching for is highlighted on the table (this involves animation/graphics that is not our primary aim)
-* The graph could be interactive
-* Be able to find an element on the periodic table display in under 10 seconds
-* Make sure text is readable half a meter away from face when user has 20/20 vision
-* User should be able to find and use the changing unit/instrument feature in under 5 seconds
-* After reading the help page of the app, user should be able to use all features of the app confidently and quickly
