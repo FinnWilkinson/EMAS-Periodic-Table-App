@@ -4,7 +4,8 @@ import java.util.List;
 
 public class ElementsData {
     //List of elements for the search function
-    private static List<String> elements ;
+    private static List<String> elements;
+
     static {
         elements =  new ArrayList<String>();
         elements.add("Hydrogen - H - 1");
@@ -123,12 +124,18 @@ public class ElementsData {
         if(searchString != null){
             searchString = searchString.toLowerCase();
 
-            for(String rec :  elements){
-                if(rec.toLowerCase().contains(searchString)){
-                    searchResults.add(rec);
+            for(String elem :  elements){
+                // used trim() to remove whitespaces from start and end
+                // doesnt work for two spaces though
+                String cleanElem = elem.toLowerCase().trim();
+
+                if(cleanElem.contains(searchString)){
+                    searchResults.add(elem);
                 }
             }
         }
+
         return searchResults;
     }
+
 }

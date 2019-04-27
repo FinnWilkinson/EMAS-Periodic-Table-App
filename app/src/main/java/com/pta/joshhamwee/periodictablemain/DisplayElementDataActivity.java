@@ -25,12 +25,12 @@ import java.util.Set;
 public class DisplayElementDataActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    //NavigationView navigationView;
+
     //Lists of different elements to determine colours
     private static final Set<Integer> AlkMetals = new HashSet<>(Arrays.asList(new Integer[]{1,3,11,19,37,55,87}));
     private static final Set<Integer> AlkEMetals = new HashSet<>(Arrays.asList(new Integer []{4,12,20,38,56,88}));
     private static final Set<Integer> TranMetals = new HashSet<>(Arrays.asList(new Integer []{21,22,23,24,25,26,27,28,29,30,
-    39,40,41,42,43,44,45,46,47,48,57,72,73,74,75,76,77,78,79,80,89}));
+                            39,40,41,42,43,44,45,46,47,48,57,72,73,74,75,76,77,78,79,80,89}));
     private static final Set<Integer> Metaloids = new HashSet<>(Arrays.asList(new Integer []{13,31,32,49,50,51,81,82,83,84}));
     private static final Set<Integer> NonMetals = new HashSet<>(Arrays.asList(new Integer []{5,6,7,8,9,14,15,16,17,33,34,35,52,53,85}));
     private static final Set<Integer> NobleGases = new HashSet<>(Arrays.asList(new Integer []{2,10,18,36,54,86}));
@@ -119,7 +119,6 @@ public class DisplayElementDataActivity extends AppCompatActivity {
 
 
     private void displayKeVValues(CurrentElement currentElement){
-
         //Create textViews to display the chosen element's information
         TextView AtomicNumber = findViewById(R.id.AtomicNumber);
         AtomicNumber.setText(currentElement.atomicNumber);
@@ -203,7 +202,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
 
     //Helper function to set up energy units
-    private String setUpEnergyUnits(String string,String units){
+    private String setUpEnergyUnits(String string, String units){
         if((string.equals("-") || string.equals(""))){
             units = "";
         }
@@ -265,23 +264,22 @@ public class DisplayElementDataActivity extends AppCompatActivity {
     }
 
     private void onRefreshActivity(String instrument, String crystal, String spectrometer){
-        if (instrument == "Reset"){
+        if (instrument.equals("Reset")){
             displayKeVValues(currentElement);
         }
-        else if (instrument == "Cameca"){
+        else if (instrument.equals("Cameca")){
             setCamecaValues(crystal, currentElement);
         }
-        else if (instrument == "Joel") {
+        else if (instrument.equals("Joel")) {
             setLValue(currentElement, spectrometer, crystal);
         }
 
     }
 
-    //Make sure that the activity is closed for when it has been left
+    //Make sure that the activity is closed. it returns to the home page
     @Override
-    public void onBackPressed()
-    {
-        Intent intent = new Intent(this,MainActivity.class);
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         this.finish();
     }

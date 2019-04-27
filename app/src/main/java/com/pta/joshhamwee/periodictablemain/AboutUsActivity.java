@@ -9,8 +9,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +29,10 @@ public class AboutUsActivity extends AppCompatActivity{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_about_us);
             setUpToolbar(); //Function that handles the toolbar, see below
+
+            // This makes the link clickable
+            TextView linkText = (TextView) findViewById(R.id.textView2);
+            linkText.setMovementMethod(LinkMovementMethod.getInstance());
         }
 
         private void setUpToolbar(){

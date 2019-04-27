@@ -45,6 +45,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/about_the_app"
                 app:layout_constraintEnd_toStartOf="@+id/guideline191"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
@@ -52,13 +53,12 @@
                 android:id="@+id/textView42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/about_colour"
                 android:elevation="8dp"
                 android:fontFamily="@font/opensans_regular"
                 android:text=" About Emas "
-                android:textColor="@color/textBlack"
+                android:textColor="@color/EMAS_text_color"
                 android:textSize="18sp"
-                android:textStyle="normal|italic"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toTopOf="@+id/guideline78"
                 tools:ignore="HardcodedText" />
@@ -67,12 +67,11 @@
                 android:id="@+id/textView43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/about_colour"
                 android:fontFamily="@font/opensans_regular"
                 android:text=" About the app "
-                android:textColor="@color/textBlack"
+                android:textColor="@color/EMAS_text_color"
                 android:textSize="18sp"
-                android:textStyle="normal|italic"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintStart_toStartOf="@+id/guideline79"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
                 tools:ignore="HardcodedText" />

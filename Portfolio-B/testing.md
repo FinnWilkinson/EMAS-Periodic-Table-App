@@ -1,4 +1,4 @@
-# Testing
+# **Testing**
 We have created an app that is mostly user-driven, and has very few functions that can be tested through automated testing. Therefore, we have decided to test our app through user testing, i.e. having the app tested by various different people to find any design flaws, or even some minor quirks that we could fix, and provide a better user experience. Since we are also using singletons, it was very tedious to figure out how to automate the testing for the database queries, and in the end we decided to give up on implementing it, and decided to just have a manual check through the database.
 
 ## User Tests

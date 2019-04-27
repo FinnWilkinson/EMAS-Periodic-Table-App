@@ -37,8 +37,7 @@ public class CustomSearchAdapter extends ArrayAdapter {
     public View getView(int position, View view, @NonNull ViewGroup parent) {
 
         if (view == null) {
-            view = LayoutInflater.from(parent.getContext())
-                    .inflate(searchResultItemLayout, parent, false);
+            view = LayoutInflater.from(parent.getContext()).inflate(searchResultItemLayout, parent, false);
         }
 
         //Set the new resulting items in the specific TextViews
@@ -46,5 +45,6 @@ public class CustomSearchAdapter extends ArrayAdapter {
         resultItem.setText(getItem(position));
         return view;
     }
+
 }
 
