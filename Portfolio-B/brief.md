@@ -6,11 +6,11 @@ The following is a proposal for our Software Product Engineering project, underg
 
 ### Client
 
-The client we are working with is the European Microbeam Analysis Society, _EMAS_. Our primary source of contact is with Mike Matthews, the chairman and creator of the EMAS Periodic Table. EMAS is a non-profit organisation run for and by scientists working in the related field. The Society is independent, but co-operates closely with national and international microbeam analysis groups, and other European societies with related interests. Founded in 1989 with its primary purposes being **Education, Communication** and **Innovation**. The activities of the Society promote this branch of science and stimulate technical and scientific developments on a European scale.
+The client we are working with is the European Microbeam Analysis Society, _EMAS_. Our primary source of contact is with Mike Matthews, the chairman and creator of the EMAS Periodic Table. EMAS is a non-profit organisation run for and by scientists working in the related field. The society is independent, but co-operates closely with national and international microbeam analysis groups, and other European societies with related interests. Founded in 1989 with its primary purposes being **Education, Communication** and **Innovation**. The activities of the Society promote this branch of science and stimulate technical and scientific developments on an international scale.
 
 ### Application Domain
 
-The application domain of the product in which we are going to develop is that of the EMAS group. This comes under that of Earth Sciences and Chemistry. We are working for University of Bristol, and hence our sector is that of education. The education sector is growing in regards to technology on a daily basis, and we believe that this application will contribute to the modernisation of learning.
+The application domain in which we are going to develop is that of the EMAS group. This comes under that of Earth Sciences and Chemistry. We are working for University of Bristol, and hence our sector is that of education. The education sector is growing in regards to technology on a daily basis, and we believe that this application will contribute to the modernisation of learning.
 
 ### The Problem
 

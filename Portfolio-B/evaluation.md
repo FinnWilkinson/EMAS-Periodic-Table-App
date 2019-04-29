@@ -6,9 +6,9 @@ The evaluation process began with interviewing the clients. The plans for the in
 <br>
 
 ### Conducting the evaluation
-For further evaluation, we conducted observations by using the approach of talk-throughs and concluded with a short survey. We decided not to evaluate based on quantitative measures and instead focus on qualitative assessment by allowing users to explore the app.
+For further evaluation, we conducted _observations_ by using the approach of _talk-throughs_ and concluded with a short survey. We decided not to evaluate based on quantitative measures and instead focus on qualitative assessment by allowing users to explore the app.
 
-For each user, we would suggest a task and prompt them to explain their thoughts as they performed said task, while simultaneously taking note of any struggle, hesitation and difficulties. Once every use case was completed, we requested the user to complete the survey summarizing the experience (figure).
+For each user, we suggested each task and prompted them to explain their thoughts as they performed said task, while we simultaneously took note of any struggle, hesitation and difficulties. Once every use case was completed, we requested the user to complete the short survey summarizing the experience.
 
 <br>
 
@@ -17,7 +17,7 @@ As seen in the image below, majority of the feedback was positive with 4 or 5 st
 
 ![results](images/SurveyResults.png "results")
 
-The evaluation pointed us to two bugs in our system- the search feature did not have a 'no result' case and secondly when previous/next element was pressed on the first/last element, the app would crash. We overcame this by removing the previous button on the first element and vice-versa for the last.
+The evaluation pointed us to two bugs in our system- the search feature did not have a 'no result' case and secondly when previous/next element was pressed on the first and last element, the app would crash. We overcame these by adding a 'no results found' page , and by removing the previous button on the first element and vice-versa for the last, respectively.
 
 The overall results were quite positive: users liked the colour scheme, appreciated the design of the home page and didnt have much trouble with operating the various features.
 
