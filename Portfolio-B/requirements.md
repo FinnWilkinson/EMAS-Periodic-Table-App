@@ -62,21 +62,19 @@ Due to the application being offline, interaction with non-human actors is  not 
 ##  Flow Breakdown
 #### _Basic flow_:
 1. View information on each element
-    - Periodic table will be displayed, fitted to the screen
-    - User clicks on desired element
-    - The click creates and sends an SQL query
-    - Data is retrieved from the database
-    - Data is displayed in a suitable format on element page
+    * Periodic table will be displayed, fitted to the screen
+    * User presses on desired element
+    * SQL query is sent
+    * Data is retrieved from the database
+    * Data is displayed in a suitable format on element page
 
 2. Search for an element with the symbol or name.  
-    - User clicks on the search icon  
-    - List appears with all the elements in order of increasing atomic number  
-    - User types into the bar the element symbol or name  
-    - The word is autocompleted  
+    - User clicks on the search icon    
+    - User types into the bar the element symbol/name/atomic mass   
     - The drop down list shows only the relevant element  
     - Clicking the list item opens up the information page for that element
 
-3. Use the navigation drawer to perform the following activities:
+3. Use the navigation drawer/toolbar to perform the following activities:
     * Switch between instruments  (this step also involves changing the units based on the instrument being used)
         - Option 1:
             * Open filter drawer
@@ -94,11 +92,10 @@ Due to the application being offline, interaction with non-human actors is  not 
         * Open navigation drawer by swiping or clicking the icon
         * Click on the Help tab
         * Help page is displayed
-    * View the Settings page
+    * View the "About us" page
         * Open navigation drawer by swiping or clicking the icon
-        * Click on the Settings tab
-        * Settings page is displayed
-        * Use the filter to change default instruments
+        * Click on the "About us" tab
+        * Information is displayed
 
 #### _Alternative flow_ :
 * User may utilise the search bar to look for an element rather than clicking on the periodic table display
