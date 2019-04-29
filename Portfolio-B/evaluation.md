@@ -17,11 +17,11 @@ As seen in the image below, majority of the feedback was positive with 4 or 5 st
 
 ![results](images/SurveyResults.png "results")
 
-The evaluation pointed us to two bugs in our system- the search feature did not have a 'no result' case and secondly when previous/next element was pressed on thr first/last element, the app would crash. We overcame this by removing the previous button on the first element and vice-versa for the last.
+The evaluation pointed us to two bugs in our system- the search feature did not have a 'no result' case and secondly when previous/next element was pressed on the first/last element, the app would crash. We overcame this by removing the previous button on the first element and vice-versa for the last.
 
 The overall results were quite positive: users liked the colour scheme, appreciated the design of the home page and didnt have much trouble with operating the various features.
 
-One change which we did make due to these results, was that of the unit/filter functions. As it was the result which was the most skewed, we beleived that a change was needed, so we moved from an icon of three dots, to an icon of an actual filter. This seemed to eliminate any confusion by the user.
+One change which we did make due to these results, was that of the unit/filter functions. As it was the result which was the most skewed, we believed that a change was needed, so we moved from an icon of three dots, to an icon of an actual filter. This seemed to eliminate any confusion by the user.
 
 The final iteration of our app consisted of fixing the search feature and other bugs, completing the documentation and tying up other loose ends.
 
