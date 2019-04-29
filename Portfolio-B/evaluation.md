@@ -1,14 +1,14 @@
 # **Evaluation**
 In the initial client brief, five stages were outlined according to increasing importance and complexity. We were able to complete three stages. Below we discuss the evaluation of this project and the results obtained.
 
-The evaluation process began with interviewing the clients. The plans for the initial stages were discussed and compared with the final product. After asking open-ended questions and going through possible use case tasks, the feedback we recieved was mostly positive. The clients did mention that they would like to be able to zoom-in, but that this is not a necessary feature and could be left for future development. 
+The evaluation process began with interviewing the clients. The plans for the initial stages were discussed and compared with the final product. After asking open-ended questions and going through possible use case tasks, the feedback we received was mostly positive. The clients did mention that they would like to be able to zoom-in, but that this is not a necessary feature and could be left for future development.
 
 <br>
 
 ### Conducting the evaluation
 For further evaluation, we conducted observations by using the approach of talk-throughs and concluded with a short survey. We decided not to evaluate based on quantitative measures and instead focus on qualitative assessment by allowing users to explore the app.
 
-For each user, we would suggest a task and prompt them to explain their thoughts as they performed said task, while simultaneously taking note of any struggle, hesitation and difficulties. Once every use case was sompleted, we requested the user to complete the survey summarizing the experience (figure).
+For each user, we would suggest a task and prompt them to explain their thoughts as they performed said task, while simultaneously taking note of any struggle, hesitation and difficulties. Once every use case was completed, we requested the user to complete the survey summarizing the experience (figure).
 
 <br>
 
