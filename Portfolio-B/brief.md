@@ -10,7 +10,7 @@ The client we are working with is the European Microbeam Analysis Society, _EMAS
 
 ### Application Domain
 
-The application domain of the product in which we are going to develop is that of the EMAS group. This comes under that of Earth Sciences and Chemistry.
+The application domain of the product in which we are going to develop is that of the EMAS group. This comes under that of Earth Sciences and Chemistry. We are working for University of Bristol, and hence our sector is that of eduction. The education sector is growing in regards to technology on a daily basis, and we believe that this application will contribute to the modernisation of learning.
 
 ### The Problem
 
