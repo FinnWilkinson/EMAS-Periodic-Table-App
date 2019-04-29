@@ -64,7 +64,7 @@ Due to the application being offline, interaction with non-human actors is  not 
 1. View information on each element
     - Periodic table will be displayed, fitted to the screen
     - User clicks on desired element
-    - The click creates and sends an sql query
+    - The click creates and sends an SQL query
     - Data is retrieved from the database
     - Data is displayed in a suitable format on element page
 
