@@ -22,7 +22,7 @@ Students doing research in microbeam-analysis related fields. Students part of B
 Technicians in charge of equipment in microbeam analysis laboratories in different institutions, academic or commercial.
 
 #### General Public
-The app will be available on the Google play-store hence anyone could make use of it.
+The app will be available on the Google play-store therefore anyone could make use of it.
 
 ## High User Case Diagram
 Our users will interact with the application in very similar ways due to the nature of the system. Therefore  all interactions can be encompassed by the following diagram:
@@ -81,11 +81,11 @@ Due to the application being offline, interaction with non-human actors is  not 
         - Option 1:
             * Open filter drawer
             * Use the menu to switch between instruments
-            * Elements in the instrument' range are displayed
+            * Elements in the instrument' range are highlighted
         - Option 2:
             * Click the element from the table or using the search bar
             * Element page appears
-            * Use the filter drawer on the element page to switch between instruments
+            * Use the filter icon on the element page to switch between instruments
     * View the energy graph
         * Open Menu drawer
         * Click on the energy graph tab
@@ -98,7 +98,7 @@ Due to the application being offline, interaction with non-human actors is  not 
         * Open navigation drawer by swiping or clicking the icon
         * Click on the Settings tab
         * Settings page is displayed
-        * Use the toggle to change default instruments
+        * Use the filter to change default instruments
 
 #### _Alternative flow_ :
 * User may utilise the search bar to look for an element rather than clicking on the periodic table display
