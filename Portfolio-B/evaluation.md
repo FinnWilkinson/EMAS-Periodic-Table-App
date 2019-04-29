@@ -1,28 +1,37 @@
 # **Evaluation**
-// Intro para (we have accommplished all requirements that client wanted, etc)
+In the initial client brief, five stages were outlined according to increasing importance and complexity. We were able to complete three stages. Below we discuss the evaluation of this project and the results obtained.
 
-### Testing
-// we created a questionnaire and did user testing on clients as well as the common human
+The evaluation process began with interviewing the clients. The plans for the initial stages were discussed and compared with the final product. After asking open-ended questions and going through possible use case tasks, the feedback we recieved was mostly positive. The clients did mention that they would like to be able to zoom-in, but that this is not a necessary feature and could be left for future development. 
+
 <br>
-// put picture of questionnaire
 
+### Conducting the evaluation
+For further evaluation, we conducted observations by using the approach of talk-throughs and concluded with a short survey. We decided not to evaluate based on quantitative measures and instead focus on qualitative assessment by allowing users to explore the app.
+
+For each user, we would suggest a task and prompt them to explain their thoughts as they performed said task, while simultaneously taking note of any struggle, hesitation and difficulties. Once every use case was sompleted, we requested the user to complete the survey summarizing the experience (figure).
+
+// picture of questionnaire
+
+<br>
 
 ### Results
-// what were the main errors/bugs/problems
-// categorize them? hueristic eval?
+Majority of the feedback from the evaluation pointed to one bug in our system- the search feature did not have a 'no result' case. The overall results were quite positive: users liked the colour scheme, appreciated the design of the home page and didnt have much trouble with operating the various features.
 
-### Final Iteration
-// changes made after getting feedback
+// picture of results 
+
+The final iteration of our app consisted of fixing the search feature and other bugs, completing the documentation and tying up other loose ends.
+
+<br>
 
 ### Future Developments/Ideas
-From the initial client brief regarding the system, they outlined for us five stages, with each stage increasing the features of the application. Due to time constraints we were not able to complete all the stages set out to us by the client and so these further stages, mainly stages 4 and 5, would be areas to look into developing the application in the future.
+The next two stages would be the key areas to look into for developing the application in the future.
 
-Firstly comes an Instrument Configuration Tool as outlined in stage 4. This tool would allow a user to have a list of all spectrometer-crystal combinations that they could use to detect each element. This would enable the user to receive guidance on how they should analyse an element. This would aid our client's in the work that they carry out as they would not have to look up these configurations in a book, nor remember these configurations.
+The fourth stage involves creating an Instrument Configuration Tool. This tool would equip the user with a list of all spectrometer-crystal combinations that they could use to detect each element. This would guide the user on how they should analyse an element and aid our client's in the work that they carry out as they would not have to look up these configurations in a book, nor remember these configurations.
 
-Secondly comes a X=ray line look-up/interference tool. Currently in our application is a graph of the major X-ray lines for the elements, however there are also a range of minor lines. The client has outlined that interference from these minor lines is a major issue in the work that they carry out, so a graph depicting possible interfering element lines (based on the spectrometer and crystal used) would reduce the errors that they encountered in their work.
+The fifth stage involves an X-ray line look-up/interference tool. Our application currently contains a graph of the major X-ray lines for the elements, however there is no consideration for the range of minor lines. The client has outlined that interference from these minor lines is an important issue in the work that they carry out, so a graph depicting possible interfering element lines (based on the spectrometer and crystal used) would reduce the errors that they encounter in their work.
 
-Finally, whilst we have implemented a section of the application to view different graphs that the client wanted within included, in their initial specification they requested that these graphs be interactive. This would allow them to view the precise values and ranges displayed on the graphs more accurately.
+Finally, whilst we have implemented a section of the application to view graphs, in their initial specification the client requested that these graphs be interactive. This would allow them to view the precise values and ranges displayed on the graphs more accurately.
 
-Additionally, we have also received possible future developments from the user feedback and testing of our application:
-* As EMAS is a European society, a select language feature would increase the accessibility of the application, whilst proving more convenient to the colleagues of our clients.
-* A zooming feature was also highlighted to be a possible future improvement. The size of the periodic table displayed, along with the data displayed about the elements is dependant on the screen size that the user's phone or tablet has. Therefore, a zooming feature would enable users with smaller screen sizes to use the application more easily. Additionally, this feature would improve the application's accessibility as users with impaired vision would find a feature such as this useful.
+Additionally, we have also received the following feedback, from the user testing of our application, that can be further developments:
+* As EMAS is a European society, a select language/translation feature would increase the accessibility of the application, whilst proving more convenient to the colleagues of our clients.
+* A zooming feature, as mentioned by many test-takers, would enable users with smaller screen sizes to use the application more easily. Additionally, this feature could make the app more accessible to those visually-impaired.
