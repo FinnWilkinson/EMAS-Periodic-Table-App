@@ -1,3 +1,19 @@
+# Installation Process
+## For PC
+Since it is normally not possible to run a Android app on your PC, we will first have to download
+an emulator that will allow us to run the app. The emulator that we are going to be using is Bluestacks, which can be found [here](https://www.bluestacks.com/). Follow the instructions provided by the installer to install the emulator.
+
+1. After Bluestack is installed, open it and sign in to the Google Play Store.
+2. In the search bar, type `EMAS Periodic Table`, or click the link [here](https://play.google.com/store/apps/details?id=com.pta.joshhamwee.periodictablemain&hl=en_GB)
+3. Install the app by clicking the `Install` button and following the instructions on the screen
+
+## For Android
+On an Android device, it is possible to directly install the app from the Google Play Store. Your Android device needs to have Android version 4.1 or above to install the app.
+
+1. Open the Play Store and sign in if you haven't already
+2. In the search bar, type `EMAS Periodic Table`, or click the link [here](https://play.google.com/store/apps/details?id=com.pta.joshhamwee.periodictablemain&hl=en_GB)
+3. Install the app by clicking the `Install` button and following the instructions on the screen
+
 # Deployment Process
 ## Building the APK
 After changes have been made to the app, there are a few steps before you can build the APK for the app and upload it to the Play Store.
