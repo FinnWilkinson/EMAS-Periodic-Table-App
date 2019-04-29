@@ -11,12 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
-import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+
 
 public class AboutUsActivity extends AppCompatActivity{
 

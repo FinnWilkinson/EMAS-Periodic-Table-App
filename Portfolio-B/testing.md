@@ -8,8 +8,4 @@ We then gave the app to our mentor, who downloaded it through the Play Store, an
 
 We then moved forward and urged different people such as our family and friends to download the app on their phones and to try it out for a while, just to have a better impression on what can be done to improve the app, either functionally or visually. We got some good feedback on how to improve our product, there were several areas that we had ignored due to them being 'obvious' to us, since we were the ones developing the app. Several navigation oversights were fixed in this manner, as it was obvious for us to know which button takes us to which page, but they were actually not properly labelled or didn't give a proper indication as to what they did. One example was the filter function we had implemented. Since we were only using icons, it wasn't very obvious what the button did, and the user would have to explore the app and draw conclusions since the icon was only an standard drop-down menu icon. However, due to the feedback we obtained, we decided to change the icon to something that would allow users to understand the purpose of the menu.
 
-## Further improvements
-
-Even with all the testing we have done, I believe there are still several areas of improvement for our app. For example ...
-
-However, I believe that we have achieved our goal to build a periodic table app that is easy to use, and is also technically robust.
+I believe that we have achieved our goal to build a periodic table app that is easy to use, and is also technically robust, and meets the demands of our client. 
