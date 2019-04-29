@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -78,11 +79,13 @@ public class DisplayElementDataActivity extends AppCompatActivity {
         Button nextElement = (Button) findViewById(R.id.next_element);
         Button prevElement = (Button) findViewById(R.id.previous_element);
 
+
         //This is the colour change to the specific atomic number
         if(AlkMetals.contains(atomicNumber)) {
             ElementName.setTextColor(ContextCompat.getColor(this, R.color.pastelPink));
             nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour1));
             prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour1));
+            if(atomicNumber == 1) prevElement.setVisibility(View.INVISIBLE);
         }
         else if(AlkEMetals.contains(atomicNumber)){
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelOrange));
@@ -113,6 +116,7 @@ public class DisplayElementDataActivity extends AppCompatActivity {
             ElementName.setTextColor(ContextCompat.getColor(this,R.color.pastelGreen));
             nextElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour7));
             prevElement.setBackground(ContextCompat.getDrawable(this,R.drawable.button_colour7));
+            if(atomicNumber == 103) nextElement.setVisibility(View.INVISIBLE);
         }
 
     }
