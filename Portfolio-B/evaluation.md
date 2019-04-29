@@ -10,14 +10,18 @@ For further evaluation, we conducted observations by using the approach of talk-
 
 For each user, we would suggest a task and prompt them to explain their thoughts as they performed said task, while simultaneously taking note of any struggle, hesitation and difficulties. Once every use case was sompleted, we requested the user to complete the survey summarizing the experience (figure).
 
-// picture of questionnaire
-
 <br>
 
 ### Results
-Majority of the feedback from the evaluation pointed to one bug in our system- the search feature did not have a 'no result' case. The overall results were quite positive: users liked the colour scheme, appreciated the design of the home page and didnt have much trouble with operating the various features.
+As seen in the image below, majority of the feedback was positive with 4 or 5 stars on most questions.
 
-// picture of results 
+![results](images/SurveyResults.png "results")
+
+The evaluation pointed us to two bugs in our system- the search feature did not have a 'no result' case and secondly when previous/next element was pressed on thr first/last element, the app would crash. We overcame this by removing the previous button on the first element and vice-versa for the last.
+
+The overall results were quite positive: users liked the colour scheme, appreciated the design of the home page and didnt have much trouble with operating the various features.
+
+One change which we did make due to these results, was that of the unit/filter functions. As it was the result which was the most skewed, we beleived that a change was needed, so we moved from an icon of three dots, to an icon of an actual filter. This seemed to eliminate any confusion by the user.
 
 The final iteration of our app consisted of fixing the search feature and other bugs, completing the documentation and tying up other loose ends.
 
